@@ -1,3 +1,4 @@
+
 <style>
         .logo {
             max-width: 15%; /* Điều chỉnh kích thước tối đa theo % hoặc px */
@@ -7,6 +8,12 @@
           width: 45%;
           height: 65px;
           margin: auto;
+        }
+        .navbar-nav .nav-item {
+        margin-right: 15px; /* Điều chỉnh khoảng cách giữa các mục */
+        }
+        .navbar-brand {
+            margin-right: 20px; /* Khoảng cách giữa logo và tiêu đề thương hiệu */
         }
 </style>
 
