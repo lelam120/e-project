@@ -1,0 +1,674 @@
+
+*{
+        
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto Condensed", sans-serif;
+    color:  rgb(255, 255, 255);
+  
+   
+
+}
+
+
+ul{
+
+list-style: none;
+display: flex;
+
+
+}
+
+a{
+text-decoration: none;
+color:  rgb(0, 0, 0);
+}
+
+.navcon{
+margin-left: 20px;
+}
+
+.navheader{
+margin: auto;
+width: 100%;
+height: 70px;
+padding: 20px 50px;
+display: flex;
+justify-content: space-between;
+background-color: transparent;
+/* border: 1px solid rgba(255, 255, 255, 0.747); */
+border-bottom: 1px solid rgba(255, 255, 255, 0.747);
+backdrop-filter: blur(20px) ;
+box-shadow: 0 0 30px rgba(0, 0, 0, 0.747);
+
+}
+
+@media screen and (max-width: 1088px) {
+
+    .ul_nav{
+        display: none;
+    }
+    .slide .slide_grid .trai{
+        text-align: center;
+        padding: 0 20px;
+    }
+    
+    
+    }
+    
+    .hot::after{
+        background: #f48000;
+        border-radius: .5rem 0 .5rem 0;
+        color: #fff;
+        content: "HOT";
+        display: block;
+        font-size: 1.2rem;
+        line-height: 1.8rem;
+        padding: 0 .8rem;
+        position: absolute;
+        right: 20px;
+        top: -0.9rem;
+        transform: translateX(108%) scale(.4);
+        transform-origin: left center;
+        z-index: -1;
+    }
+    
+    #logoimg{
+        
+        width: 170px;
+    
+    }
+    .ul_nav .li_nav{
+       margin: 0 10px;
+       position: relative;
+       
+        border-bottom: 0px solid rgb(255, 255, 255);
+      
+    }
+    .ul_nav .li_nav:hover 
+    a{
+        color: rgb(0, 0, 0);
+        border-bottom: 2px solid rgb(255, 255, 255);
+        transition:  0.5s ;
+     
+       
+      
+    }
+    .input-container {
+      width: 220px;
+      position: relative;
+    }
+    
+    .icon {
+      position: absolute;
+      right: 10px;
+      top: calc(50% + 5px);
+      transform: translateY(calc(-50% - 5px));
+    }
+    
+    .input {
+        color: black;
+      width: 100%;
+      height: 20px;
+      padding: 10px;
+      transition: .2s linear;
+      border: 2.5px solid rgb(114, 114, 114);
+      font-size: 13px;
+      /* text-transform: uppercase;  */
+       letter-spacing: 2px;
+    }
+    .ul_nav{
+        margin-right: 20px;
+    }
+    .input:focus {
+      outline: none;
+      border: 0.5px solid black;
+      box-shadow: -5px -5px 0px black;
+    }
+    
+    .input-container:hover > .icon {
+      animation: anim 1s linear infinite;
+    }
+    
+    @keyframes anim {
+      0%,
+      100% {
+        transform: translateY(calc(-50% - 5px)) scale(1);
+      }
+    
+      50% {
+        transform: translateY(calc(-50% - 5px)) scale(1.1);
+      }
+    }
+    
+    
+    .slide-show {
+        background-color: rgb(253, 253, 253);
+        width: 100%;
+       
+     /* bạn có thể thay đổi chiều cao tùy theo nhu cầu */
+        overflow: hidden;
+        position: relative;
+    }
+    .list-images {
+    
+    display: flex;
+    width: 100%;
+    height: 100%;
+    transition: transform 2s;
+    }
+    .slide {
+    
+    background-image: url(/img/banner-bg1.jpg);
+    min-width: 100%;
+    /* padding-top: 100px;
+    padding-left: 100px; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    
+    }
+    .slide .slide_grid{
+    
+        display: grid;
+        padding: 0 10px;
+    
+        max-width: 1500px;
+        width: 100%;
+        grid-template-columns: repeat(auto-fit,minmax(700px,1fr));
+        gap: 2rem;
+    
+    }
+    .slide .slide_grid .trai>p{
+    
+        margin-top: 70px;
+        font-weight: 300;
+        animation-name: headervao;
+        animation-duration: 2s;
+        animation-iteration-count: 1;
+        transition-timing-function: ease-in-out;
+    
+    }
+    
+    .nutxanh{
+        background-color: rgb(51, 202, 35);
+        border: none;
+        width: 170px;
+        height: 50px;
+        border-radius: 10px;
+        margin-top: 20px;
+        font-size: 17px;
+        transition: 0.5s;
+        animation-name: headervao;
+        animation-duration: 2s;
+    
+        animation-iteration-count: 1;
+        transition-timing-function: ease-in-out;
+    }
+    
+    .nutxanh:hover{
+        background-color: rgb(0, 0, 0);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.747);
+        backdrop-filter: blur(20px) ;
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.747);
+        transition: 0.5s;
+    
+    }
+    .slide .slide_grid .phai{
+        display: flex;
+        justify-content: right;
+        
+    }
+    
+    .slide .slide_grid .phai>img{
+     
+        width: 100%;
+        margin-right: 0;
+        animation-name: headervao;
+        animation-duration: 2s;
+    
+        animation-iteration-count: 1;
+        transition-timing-function: ease-in-out;
+        
+    }
+    .slide .slide_grid .trai>h1{
+        font-size: 70px;
+        font-weight: 900;
+        
+        animation-name: headervao;
+        animation-duration: 2s;
+    
+        animation-iteration-count: 1;
+        transition-timing-function: ease-in-out;
+     
+    }
+    
+    
+    
+    @keyframes headervao {
+        from{
+          
+            transform: translateY(50px);
+            color: #f47e0000;
+            opacity: 0;
+        }
+       
+        
+    }
+    
+    
+    
+    main .mot{
+       
+        display: grid;
+        padding: 10px;
+        width: 100%;
+        grid-template-columns: repeat(auto-fit,minmax(500px,1fr));
+       
+       
+    }
+    main .mot>div{
+        height: 400px;
+        margin: 10px;
+        background-repeat: no-repeat;
+        background-size: cover;
+      
+        padding: 100px 50px;
+        
+    }
+    main .mot>div #tieude{
+       color: rgb(37, 159, 28);
+        font-weight: 700;
+    }
+    
+    main .mot .trai{
+        background-image: linear-gradient(0,rgba(0, 0, 0, 0.733),rgba(0, 0, 0, 0.733)) ,url(/img/procat1.jpg) ;
+        animation-name: headervao;
+        animation-duration: 2s;
+    
+        animation-iteration-count: 1;
+        transition-timing-function: ease-in-out;
+    }
+    main .mot .phai{
+        background-image: linear-gradient(0,rgba(0, 0, 0, 0.733),rgba(0, 0, 0, 0.733)) ,url(/img/procat2.jpg) ;
+        animation-name: headervao;
+        animation-duration: 2s;
+    
+        animation-iteration-count: 1;
+        transition-timing-function: ease-in-out;
+        
+    } 
+    
+    main .hai{
+        background-image:url(/img/home-sec-bg1.jpg) ;
+        height: 40vh;
+        padding-top: 50px;
+        text-align: center;
+        position: relative;
+        animation-name: headervao;
+        animation-duration: 2s;
+    
+        animation-iteration-count: 1;
+        transition-timing-function: ease-in-out;
+        
+     
+    }
+    
+    main .hai .hang{
+        background-color: rgb(44, 159, 28);
+        max-width: 1300px;
+        border-radius: 10px;
+        height: 170px;
+        margin: auto;
+        display: flex;
+        overflow: hidden;
+        justify-content: center;
+        align-items: center;
+    }
+    main .hai .hang>ul{
+     
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        margin: 0;
+        
+    }
+    main .hai .hang>ul>li{
+        margin: 0 10px;
+    
+     
+    }
+    main .ba {
+        margin-top: 20vh;
+        display: grid;
+      
+        width: 100%;
+        grid-template-columns: repeat(auto-fit,minmax(500px,1fr));
+    
+        margin-bottom: 50px;
+     
+    }
+    
+    
+    main .ba .phai{
+        background-image: url(/img/homg-about-bg.png);
+        padding: 70px 100px;
+    }
+    main .ba .phai #tieude{
+       color: green;
+        
+    }
+    main .ba .phai>p,
+    main .ba .phai b{
+       color: rgb(0, 0, 0);
+        
+    }
+    main .ba .phai button>b{
+       color: rgb(255, 255, 255);
+        
+    }
+    
+    main .ba .trai{
+        display: flex;
+        justify-content: right;
+        align-items: center;
+        
+    }
+    main .ba .trai>iframe{
+       
+        width: 700px;
+        height: 370px;
+        border-radius: 10px;
+        margin-right: -30px;
+        z-index: 2;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.747);
+        backdrop-filter: blur(20px) ;
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.747);
+        transition: 0.5s;
+        
+    }
+    main .bon{
+        display: grid;
+        margin: auto;
+        margin-top: 100px;
+        max-width: 1500px;
+        grid-template-columns: repeat(auto-fit,minmax(500px,1fr));
+        gap: 4rem;
+        animation-name: headervao;
+        animation-duration: 2s;
+    
+        animation-iteration-count: 1;
+        transition-timing-function: ease-in-out;
+    }
+    
+    
+    
+    main .bon>div p,
+    main .bon>div b{
+        color: rgb(51, 51, 51);
+       
+    }
+    main .bon>div #link{
+        color: rgb(44, 159, 28);
+       
+    }
+    main .bon>div #link:hover{
+       
+        transform: translateX(-100px);
+       
+    }
+    main .bon>div img{
+        width: 90%;
+     transition: 0.5s;
+     box-shadow: -5px -5px 50px rgb(76, 76, 90);
+     border-radius: 10px;
+       
+    }
+    
+    main .bon>div .ghichu{
+        padding-right: 60px;
+        
+       
+    }
+    main .nam{
+       
+       background-image: url(/img/home-service-bg.jpg);
+       animation-name: headervao;
+       animation-duration: 2s;
+    
+       animation-iteration-count: 1;
+       transition-timing-function: ease-in-out;
+       
+       
+    }
+    
+    main .nam .giua{
+    
+       display: grid;
+       margin: auto;
+       margin-top: 100px;
+       max-width: 1500px;
+       grid-template-columns: repeat(auto-fit,minmax(100px,1fr));
+       gap: 2rem;
+       position: relative;
+    
+      
+    }
+    main .nam>img{
+        position: absolute;
+        padding-top: 400px;
+    
+    
+      
+    }
+    main .nam .giua .cac{
+        height: 60vh;
+    
+        padding-top: 80px;
+    }
+    main .nam .giua .Namcon {
+        margin-top: 80px;
+        height: 45vh;
+        background-color: white;
+        
+        border-radius: 10px;
+        padding: 50px;
+        margin-right: 20px;
+        transition: 0.5s;
+    }
+    main .nam .giua .Namcon:hover {
+       transition: 0.5s;
+        transform: translateY(-20px);
+    
+    }
+    
+    main .nam .giua .Namcon>i {
+        color: black;
+        font-size: 50px;
+        position: relative;
+     
+        z-index: 2!important;
+    
+    }
+    
+    main .nam .giua .Namcon>p {
+        color: rgb(95, 95, 95);
+     
+       
+    
+    
+    }
+    main .nam .giua .Namcon b{
+        color: rgb(51, 51, 51);
+     
+       
+    
+    
+    }
+    main .nam .giua .Namcon a{
+        color: rgb(71, 159, 28);
+     
+       
+    
+    
+    }
+    main .nam .giua .Namcon>i::after {
+        background: rgb(44, 159, 28);
+        border-radius: 50%; 
+        color: #fff;
+        content: "";
+        display: block;
+        width: 2.5rem; 
+        height: 2.5rem; 
+        padding: 0; 
+        position: absolute;
+        left: 20px;
+        bottom: -5px; 
+        z-index: -100;
+        /* transform: translateX(100%) translateY(-60%);  */
+        /* transform-origin: left center; */
+       
+    }
+    main .nam .giua .goc {
+        padding-bottom: 50px;
+    
+    
+    
+    }
+    
+    main .nam .giua .cac #tieude{
+       color: green;
+        font-weight: 900;
+    
+    
+    
+    }
+    main .nam .giua .cac>p{
+       font-size: 20px;
+    
+    
+    
+    
+    }
+    main .nam .giua .cac #tieude1{
+      
+        font-weight: 900;
+    
+    
+    
+    }
+    main .nam .giua .cac .hr{
+        width: 60px;
+        border: 2px solid green;
+    
+        margin-bottom: 20px;
+    
+    
+    }
+    
+    @media screen and (max-width: 1088px) {
+    
+        main .nam .giua{
+    
+        display: grid;  
+        margin: auto;
+        margin-top: 100px;
+        max-width: 1500px;
+        grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+        gap: 2rem;
+    
+    
+        }
+    
+    
+    }
+    
+    main .produc{
+        max-width: 1500px;
+        width: 100%;
+        margin: auto;
+        margin-top: 100px;
+        animation-name: headervao;
+       animation-duration: 2s;
+    
+       animation-iteration-count: 1;
+       transition-timing-function: ease-in-out;
+    }
+    main .produc .tren{
+       display: flex;
+       justify-content: space-between;
+       margin-bottom: 50px;
+    }
+    main .produc .tren .trai #tieude{
+       color: green;
+       margin-bottom: 0;
+       font-weight: 700;
+    }
+    main .produc .tren .trai b{
+       color: rgb(51, 51, 51);
+        font-size: 50px;
+    }
+    main .produc .tren .phai button{
+       width: 120px;
+       border: none;
+       height: 40px;
+       border-radius: 10px;
+       background-color: green;
+    }
+    main .produc .duoi{
+       margin-top: 200px;
+       margin-bottom: 100px;
+       
+     }
+     
+     
+    .thexe{
+        max-width: 320px;
+        width: 100%;
+    
+        margin: auto;
+    
+    
+    }
+    
+    .thexe a{
+        width: 100%;
+        height: 50px;
+        text-align: center;
+        font-size: 18px;
+        font-weight: 700;
+        padding-top: 10px;
+        color: green;
+        background-color: rgb(190, 255, 181);
+    
+    }
+    .thexe a:hover{
+        color: white;
+        background-color: green;
+    
+    }
+    
+    
+    .anhxe{
+        width: 250px;
+    }
+    .cacxe {
+        height: 250px;
+        display: flex;
+    
+        justify-content: center;
+    }
+    
+    .cardthexe{
+        background-color: #f48000;
+    }
+    
+    
+    
