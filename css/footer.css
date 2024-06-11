@@ -1,0 +1,172 @@
+footer{
+    margin-top: 300px;
+}
+
+footer .tren{
+    background-color: rgb(44, 159, 28);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 12vh;
+}
+
+footer .tren>div{
+    display: flex;
+    margin: 0 20px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+footer .tren>div>p{
+    margin: 0 10px ;
+    padding-top: 9px;
+    color: white;
+    
+}
+footer .tren>div>i{
+   font-size: 30px;
+   color: white;
+}
+
+
+footer .duoi{
+    background-color:rgb(0, 12, 35) ;
+  
+    
+    padding-top: 100px;
+}
+footer .duoi .duoi_tren{
+    display: flex;
+    max-width: 1500px;
+    margin: auto;
+  
+    
+}
+footer .duoi .duoi_tren .trai {
+    padding-right: 40px;
+    
+  
+    
+}
+footer .duoi .duoi_tren .trai img{
+    width:190px;
+    margin-bottom: 10px;
+  
+    
+}
+
+footer .duoi .duoi_tren .trai p{
+    
+  color: rgb(113, 126, 142);
+    
+}
+footer .duoi .duoi_tren .trai{
+    width: 400px;
+  
+    
+}
+
+footer .duoi .duoi_tren .trai .icon_duoi>i{
+    font-size: 25px;
+    margin-right: 30px;
+    color: rgb(35, 129, 29);
+    
+  
+    
+}
+
+
+footer .duoi .duoi_tren .giua{
+    display: flex;
+    
+  
+    
+}
+footer .duoi .duoi_tren .giua>div{
+
+    margin-right: 30px;
+    
+  
+    
+}
+
+
+footer .duoi .duoi_tren .giua>div p{
+
+color: rgb(109, 111, 119);
+
+
+
+}
+footer .duoi .duoi_tren .giua>div p:hover{
+
+color: rgb(255, 255, 255);
+
+
+
+}
+
+footer .duoi .duoi_tren .giua>div #giua_tieude{
+    
+    color: #fff;
+    font-size: 17px;
+    font-weight: bold;
+
+
+
+}
+
+footer .duoi .duoi_tren .giua>div #giua_tieude:hover{
+
+color: green;
+transition: 0.2s;
+
+}
+
+
+
+footer .duoi .duoi_tren .phai{
+    border-left: 2px solid rgb(44, 54, 72) ;
+    margin-left: 10px;
+    padding-left: 50px;
+}
+
+footer .duoi .duoi_tren .phai>div{
+    display: flex;
+
+
+    
+}
+
+footer .duoi .duoi_tren .phai>div .phai_icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    font-size: 30px;
+    margin-right: 10px;
+
+
+
+
+
+}
+footer .duoi .duoi_tren .phai>div .phai_icon>i{
+    color: green;
+
+
+
+}
+
+footer .duoi .duoi_tren .phai>div .trai_icon>p{
+    padding: 0;
+    margin-bottom: 5px;
+    color: aliceblue;
+    padding-left: 20px;
+}
+
+footer .duoi .duoi_tren .phai>div .trai_icon #giua_tieude{
+    color: #fff;
+    font-size: 17px;
+    font-weight: bold;
+}
