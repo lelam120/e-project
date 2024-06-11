@@ -1,4 +1,3 @@
-
 <style>
         .logo {
             max-width: 15%; /* Điều chỉnh kích thước tối đa theo % hoặc px */
