@@ -9,6 +9,15 @@ function newest_car(){
     }
     return $list;
 }
+function old_car(){
+    $sql = "select * from old_car order by oldcar_id";
+    $result = query($sql);
+    $list = [];
+    while($row = $result->fetch_assoc()){
+        $list[] = $row;
+    }
+    return $list;
+}
 function best_sellers(){
     $sql = "select * from old_car order by old_brand desc limit 4";
     $result = query($sql);

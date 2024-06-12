@@ -67,7 +67,6 @@
 .Search_Options #cac #phai:hover{
     transition: 0.5s;
     transform: rotateZ(0);
-   
 }
 
 .loccon {
@@ -397,7 +396,7 @@
 
 
             <div class="reset">
-                <a style="font-size:15px; color:#2c9f1c;" class="Reset" href="/range_of_car.php" ><i class="bi bi-arrow-clockwise"></i>RESET ALL</a>
+                <a style="font-size:15px;color:#2c9f1c;font-size:small;" class="Reset" href="/range_of_car.php" ><i style=" color:#2c9f1c;margin:2px;" class="bi bi-arrow-counterclockwise"></i>RESET ALL</a>
             </div>
        </div>
     </div>
