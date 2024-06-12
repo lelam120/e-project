@@ -38,8 +38,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <?php include_once("html/style.php"); ?>
-    
-
+    <link href="css/styles.css" rel="stylesheet">
 </head>
 
 <body>
@@ -81,10 +80,10 @@
                                     <img src="<?php echo $item["thumbnail"]; ?>" class="card-img-top" alt="<?php echo $item["car_name"]; ?>">
                                 </a>
                                 <div style="width: 100%;" class="card-body">
-                                <i class="bi bi-tags" style="color:gray; margin-right:16px;">Chery</i>
-                                <i class="bi bi-car-front" style="color:gray">SUV</i>
-                                    <h6 class="card-title" style="margin:10px"><?php echo $item["car_name"]; ?></h6>
-                                    <a href="/detail.php?id=<?php echo $item["newcar_id"]; ?>" class="btn btn custom-gray">View More</a>
+                                <h6 class="card-title" style="margin:10px;font-weight:700"><?php echo $item["car_name"]; ?></h6>
+                                <i class="bi bi-tags" style="color:gray; margin:6px;font-size:small;"></i><span style="color:gray; margin-right:16px;font-size:small;">Chery</span>
+                                <i class="bi bi-car-front" style="color:gray;margin:6px;font-size:small;"></i><span style="color:gray;font-size:small;">SUV</span>
+                                    <a style="width:100%; margin-top:10px;" href="/detail.php?id=<?php echo $item["newcar_id"]; ?>" class="btn btn custom-gray">View More</a>
                                 </div>
                             </div>
                         </div>
