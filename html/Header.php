@@ -1,25 +1,34 @@
 
 <style>
-        .logo {
-            max-width: 15%; /* Điều chỉnh kích thước tối đa theo % hoặc px */
-            height: auto; /* Đảm bảo hình ảnh giữ tỉ lệ */
-        }
-        .container-fluid{
-          width: 45%;
-          height: 65px;
-          margin: auto;
-        }
-        .navbar-nav .nav-item {
-        margin-right: 15px; /* Điều chỉnh khoảng cách giữa các mục */
-        }
-        .navbar-brand {
-            margin-right: 20px; /* Khoảng cách giữa logo và tiêu đề thương hiệu */
-        }
-        .nav-item.dropdown:hover .dropdown-menu {
-          display: block;
-          margin-top: 0; /* Giúp căn chỉnh dropdown */
-        }
+      .logo {
+          max-width: 100px; /* Điều chỉnh kích thước tối đa theo % hoặc px */
+          height: auto; /* Đảm bảo hình ảnh giữ tỉ lệ */
+      }
+      .container-fluid {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 15px; /* Điều chỉnh padding nếu cần thiết */
+        width: 55%;
+        margin:auto;
+      }
+      .navbar-nav {
+        display: flex;
+        align-items: center;
+      }
+      .navbar-nav .nav-item {
+        margin-right: 20px; /* Điều chỉnh khoảng cách giữa các mục */
+      }
+      .navbar-brand {
+        margin-left: 10px; /* Khoảng cách giữa logo và tiêu đề thương hiệu */
+        margin-right: 30px; /* Khoảng cách giữa tiêu đề thương hiệu và mục đầu tiên */
+      }
+      .nav-item.dropdown:hover .dropdown-menu {
+        display: block;
+        margin-top: 0; /* Giúp căn chỉnh dropdown */
+      }
 </style>
+<link href="css/index.css" rel="stylesheet">
 
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
@@ -32,6 +41,9 @@
       <ul class="navbar-nav">
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/about_us.php">About Us</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Brand</a>
