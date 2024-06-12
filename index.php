@@ -1,3 +1,12 @@
+
+<?php 
+
+// require_once("functions/product.php");
+// $producthot = newest_products();
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -139,7 +148,7 @@
                 <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/EC9OPdIHDsU?si=zkmym_w5rvfPAa5D" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
                 <iframe  src="https://www.youtube.com/embed/ln5h44icVZE?si=M41QVmp6jbpvc379" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
-            <div  data-aos="fade-up-left" class="trai">
+            <div data-aos="zoom-in-up" class="trai">
                 <div  class="phai">
                 <p id="tieude">Who we Are</p>
                 <p><h1><b>Automotive Sales<br> Company from China</b></h1></p>
