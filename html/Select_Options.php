@@ -9,19 +9,16 @@
 <style>
 .Search_Options{
     background-color: rgb(51, 51, 51);
-    width: 300px;
+    width: 280px;
     display: flex;
     justify-content: center;
-    border-radius: 10px;
+    border-radius: 5px;
     position: absolute;
-    left:-15%;
     top: 0;
    
 }
 .Search_Options>div>div{
-    margin: 10px 0;
- 
-    
+    margin: 10px 0;    
 }
 
 .Search_Options>div .Reset{
@@ -45,20 +42,22 @@
 
 .Search_Options b{
    color: aliceblue;
+   font-size: 20px;
 }
 
 
 .Search_Options #cac{
    background-color: rgb(44, 159, 28);
-   width: 200px;
-   height: 45px ;
+   width: 230px;
+   height: 40px ;
    border: none;
-   border-radius: 2px;
+   border-radius: 3px;
    color: white;
    display: flex;
    align-items: center;
    padding: 0 15px;
    justify-content: space-between;
+   font-size: small;
 }
 
 .Search_Options #cac #phai{
@@ -70,6 +69,7 @@
     transform: rotateZ(0);
    
 }
+
 .loccon {
     display: none;
     background-color: rgb(61, 61, 61);
@@ -164,7 +164,7 @@
        
             <p><h3><b>Search Options</b></h3></p>
             <div class="loc" >
-                <button onclick="toggleBrand(this)" id="cac"><span id="trai"><b>Brand</b></span><span id="phai"><i class="bi bi-caret-down-fill"></i></span></button>
+                <button onclick="toggleBrand(this)" id="cac"><span id="trai"><b style="font-size:15px;">Brand</b></span><span id="phai"><i class="bi bi-chevron-down"></i></span></button>
 
                 <div class="loccon"   id="thuonghieu">
                     <div class="Search_form">
@@ -241,7 +241,7 @@
                 </div>
             </div>
             <div class="loc" >
-                <button onclick="Vehicle()" id="cac"><span id="trai"><b>Vehicle Type</b></span><span id="phai"><i class="bi bi-caret-down-fill"></i></span></button>
+                <button onclick="Vehicle()" id="cac"><span id="trai"><b style="font-size:15px;">Vehicle Type</b></span><span id="phai"><i class="bi bi-chevron-down"></i></span></button>
 
                 <div class="loccon"   id="Vehicle_Type">
                     <div class="Search_form">
@@ -318,7 +318,7 @@
                 </div>
             </div>
             <div class="loc" >
-                <button onclick="Body()" id="cac"><span id="trai"><b>Body Style</b></span><span id="phai"><i class="bi bi-caret-down-fill"></i></span></button>
+                <button onclick="Body()" id="cac"><span id="trai"><b style="font-size:15px;">Body Style</b></span><span id="phai"><i class="bi bi-chevron-down"></i></span></button>
 
                 <div class="loccon"   id="Body_Style">
                     <div class="Search_form">
@@ -397,7 +397,7 @@
 
 
             <div class="reset">
-                <a class="Reset" href="/range_of_car.php" ><i class="bi bi-arrow-clockwise"></i>RESET ALL</a>
+                <a style="font-size:15px; color:#2c9f1c;" class="Reset" href="/range_of_car.php" ><i class="bi bi-arrow-clockwise"></i>RESET ALL</a>
             </div>
        </div>
     </div>

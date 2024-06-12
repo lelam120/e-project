@@ -80,8 +80,8 @@
                                     <img src="<?php echo $item["thumbnail"]; ?>" class="card-img-top" alt="<?php echo $item["car_name"]; ?>">
                                 </a>
                                 <div style="width: 100%;" class="card-body">
-                                <h6 class="card-title" style="margin:10px;font-weight:700"><?php echo $item["car_name"]; ?></h6>
-                                <i class="bi bi-tags" style="color:gray; margin:6px;font-size:small;"></i><span style="color:gray; margin-right:16px;font-size:small;">Chery</span>
+                                <h6 class="card-title" style="margin-bottom:5px;font-weight:700"><?php echo $item["car_name"]; ?></h6>
+                                <i class="bi bi-tags" style="color:gray; margin:6px;font-size:small;"></i><span style="color:gray; margin-right:10px;font-size:small;">Chery</span>
                                 <i class="bi bi-car-front" style="color:gray;margin:6px;font-size:small;"></i><span style="color:gray;font-size:small;">SUV</span>
                                     <a style="width:100%; margin-top:10px;" href="/detail.php?id=<?php echo $item["newcar_id"]; ?>" class="btn btn custom-gray">View More</a>
                                 </div>
