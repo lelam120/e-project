@@ -34,13 +34,30 @@
             margin-top: 10px;
             margin-bottom: 3px;
         }
-        .contact-info a{
-        
+        .contact-info>a{
+            margin-left: 20px;
             color: #ffffff;
             font-size: 20px;
             font-weight: 700;
             line-height: 2.1rem;
         }
+        .contact-info .buoi{
+            margin-left: 20px;
+         
+        }
+        .contact-info .buoi>a{
+           
+            color: #ffffff;
+            font-size: 20px;
+            font-weight: 700;
+            line-height: 2.1rem;
+         
+        }
+        .contact-info .buoi>a:hover{
+           
+            text-decoration: none;
+            color: #2c9f1c; 
+       }
         .contact-info a:hover{
             text-decoration: none;
             color: #2c9f1c; /* Đổi màu khi hover */
@@ -122,7 +139,7 @@
                         <p><i class="bi bi-telephone"></i> Tel</p>
                         <a href="#">+86-19037179250 </a>
                         <p><i class="bi bi-geo-alt"></i> Address</p>
-                        <a href="#">No. 1291, Hanghai East Road, Economic and Technical Development Zone, Zhengzhou, He'nan Province, China</a>
+                        <div class="buoi"><a href="#">No. 1291, Hanghai East Road, Economic and Technical Development Zone, Zhengzhou, He'nan Province, China</a></div>
                         <div class="container mt-5">
                             <div class="icon-container">
                                 <i class="bi bi-facebook"></i>
