@@ -17,15 +17,8 @@
     $types = array_unique($types);
     $styles = array_unique($styles);
 
-    // Số xe hiển thị mỗi trang
-    $items_per_page = 12;
 
-    // Xác định trang hiện tại
-    $current_page = isset($_GET['page']) ? (int)$_GET['page'] : 1;
 
-    // Tổng số trang
-    $total_items = count($old_car);
-    $total_pages = ceil($total_items / $items_per_page);
 
     // Lấy dữ liệu xe cho trang hiện tại
     $start_index = ($current_page - 1) * $items_per_page;
