@@ -3,45 +3,81 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    line-height: 1.6;
+    color: #333;
 }
 
-/* Header Styles */
 header {
     background: #333;
-    color: white;
-    padding: 20px 0;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
 }
 
 header h1 {
     margin: 0;
+    font-size: 2.5em;
 }
 
 header p {
-    margin: 0;
-    font-size: 1.2rem;
+    margin: 5px 0 0;
 }
 
-/* Section Styles */
+nav {
+    background: #444;
+    overflow: hidden;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #fff;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    background: #555;
+}
+
 section {
-    padding: 40px 0;
+    padding: 20px;
+    margin: 20px;
+    background: #f4f4f4;
+    border-radius: 8px;
 }
 
 section h2 {
-    margin-bottom: 20px;
+    color: #0066cc;
+    margin-top: 0;
 }
 
-/* Form Styles */
 form {
     margin-top: 20px;
 }
 
-form .form-label {
+form label {
+    display: block;
+    margin-bottom: 5px;
     font-weight: bold;
 }
 
-form .form-control {
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
     border-radius: 5px;
-    margin-bottom: 15px;
 }
 
 form button {
@@ -57,17 +93,19 @@ form button:hover {
     background: #005bb5;
 }
 
-/* Image Styles */
-img.img-fluid {
+img {
     max-width: 100%;
     height: auto;
-    display: block;
-    margin: 20px auto;
+    border-radius: 8px;
 }
 
-/* Footer Styles */
 footer {
     background: #333;
     color: white;
-    padding: 20px 0;
+    padding: 10px 0;
+    text-align: center;
+    margin-top: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
 }
