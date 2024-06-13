@@ -1,4 +1,4 @@
-<footer>
+<footer style="margin-top: 50px;">
         <div class="tren">
             <div>
                 <i class="bi bi-gem"></i>
@@ -95,7 +95,5 @@
             </div>
             <div class="duoi"></div>
         </div>
-
-
 
    </footer>

@@ -6,6 +6,7 @@
     <title>Document</title>
     <?php include_once("html/style.php"); ?>
     <link href="css/about_us.css" rel="stylesheet">
+
 </head>
     
   

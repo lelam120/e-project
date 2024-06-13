@@ -1,0 +1,283 @@
+main .mot {
+    margin: 100px 0;
+ 
+}
+
+
+
+main .mot .motchitiet{
+
+    max-width: 1400px;
+    display: flex;
+
+    margin: auto;
+}
+main .mot .motchitiet>div{
+
+   padding: 20px;
+}
+
+
+main .mot .motchitiet .phai .Tieude .car_name {
+
+     color: rgb(51, 51, 51);
+     font-size: 40px;
+     font-weight: bold;
+
+}
+main .mot .motchitiet .phai .Tieude .information {
+
+    color: rgb(51, 51, 51);
+
+
+}
+main .mot .motchitiet .phai table {
+  margin-top: 30px;
+}
+main .mot .motchitiet .phai .tenthuoctinh {
+    font-size: 20px;
+
+
+    color: rgb(102, 102, 102);
+    padding-right: 20px;
+    padding-bottom: 20px;
+
+}
+main .mot .motchitiet .phai .thuoctinh {
+    padding-right: 20px;
+    padding-bottom: 20px;
+    color:  rgb(51, 51, 51);
+    font-size: 20px;
+
+
+}
+
+main .mot .motchitiet .phai button{
+    background-color: rgb(35, 129, 29);
+    color: white;
+    width: 100%;
+    border: none;
+    height: 50px;
+    border-radius: 10px;
+    margin-top: 20px;
+    transition: 0.5s;
+    font-weight: bold;
+}
+main .mot .motchitiet .phai button:hover{
+    background-color: rgb(0, 0, 0);
+    color: white;
+    transition: 0.5s;
+
+}
+
+main .mot .motchitiet .phai .liicon{
+    margin-top: 20px;
+}
+main .mot .motchitiet .phai .liicon>i{
+    margin-right: 10px ;
+    color: rgb(153, 153, 153);
+    transition: 0.5s;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+main .mot .motchitiet .phai .liicon>i:hover{
+    margin-right: 10px ;
+    color: rgb(35, 129, 29);
+    transition: 0.5s;
+}
+
+main .hai {
+    display: grid;
+    grid-template-columns: 25% 75%;
+    max-width: 1400px;
+    margin: auto;
+  
+}
+
+main .hai .trai .thongtin>p {
+    padding-left: 16px;
+    color: rgb(153, 153, 153);
+    font-size: 19px;
+ 
+    border-left: 4px solid rgba(0, 128, 0, 0);
+}
+
+main .hai .trai .thongtin>p:hover {
+    border-left: 4px solid green;
+   
+    color: black;
+    font-weight: 500;
+}
+main .hai .trai .hoi {
+    
+    margin-top: 40px;
+    background-image: linear-gradient(0,rgba(85, 178, 73, 0.795),rgba(85, 178, 73, 0.781)) ,url(/img/bg-service.jpg) ;
+    background-size: cover;
+    width: 220px;
+    height: 270px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}   
+
+
+main .hai .trai .hoi {
+    
+    margin-top: 40px;
+    background-image: linear-gradient(0,rgba(36, 77, 30, 0.808),rgba(30, 68, 25, 0.753)) ,url(/img/bg-service.jpg) ;
+    background-size: cover;
+    width: 240px;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    border-radius: 10px;
+}   
+
+
+main .hai .trai .hoi>div #tieude {
+    color: white;
+    font-weight: bold;
+    font-size: 25px;
+
+   
+}   
+
+main .hai .trai .hoi>div #gioithiet {
+    color: white;
+ 
+
+  
+}   
+
+main .hai .trai .hoi>div button {
+    margin-top: 10px;
+   width: 100%;
+   background-color: aliceblue;
+   border: none;
+   height: 45px;
+   color: rgb(44, 159, 28);
+   border-radius: 10px;
+   font-weight: bolder;
+
+   transition: 0.2s;
+    font-size: 13px;
+   
+}  
+
+main .hai .trai .hoi>div button:hover {
+
+    background-color: rgb(0, 0, 0);
+
+    color: rgb(255, 255, 255);
+
+  
+    transition: 0.2s;
+    
+ }  
+
+
+ main .hai .phai .tieude {
+    font-size: 25px;
+    font-weight: bold;
+    color: rgb(51, 51, 51);
+   
+    
+ }
+
+ main .hai .phai .tieudenho {
+    font-size: 20px;
+    font-weight: bold;
+    
+   
+    
+ }
+ main .hai .phai li::marker {
+   
+    color: rgb(44, 159, 28);
+    font-size: 1.6rem;
+ }
+ main .hai .phai ul {
+    margin: 40px 0;
+   margin-bottom: 140px;
+    
+ }
+
+ main .hai .phai li {
+   font-size: 19px;
+    margin: 15px 0;
+    color: rgb(51, 51, 51);
+ }
+
+ main .hai .phai .FAQ>div{
+
+    background-color: rgb(248, 248, 248);
+ 
+    padding: 50px;
+  
+}
+
+main .hai .phai .FAQ>div  .traloihoi{
+    border-bottom: 0.1px solid rgba(172, 172, 172, 0.226);
+   margin-top: 30px;
+}
+main .hai .phai .FAQ>div  .traloihoi  .hoi{
+    display: flex;
+   align-items: center;
+   
+   
+}
+
+main .hai .phai .FAQ>div  .traloihoi  .hoi #hoi{
+    
+background-color: rgb(44, 159, 28);
+width: 40px;
+height: 40px;
+display: flex;
+justify-content: center;
+align-items: center;
+color: white;
+font-size: 19px;
+font-weight: bold;
+border-radius: 5px;
+margin-right: 20px;
+}
+
+main .hai .phai .FAQ>div  .traloihoi  .traloi {
+    margin-top: 20px;
+    margin-bottom: 40px;
+    
+}
+    
+   
+    
+
+main .hai .phai .FAQ>div  .traloihoi  .traloi #traloi{
+    
+    background-color: rgb(44, 159, 28);
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    border-radius: 5px;
+    color: white;
+  
+    font-size: 19px;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-right: 20px;
+
+ }
+    
+ main .hai .phai .FAQ>div  .traloihoi  .traloi #cac{
+    
+    color: rgb(130, 130, 115);
+    font-size: 17px;
+
+   
+
+ }
+    
+    
