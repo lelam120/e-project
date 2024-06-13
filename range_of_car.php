@@ -41,11 +41,6 @@
     <link href="css/styles.css" rel="stylesheet">
 </head>
 <style>
-        body {
-            background-color: #f0f0f0; /* Màu nền của body */
-            margin: 0;
-            padding: 0;
-        }
         .boxbox{
             background-color: white; /* Màu nền của boxbox */
             width: 70%; /* Độ rộng của boxbox */
@@ -58,6 +53,8 @@
         .contact-info {
             background-color: #242424;
             padding: 40px;
+            background: url(img/car-shape2.png) no-repeat 50% 96% #222;
+            background-size: 470px 100px;
         }
         .contact-info h2 {
             color: #6b6a69;
@@ -75,6 +72,23 @@
             font-weight: 700;
             line-height: 2.1rem;
         }
+        .contact-info .canle{
+            margin-left: 20px;
+         
+        }
+        .contact-info .canle>a{
+           
+            color: #ffffff;
+            font-size: 20px;
+            font-weight: 700;
+            line-height: 2.1rem;
+         
+        }
+        .contact-info .canle>a:hover{
+           
+            text-decoration: none;
+            color: #2c9f1c; 
+       }
         .contact-info a:hover{
             text-decoration: none;
             color: #2c9f1c; /* Đổi màu khi hover */
@@ -125,6 +139,7 @@
             font-size: 27px; /* Kích thước icon */
             color:#2c9f1c;
         }
+        
 </style>
 <body>
     <header>
@@ -151,7 +166,6 @@
             <!-- Search Form -->
             <div class="col-md-3">
             <?php include_once("html/Select_Options.php"); ?>
-
             </div>
             <div class="col-md-9">
                 <div class="row" id="carListings">
@@ -181,7 +195,7 @@
                         <?php if ($current_page > 1): ?>
                             <li class="page-item">
                                 <a class="page-link" href="?page=<?php echo $current_page - 1; ?>" aria-label="Previous">
-                                    <span aria-hidden="true">&laquo;</span>
+                                    <span style="color: #333;" aria-hidden="true">&laquo;</span>
                                 </a>
                             </li>
                         <?php endif; ?>
@@ -193,7 +207,7 @@
                         <?php if ($current_page < $total_pages): ?>
                             <li class="page-item">
                                 <a class="page-link" href="?page=<?php echo $current_page + 1; ?>" aria-label="Next">
-                                    <span aria-hidden="true">&raquo;</span>
+                                    <span style="color: #333;" aria-hidden="true">&raquo;</span>
                                 </a>
                             </li>
                         <?php endif; ?>
@@ -218,12 +232,12 @@
                         <p><i class="bi bi-geo-alt"></i> Address</p>
                         <a href="#">No. 1291, Hanghai East Road, Economic and Technical Development Zone, Zhengzhou, He'nan Province, China</a>
                         <div class="container mt-5">
-                            <div class="icon-container">
-                                <i class="bi bi-facebook"></i>
-                                <i class="bi bi-linkedin"></i>
-                                <i class="bi bi-instagram"></i>
-                                <i class="bi bi-twitter"></i>
-                                <i class="bi bi-youtube"></i>
+                        <div class="icon-container">
+                                <a href="https://www.facebook.com/Opel/?locale=vi_VN"><i class="bi bi-facebook"></i></a>
+                                <a href="https://www.linkedin.com/company/opelautomobile"><i class="bi bi-linkedin"></i></a>
+                                <a href="https://www.instagram.com/opel/"><i class="bi bi-instagram"></i></a>
+                                <a href="https://x.com/Opel?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"><i class="bi bi-twitter"></i></a>
+                                <a href="https://www.youtube.com/channel/UCSr5PuKiJ5Zi00zfsiT-7jA"><i class="bi bi-youtube"></i></a> 
                             </div>
                         </div>
                     </div>

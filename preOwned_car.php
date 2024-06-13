@@ -51,6 +51,8 @@
         .contact-info {
             background-color: #242424;
             padding: 40px;
+            background: url(img/car-shape2.png) no-repeat 50% 96% #222;
+            background-size: 470px 100px;
         }
         .contact-info h2 {
             color: #6b6a69;
@@ -68,6 +70,23 @@
             font-weight: 700;
             line-height: 2.1rem;
         }
+        .contact-info .canle{
+            margin-left: 20px;
+         
+        }
+        .contact-info .canle>a{
+           
+            color: #ffffff;
+            font-size: 20px;
+            font-weight: 700;
+            line-height: 2.1rem;
+         
+        }
+        .contact-info .canle>a:hover{
+           
+            text-decoration: none;
+            color: #2c9f1c; 
+       }
         .contact-info a:hover{
             text-decoration: none;
             color: #2c9f1c; /* Đổi màu khi hover */
@@ -184,14 +203,14 @@
                         <p><i class="bi bi-telephone"></i> Tel</p>
                         <a href="#">+86-19037179250 </a>
                         <p><i class="bi bi-geo-alt"></i> Address</p>
-                        <a href="#">No. 1291, Hanghai East Road, Economic and Technical Development Zone, Zhengzhou, He'nan Province, China</a>
+                        <div class="canle"><a href="#">No. 1291, Hanghai East Road, Economic and Technical Development Zone, Zhengzhou, He'nan Province, China</a></div>
                         <div class="container mt-5">
-                            <div class="icon-container">
-                                <i class="bi bi-facebook"></i>
-                                <i class="bi bi-linkedin"></i>
-                                <i class="bi bi-instagram"></i>
-                                <i class="bi bi-twitter"></i>
-                                <i class="bi bi-youtube"></i>
+                        <div class="icon-container">
+                                <a href="https://www.facebook.com/Opel/?locale=vi_VN"><i class="bi bi-facebook"></i></a>
+                                <a href="https://www.linkedin.com/company/opelautomobile"><i class="bi bi-linkedin"></i></a>
+                                <a href="https://www.instagram.com/opel/"><i class="bi bi-instagram"></i></a>
+                                <a href="https://x.com/Opel?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"><i class="bi bi-twitter"></i></a>
+                                <a href="https://www.youtube.com/channel/UCSr5PuKiJ5Zi00zfsiT-7jA"><i class="bi bi-youtube"></i></a> 
                             </div>
                         </div>
                     </div>

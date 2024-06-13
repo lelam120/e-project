@@ -78,6 +78,7 @@
    padding-bottom: 10px;
    background-color: rgb(61, 61, 61);
    justify-content: center;
+
 }
 .loccon input{
     border: none;
@@ -93,6 +94,7 @@
     overflow-y: scroll;
 }
 
+
 ::-webkit-scrollbar{
     width: 10px;
 }
@@ -104,54 +106,44 @@
 .hangxe_kien>div{
     background-color: rgb(61, 61, 61);
     display: flex;
-    justify-content: center;
+    justify-content: left;
     align-items: center;
-    padding: 10px 0;
 
 }
 .hangxe_kien>div img{
-
-    width: 70px;
+    width: 60px;
+    margin-left:0;
 }
 .hangxe_kien>div form{
     display: flex;
     justify-content: center;
     align-items: center;
-  
-   
-    
+      
 }
 
 .hangxe_kien>div form>button{
     background-color: rgb(61, 61, 61);
-    border: 2px solid green;
+    border: 1px solid #2c9f1c;
     border-radius: 5px;
     width: 16px;
     height: 16px;
-    margin-left: 10px;
-  
-   
-    
+    margin-left: 20px; 
 }
 
 .hangxe_kien>div form>button:hover{
-    content: "cac";
-    background-color: rgb(28, 236, 0);
-    border: 1px solid rgb(255, 255, 255);
-   
+    /* content: "cac"; */
+    /* background-color: rgb(28, 236, 0); */
+    /* border: 1px solid rgb(255, 255, 255); */
     
 }
 .hangxe_kien>div label{
- 
+    padding-top: 10px;
     color: white;
 }
 
 .locconhien{
     display: inline;
 }
-
-
-
 
 </style>
 
@@ -172,229 +164,47 @@
                         
                     
                     </div>
-                    <div class="hangxe_kien">
-                        
+                    <div class="hangxe_kien"> 
                         <div >
-                            <img src="/img/A4E497.png"/>
                             <form action="/Selct.html" method="GET">
                                 <input  type="text" id="loc" name="loc" style="display: none;" value="1">
-                                <label for="loc">Checkbox</label><br>
                                 <button id="checkbox2" type="submit" class="submit-button"></button>
                             </form>
-                        </div>
-                        <div >
                             <img src="/img/A4E497.png"/>
-                            <form action="/Selct.html" method="GET">
-                                <input  type="text" id="loc" name="loc" style="display: none;" value="1">
-                                <label for="loc">Checkbox</label><br>
-                                <button id="checkbox2" type="submit" class="submit-button"></button>
-                            </form>
-                        </div>
-                        <div >
-                            <img src="/img/A4E497.png"/>
-                            <form action="/Selct.html" method="GET">
-                                <input  type="text" id="loc" name="loc" style="display: none;" value="1">
-                                <label for="loc">Checkbox</label><br>
-                                <button id="checkbox2" type="submit" class="submit-button"></button>
-                            </form>
-                        </div>
-                        <div >
-                            <img src="/img/A4E497.png"/>
-                            <form action="/Selct.html" method="GET">
-                                <input  type="text" id="loc" name="loc" style="display: none;" value="1">
-                                <label for="loc">Checkbox</label><br>
-                                <button id="checkbox2" type="submit" class="submit-button"></button>
-                            </form>
-                        </div>
-                        <div >
-                            <img src="/img/A4E497.png"/>
-                            <form action="/Selct.html" method="GET">
-                                <input  type="text" id="loc" name="loc" style="display: none;" value="1">
-                                <label for="loc">Checkbox</label><br>
-                                <button id="checkbox2" type="submit" class="submit-button"></button>
-                            </form>
-                        </div>
-                        <div >
-                            <img src="/img/A4E497.png"/>
-                            <form action="/Selct.html" method="GET">
-                                <input  type="text" id="loc" name="loc" style="display: none;" value="1">
-                                <label for="loc">Checkbox</label><br>
-                                <button id="checkbox2" type="submit" class="submit-button"></button>
-                            </form>
-                        </div>
-                        <div >
-                            <img src="/img/A4E497.png"/>
-                            <form action="/Selct.html" method="GET">
-                                <input  type="text" id="loc" name="loc" style="display: none;" value="1">
-                                <label for="loc">Checkbox</label><br>
-                                <button id="checkbox2" type="submit" class="submit-button"></button>
-                            </form>
-                        </div>
-
-                 
+                            <label for="loc">Checkbox</label><br>
+                        </div>        
                     </div>
-                   
-               
-                    
-
                 </div>
             </div>
             <div class="loc" >
                 <button onclick="Vehicle()" id="cac"><span id="trai"><b style="font-size:15px;">Vehicle Type</b></span><span id="phai"><i class="bi bi-chevron-down"></i></span></button>
 
                 <div class="loccon"   id="Vehicle_Type">
-                    <div class="Search_form">
-                    
-                        <input type="Text" placeholder="Search" aria-label="Search">
-                        
-                    
+                    <div class="hangxe_kien">             
+                        <div>     
+                            <form action="/Selct.html" method="GET">
+                                <input  type="text" id="loc" name="loc" style="display: none;" value="1">
+                                <button style="margin-right: 6px;" id="checkbox2" type="submit" class="submit-button"></button>
+                                <label for="loc">Checkbox</label><br>
+                            </form>
+                        </div>      
                     </div>
-                    <div class="hangxe_kien">
-                        
-                        <div>
-                     
-                            <form action="/Selct.html" method="GET">
-                                <input  type="text" id="loc" name="loc" style="display: none;" value="1">
-                                <label for="loc">Checkbox</label><br>
-                                <button id="checkbox2" type="submit" class="submit-button"></button>
-                            </form>
-                        </div>
-                        <div >
-                       
-                            <form action="/Selct.html" method="GET">
-                                <input  type="text" id="loc" name="loc" style="display: none;" value="1">
-                                <label for="loc">Checkbox</label><br>
-                                <button id="checkbox2" type="submit" class="submit-button"></button>
-                            </form>
-                        </div>
-                        <div >
-                       
-                            <form action="/Selct.html" method="GET">
-                                <input  type="text" id="loc" name="loc" style="display: none;" value="1">
-                                <label for="loc">Checkbox</label><br>
-                                <button id="checkbox2" type="submit" class="submit-button"></button>
-                            </form>
-                        </div>
-                        <div >
-                  
-                            <form action="/Selct.html" method="GET">
-                                <input  type="text" id="loc" name="loc" style="display: none;" value="1">
-                                <label for="loc">Checkbox</label><br>
-                                <button id="checkbox2" type="submit" class="submit-button"></button>
-                            </form>
-                        </div>
-                        <div >
-                         
-                            <form action="/Selct.html" method="GET">
-                                <input  type="text" id="loc" name="loc" style="display: none;" value="1">
-                                <label for="loc">Checkbox</label><br>
-                                <button id="checkbox2" type="submit" class="submit-button"></button>
-                            </form>
-                        </div>
-                        <div >
-                      
-                            <form action="/Selct.html" method="GET">
-                                <input  type="text" id="loc" name="loc" style="display: none;" value="1">
-                                <label for="loc">Checkbox</label><br>
-                                <button id="checkbox2" type="submit" class="submit-button"></button>
-                            </form>
-                        </div>
-                        <div >
-                       
-                            <form action="/Selct.html" method="GET">
-                                <input  type="text" id="loc" name="loc" style="display: none;" value="1">
-                                <label for="loc">Checkbox</label><br>
-                                <button id="checkbox2" type="submit" class="submit-button"></button>
-                            </form>
-                        </div>
-
-                 
-                    </div>
-                   
-               
-                    
-
                 </div>
             </div>
             <div class="loc" >
                 <button onclick="Body()" id="cac"><span id="trai"><b style="font-size:15px;">Body Style</b></span><span id="phai"><i class="bi bi-chevron-down"></i></span></button>
-
                 <div class="loccon"   id="Body_Style">
-                    <div class="Search_form">
-                    
-                        <input type="Text" placeholder="Search" aria-label="Search">
-                        
-                    
-                    </div>
                     <div class="hangxe_kien">
-                        
-                        <div >
-                        
+                        <div >            
                             <form action="/Selct.html" method="GET">
+                                <button style="margin-right: 6px;" id="checkbox2" type="submit" class="submit-button"></button>
                                 <input  type="text" id="loc" name="loc" style="display: none;" value="1">
                                 <label for="loc">Checkbox</label><br>
-                                <button id="checkbox2" type="submit" class="submit-button"></button>
                             </form>
                         </div>
-                        <div >
-                          
-                            <form action="/Selct.html" method="GET">
-                                <input  type="text" id="loc" name="loc" style="display: none;" value="1">
-                                <label for="loc">Checkbox</label><br>
-                                <button id="checkbox2" type="submit" class="submit-button"></button>
-                            </form>
-                        </div>
-                        <div >
-                          
-                            <form action="/Selct.html" method="GET">
-                                <input  type="text" id="loc" name="loc" style="display: none;" value="1">
-                                <label for="loc">Checkbox</label><br>
-                                <button id="checkbox2" type="submit" class="submit-button"></button>
-                            </form>
-                        </div>
-                        <div >
-                          
-                            <form action="/Selct.html" method="GET">
-                                <input  type="text" id="loc" name="loc" style="display: none;" value="1">
-                                <label for="loc">Checkbox</label><br>
-                                <button id="checkbox2" type="submit" class="submit-button"></button>
-                            </form>
-                        </div>
-                        <div >
-                            
-                            <form action="/Selct.html" method="GET">
-                                <input  type="text" id="loc" name="loc" style="display: none;" value="1">
-                                <label for="loc">Checkbox</label><br>
-                                <button id="checkbox2" type="submit" class="submit-button"></button>
-                            </form>
-                        </div>
-                        <div >
-               
-                            <form action="/Selct.html" method="GET">
-                                <input  type="text" id="loc" name="loc" style="display: none;" value="1">
-                                <label for="loc">Checkbox</label><br>
-                                <button id="checkbox2" type="submit" class="submit-button"></button>
-                            </form>
-                        </div>
-                        <div >
-                     
-                            <form action="/Selct.html" method="GET">
-                                <input  type="text" id="loc" name="loc" style="display: none;" value="1">
-                                <label for="loc">Checkbox</label><br>
-                                <button id="checkbox2" type="submit" class="submit-button"></button>
-                            </form>
-                        </div>
-
-                 
                     </div>
-                   
-               
-                    
-
                 </div>
             </div>
-
-
             <div class="reset">
                 <a style="font-size:15px;color:#2c9f1c;font-size:small;" class="Reset" href="/range_of_car.php" ><i style=" color:#2c9f1c;margin:2px;" class="bi bi-arrow-counterclockwise"></i>RESET ALL</a>
             </div>
