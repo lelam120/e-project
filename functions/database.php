@@ -1,14 +1,18 @@
 <?php 
 function connect(){
-    $host = "127.0.0.1";
-    $user = "root";
-    $pwd = "root";
-    $db = "carvan";
-    $conn = new mysqli($host,$user,$pwd,$db);
+    $host = 'localhost';
+    $user = 'root';
+    $pwd = '';
+    $db = 'carvan';
+
+
+    $conn = new mysqli($host, $user, $pwd, $db);
+
     if($conn->connect_error)
         die("Connect refused!");
     return $conn;
 }
+connect();
 
 function query($sql){
     $conn = connect();
