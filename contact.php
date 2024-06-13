@@ -35,7 +35,7 @@
             margin-bottom: 3px;
         }
         .contact-info a{
-            padding-left: 35px;
+        
             color: #ffffff;
             font-size: 20px;
             font-weight: 700;
@@ -92,6 +92,7 @@
             color:#2c9f1c;
         }
 
+      
     </style>
 </head>
 <body>
