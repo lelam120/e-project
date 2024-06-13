@@ -33,7 +33,92 @@
     <?php include_once("html/style.php"); ?>
     <link href="css/styles.css" rel="stylesheet">
 </head>
-
+<style>
+        body {
+            background-color: #f0f0f0; /* Màu nền của body */
+            margin: 0;
+            padding: 0;
+        }
+        .boxbox{
+            background-color: white; /* Màu nền của boxbox */
+            width: 70%; /* Độ rộng của boxbox */
+            margin:auto;
+            padding: 50px;
+            border: 2px solid #fff; /* Viền của boxbox */
+            box-shadow: 0 0 20px rgba(0,0,0,0.2); /* Đổ bóng */
+            border-bottom: 2px solid #2c9f1c; /* Đường viền màu xanh dưới */
+        }
+        .contact-info {
+            background-color: #242424;
+            padding: 40px;
+        }
+        .contact-info h2 {
+            color: #6b6a69;
+            padding-bottom: 20px;
+        }
+        .contact-info p{
+            color: #696b6b;
+            margin-top: 10px;
+            margin-bottom: 3px;
+        }
+        .contact-info a{
+            padding-left: 35px;
+            color: #ffffff;
+            font-size: 20px;
+            font-weight: 700;
+            line-height: 2.1rem;
+        }
+        .contact-info a:hover{
+            text-decoration: none;
+            color: #2c9f1c; /* Đổi màu khi hover */
+        }
+        .contact-info i {
+            color: #21b83a;
+            margin-right: 10px;
+        }
+        .contact-form {
+            padding: 20px;
+            border-radius: 5px;
+            background-color: #fff;
+        }
+        .contact-form h1 {
+            color: #0e0e0e;
+            font-size: 45px;
+            font-weight: 800;
+        }
+        .contact-form p{
+            color:gray;
+        }
+        .contact-form .form-group {
+            margin-bottom: 20px;
+        }
+        .contact-form .form-group i {
+            color: #28a745;
+            margin-right: 10px;
+        }
+        .form-column {
+            display: flex;
+            justify-content: space-between;
+        }
+        .form-column .form-group {
+            width: 48%; /* Adjust width as needed */
+        }
+        .form-group.full-width {
+            width: 100%;
+        }
+        .form-group textarea {
+            height: 150px; /* Adjust height as needed */
+        }
+        .icon-container {
+            display: flex;
+            justify-content: center; /* Căn giữa các icon */
+            gap: 20px; /* Khoảng cách giữa các icon */
+        }
+        .icon-container i {
+            font-size: 27px; /* Kích thước icon */
+            color:#2c9f1c;
+        }
+</style>
 <body>
     <header>
         <?php include_once("html/Header.php"); ?>
@@ -85,6 +170,67 @@
             </div>
         </div>
     </div>
+    </section>
+    <section class="boxbox">
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-md-5">
+                    <div class="contact-info">
+                        <h2><i class="fas fa-info-circle"></i> Contact Info</h2>
+                        <p><i class="bi bi-chat-dots"></i> Phone / Whatsapp / Wechat</p>
+                        <a href="#">+8619037179250 </a>
+                        <p><i class="bi bi-envelope"></i> Send Email</p>
+                        <a href="#">info@borderlesscar.com</a>
+                        <p><i class="bi bi-telephone"></i> Tel</p>
+                        <a href="#">+86-19037179250 </a>
+                        <p><i class="bi bi-geo-alt"></i> Address</p>
+                        <a href="#">No. 1291, Hanghai East Road, Economic and Technical Development Zone, Zhengzhou, He'nan Province, China</a>
+                        <div class="container mt-5">
+                            <div class="icon-container">
+                                <i class="bi bi-facebook"></i>
+                                <i class="bi bi-linkedin"></i>
+                                <i class="bi bi-instagram"></i>
+                                <i class="bi bi-twitter"></i>
+                                <i class="bi bi-youtube"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-7">
+                    <div class="contact-form">
+                        <h1>Get In Touch</h1>
+                        <p>Complete control over products allows us to ensure our customers receive the best quality prices and service.</p>
+                        <form>
+                            <div class="form-column">
+                                <div class="form-group">
+                                    <label for="name"><i class="bi bi-person-fill"></i> Name *</label>
+                                    <input type="text" class="form-control" id="name" placeholder="Nhập họ và tên">
+                                </div>
+                                <div class="form-group">
+                                    <label for="email"><i class="bi bi-envelope-fill"></i> Email *</label>
+                                    <input type="email" class="form-control" id="email" placeholder="Nhập email">
+                                </div>
+                            </div>
+                            <div class="form-column">
+                                <div class="form-group">
+                                    <label for="country"><i class="bi bi-geo-alt-fill"></i> Country / Region *</label>
+                                    <input type="text" class="form-control" id="country" placeholder="Nhập quốc gia hoặc vùng miền">
+                                </div>
+                                <div class="form-group">
+                                    <label for="mobile"><i class="bi bi-telephone"></i> Mobile *</label>
+                                    <input type="text" class="form-control" id="mobile" placeholder="Nhập số điện thoại di động">
+                                </div>
+                            </div>
+                            <div class="form-group full-width">
+                                <label for="message"><i class="bi bi-chat-dots-fill"></i> Message *</label>
+                                <textarea class="form-control" id="message" rows="4" placeholder="Nhập tin nhắn của bạn"></textarea>
+                            </div>
+                            <button style="background-color: #2c9f1c;color:white;width:100%;height:50px " type="submit" class="btn btn">Submit<i style="padding-left: 10px;" class="bi bi-send-fill"></i></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
     <?php include_once("html/Footers.php"); ?>
 </body>

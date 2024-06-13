@@ -16,6 +16,10 @@
             left: 50%;
             transform: translate(-50%, -50%);
             z-index: 10; /* Ensure it's above the background image */
+            padding: 50px;
+            border: 2px solid #fff; /* Viền của boxbox */
+            box-shadow: 0 0 20px rgba(0,0,0,0.2); /* Đổ bóng */
+            border-bottom: 2px solid #2c9f1c; /* Đường viền màu xanh dưới */
         }
         .contact-info {
             background-color: #242424;
@@ -165,9 +169,8 @@
             </div>
         </div>
     </section>
-    <div style="height:400px;"></div>
+    <div style="height:500px;"></div>
     <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d38969.49755005075!2d113.7493648069477!3d34.71984131374476!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x35d75d5169ef9047%3A0x516c0e10e656ba80!2sZhengshang%20Jingkai%20Plaza!5e0!3m2!1sen!2s!4v1689929938304!5m2!1sen!2s" width="100%" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    
     <?php include_once("html/Footers.php"); ?>
 </body>
 </html>
