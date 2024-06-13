@@ -1,10 +1,3 @@
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 /* Global Styles */
 body {
     font-family: Arial, sans-serif;
@@ -16,45 +9,25 @@ body {
 header {
     background: #333;
     color: white;
-    padding: 10px 0;
-    text-align: center;
+    padding: 20px 0;
 }
 
-/* Navigation Styles */
-nav ul {
-    list-style-type: none;
+header h1 {
     margin: 0;
-    padding: 0;
-    background: #444;
-    text-align: center;
 }
 
-nav ul li {
-    display: inline;
-    margin: 0 10px;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-}
-
-nav ul li a:hover {
-    text-decoration: underline;
+header p {
+    margin: 0;
+    font-size: 1.2rem;
 }
 
 /* Section Styles */
 section {
-    padding: 20px;
-    margin: 20px;
-    background-color: #fff;
-    border: 1px solid #ddd;
+    padding: 40px 0;
 }
 
-/* Section Heading Styles */
-#contact-us h1, #brand-story h1, #professionalism h1 {
-    color: #0066cc;
-    margin-bottom: 15px;
+section h2 {
+    margin-bottom: 20px;
 }
 
 /* Form Styles */
@@ -62,17 +35,13 @@ form {
     margin-top: 20px;
 }
 
-form label {
-    display: block;
-    margin-bottom: 5px;
+form .form-label {
+    font-weight: bold;
 }
 
-form input, form textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
+form .form-control {
     border-radius: 5px;
+    margin-bottom: 15px;
 }
 
 form button {
@@ -89,20 +58,16 @@ form button:hover {
 }
 
 /* Image Styles */
-img {
+img.img-fluid {
     max-width: 100%;
     height: auto;
     display: block;
-    margin: 10px auto;
+    margin: 20px auto;
 }
 
 /* Footer Styles */
 footer {
     background: #333;
     color: white;
-    padding: 10px 0;
-    text-align: center;
-    position: absolute;
-    width: 100%;
-    bottom: 0;
+    padding: 20px 0;
 }
