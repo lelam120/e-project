@@ -63,10 +63,10 @@
             margin-top: 10px;
             margin-bottom: 3px;
         }
-        .contact-info a{
-            padding-left: 35px;
+        .contact-info>a{
+            margin-left: 20px;
             color: #ffffff;
-            font-size: 20px;
+            font-size: 18px;
             font-weight: 700;
             line-height: 2.1rem;
         }

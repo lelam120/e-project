@@ -65,10 +65,10 @@
             margin-top: 10px;
             margin-bottom: 3px;
         }
-        .contact-info a{
-            padding-left: 35px;
+        .contact-info>a{
+            margin-left: 20px;
             color: #ffffff;
-            font-size: 20px;
+            font-size: 18px;
             font-weight: 700;
             line-height: 2.1rem;
         }
@@ -230,7 +230,7 @@
                         <p><i class="bi bi-telephone"></i> Tel</p>
                         <a href="#">+86-19037179250 </a>
                         <p><i class="bi bi-geo-alt"></i> Address</p>
-                        <a href="#">No. 1291, Hanghai East Road, Economic and Technical Development Zone, Zhengzhou, He'nan Province, China</a>
+                        <div class="canle"><a href="#">No. 1291, Hanghai East Road, Economic and Technical Development Zone, Zhengzhou, He'nan Province, China</a></div>
                         <div class="container mt-5">
                         <div class="icon-container">
                                 <a href="https://www.facebook.com/Opel/?locale=vi_VN"><i class="bi bi-facebook"></i></a>
