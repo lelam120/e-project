@@ -1,8 +1,8 @@
 
 <?php 
 
-// require_once("functions/product.php");
-// $producthot = newest_products();
+require_once("functions/product.php");
+$producthot = newest_products();
 
 ?>
 
@@ -95,7 +95,7 @@
                                         <i class="bi bi-tags" style="color:gray; margin-right:16px;">Chery</i>
                                         <i class="bi bi-car-front" style="color:gray">SUV</i>
                                         <h6 class="card-title" style="margin:10px"><?php echo $item["car_name"]; ?></h6>
-                                        <a href="/detail.php?id=<?php echo $item["newcar_id"]; ?>" class="btn btn custom-gray">View More</a>
+                                        <a href="/product_id.php?id=<?php echo $item["newcar_id"]; ?>" class="btn btn custom-gray">View More</a>
                                     </div>
                                 </div>
                             </div>

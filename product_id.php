@@ -1,3 +1,18 @@
+<?php
+   require_once("functions/product.php");
+   $product_id  = isset($_GET['id']) ? intval($_GET['id']) : 0;
+
+   $car = product_detail($product_id);
+  
+    if ($car ==null){
+        header('Location:/404.php');
+    }
+
+
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -29,8 +44,8 @@
             </div>
             <div class="phai">
                 <div class="Tieude" >
-                    <p class="car_name ">BYD Song L</p>
-                    <p class="information "> Roewe i5 được trang bị động cơ 1.5T với công suất tối đa 95kW, mô-men xoắn cực đại 158N·m, tốc độ tối đa 185km/h và mức tiêu thụ nhiên liệu toàn diện WLTC là 5,98L/100km. Nó được định vị là một chiếc xe nhỏ gọn. </p>
+                    <p class="car_name "><?php echo $car['car_name'] ?></p>
+                    <p class="information "> <?php echo $car['information'] ?></p>
                 </div>
                 <div class="carthuoctinh" >
                     <table >

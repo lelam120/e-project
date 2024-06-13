@@ -2,7 +2,7 @@
 function connect(){
     $host = 'localhost';
     $user = 'root';
-    $pwd = 'root';
+    $pwd = '';
     $db = 'carvan';
 
 
