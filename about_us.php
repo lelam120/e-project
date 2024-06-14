@@ -15,47 +15,10 @@
 
     <nav>
         <ul>
-            <li><a href="#contact-us">Contact Us</a></li>
             <li><a href="#brand-story">Brand Story</a></li>
             <li><a href="#professionalism">Professionalism</a></li>
         </ul>
     </nav>
-
-    <!-- Contact Us Section -->
-    <section id="contact-us">
-        <h1>Contact Us</h1>
-        <p>
-            <strong>Phone / Whatsapp / Wechat:</strong> +8619037179250<br>
-            <strong>Send Email:</strong> info@borderlesscar.com<br>
-            <strong>Tel:</strong> +86-19037179250<br>
-            <strong>Address:</strong> No. 1291, Hanghai East Road, Economic and Technical Development Zone, Zhengzhou, He'nan Province, China
-        </p>
-
-        <h2>Get In Touch</h2>
-        <p>Complete control over products allows us to ensure our customers receive the best quality prices and service.</p>
-
-        <form method="POST" action="">
-            <label for="name">Name:</label><br>
-            <input type="text" id="name" name="name" required><br><br>
-            <label for="country_region">Country/Region:</label><br>
-            <input type="text" id="country_region" name="country_region" required><br><br>
-            <label for="email">Email:</label><br>
-            <input type="email" id="email" name="email" required><br><br>
-            <label for="mobile">Mobile or Whatsapp/Skype:</label><br>
-            <input type="text" id="mobile" name="mobile" required><br><br>
-            <label for="message">Message:</label><br>
-            <textarea id="message" name="message" required></textarea><br><br>
-            <button type="submit">Submit</button>
-        </form>
-
-        <h2>You May Also Want to See</h2>
-        <ul>
-            <li><a href="all_vehicles.php">All Vehicles</a></li>
-            <li><a href="used_car.php">Used Car</a></li>
-            <li><a href="trucks.php">Trucks</a></li>
-            <li><a href="about_us.php">About Us</a></li>
-        </ul>
-    </section>
 
     <!-- Brand Story Section -->
     <section id="brand-story">
