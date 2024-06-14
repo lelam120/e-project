@@ -1,88 +1,53 @@
-/* Đặt lại các thuộc tính mặc định cho tất cả các phần tử */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Định dạng cho phần body */
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    color: #333;
-    background-color: #f4f4f4;
-    padding: 20px;
+    margin: 0;
+    padding: 0;
 }
 
-/* Định dạng cho phần header */
-header {
-    background: #333;
+header, footer {
+    background-color: #333;
     color: #fff;
-    padding: 10px 0;
+    padding: 1em 0;
     text-align: center;
 }
 
-/* Định dạng cho phần điều hướng */
 nav ul {
     list-style: none;
-    display: flex;
-    justify-content: center;
-    background: #444;
-    padding: 10px;
-    margin-bottom: 20px;
+    padding: 0;
 }
 
 nav ul li {
+    display: inline;
     margin: 0 10px;
 }
 
 nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    padding: 5px 10px;
-}
-
-nav ul li a:hover {
-    background: #555;
-    border-radius: 5px;
-}
-
-/* Định dạng cho các section */
-section {
-    background: #fff;
-    margin: 20px 0;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
-
-/* Định dạng cho các tiêu đề trong section */
-section h1, section h2 {
-    margin-bottom: 10px;
     color: #333;
+    text-decoration: none;
 }
 
-/* Định dạng cho phần văn bản trong section */
-section p {
-    margin-bottom: 10px;
-    line-height: 1.6;
+section {
+    padding: 20px;
 }
 
-/* Định dạng cho các hình ảnh trong section */
-section img {
-    display: block;
+h1 {
+    font-size: 2em;
+    margin-bottom: 0.5em;
+}
+
+h2 {
+    font-size: 1.5em;
+    margin-bottom: 0.5em;
+}
+
+.responsive-image {
     max-width: 100%;
     height: auto;
-    margin: 10px 0;
+    display: block;
+    margin: 0 auto;
 }
 
-/* Định dạng cho phần footer */
-footer {
-    background: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
+p {
+    margin-bottom: 1em;
 }
