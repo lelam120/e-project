@@ -1,100 +1,83 @@
-/* General Styles */
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6;
-    background-color: #f5f5f5;
-    color: #333;
-    margin: 0;
-    padding: 0;
-}
-
-.container {
-    max-width: 960px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-}
-
-.section {
-    padding: 40px 0;
-}
-
-.section-title {
-    font-size: 2.5rem;
-    text-align: center;
-    margin-bottom: 30px;
-    color: #333;
-}
-
-.section-content {
-    text-align: justify;
-    color: #555;
-}
-
-.responsive-image {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 20px auto;
-    border-radius: 8px;
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
-}
-
-.subsection {
-    margin-bottom: 30px;
-}
-
-.subsection h2 {
-    font-size: 1.8rem;
-    margin-bottom: 10px;
-    color: #333;
-}
-
-/* Navigation Styles */
-nav {
-    background-color: #333;
-    color: #fff;
-    padding: 10px 0;
-    text-align: center;
-}
-
-nav ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin-right: 20px;
-}
-
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 1.2rem;
-}
-
-nav ul li a:hover {
-    text-decoration: underline;
-}
-
-/* Footer Styles */
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 20px 0;
-    margin-top: 40px;
-    clear: both;
-    border-top: 1px solid #666;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .container {
-        padding: 10px;
-    }
-}
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Borderless Car Brand Story</title>
+    <style>
+        /* Reset CSS */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            line-height: 1.6;
+        }
+        
+        .header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+        }
+        
+        .content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            padding: 20px;
+        }
+        
+        .brand-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        
+        .brand-story {
+            text-align: justify;
+            color: #555;
+        }
+        
+        .brand-story h2 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+        
+        .brand-story p {
+            margin-bottom: 15px;
+        }
+        
+        @media (max-width: 768px) {
+            .content {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>Borderless Car Brand Story</h1>
+    </header>
+    <div class="content">
+        <img src="C:\Users\LAPTOP\Downloads\comingsoon-04-1024x491.jpg" alt="Brand Image" class="brand-image">
+        <div class="brand-story">
+            <h2>Our Story</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam consectetur justo eu nisi posuere, sed finibus urna iaculis. Proin non erat auctor, tristique mauris id, fringilla augue. Morbi non venenatis est. Integer fringilla dolor nec malesuada consectetur. Vestibulum vel convallis quam. Mauris fermentum volutpat nulla, ac malesuada elit bibendum eget. Duis eu condimentum ipsum. Integer venenatis lacus nisl, in dictum eros fermentum vel.</p>
+            <p>Nunc aliquam, elit vel viverra volutpat, orci justo consequat nisl, nec iaculis libero purus ac orci. Suspendisse potenti. Suspendisse laoreet, arcu eget malesuada placerat, quam risus sodales metus, non fermentum ex lacus nec risus. Nulla sit amet ante sed dui eleifend dignissim. Duis ac arcu quis ex fermentum feugiat non in leo.</p>
+            <p>Sed a maximus mauris, non viverra justo. Proin semper ligula vel quam scelerisque posuere. In eget enim vel neque laoreet aliquam. Donec lobortis orci arcu, eget convallis lectus consectetur nec. Cras luctus pretium elit, non dictum ligula dapibus vel. Integer quis sapien accumsan, dignissim ex id, eleifend ipsum.</p>
+        </div>
+    </div>
+</body>
+</html>
