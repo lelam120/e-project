@@ -6,19 +6,20 @@
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f9f9f9;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f7f7f7;
     color: #333;
     line-height: 1.6;
 }
 
 .container {
-    width: 80%;
+    width: 90%;
+    max-width: 1100px;
     margin: auto;
-    padding: 20px;
+    padding: 30px;
     background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
 }
 
 header {
@@ -26,29 +27,24 @@ header {
     color: #fff;
     padding: 20px 0;
     text-align: center;
-    margin-bottom: 20px;
-    border-radius: 8px 8px 0 0;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    margin-bottom: 30px;
 }
 
 header h1 {
     margin: 0;
-    font-size: 2em;
+    font-size: 2.5em;
 }
 
 section {
-    margin-top: 20px;
-    padding: 20px 0;
-    border-bottom: 1px solid #eee;
-}
-
-section:last-child {
-    border-bottom: none;
+    margin-bottom: 30px;
 }
 
 section h2 {
-    font-size: 1.8em;
+    font-size: 2em;
     color: #333;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
 section p {
@@ -60,14 +56,29 @@ section p {
 
 ul {
     margin-left: 20px;
+    list-style-type: disc;
 }
 
 ul li {
-    list-style-type: disc;
     margin-bottom: 5px;
 }
 
 .highlight {
     font-weight: bold;
-    color: #ff6600;
+    color: #e85a4f;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+    header h1 {
+        font-size: 2em;
+    }
+    section h2 {
+        font-size: 1.8em;
+    }
+    section p {
+        font-size: 1em;
+    }
 }
