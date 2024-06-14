@@ -1,4 +1,3 @@
-
 <style>
       .logo {
           max-width: 100px; /* Điều chỉnh kích thước tối đa theo % hoặc px */
@@ -29,7 +28,6 @@
       }
 </style>
 
-
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
       <img src="img\Logo-Opel.png" alt="Mô tả hình ảnh" class="img-fluid logo">
@@ -52,11 +50,6 @@
           <a id="rangeOfCarLink" class="nav-link dropdown" href="\range_of_car.php" role="button">
             Range of Car
           </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-          </ul>
         </li>
 
         <li class="nav-item">

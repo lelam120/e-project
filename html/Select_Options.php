@@ -1,3 +1,7 @@
+<?php
+    require_once("functions/product.php");
+    $checkbrand = brand_all();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -36,9 +40,6 @@
     
     
 }
-
-
-
 
 .Search_Options b{
    color: aliceblue;
@@ -90,7 +91,7 @@
 
 }
 .hangxe_kien{
-    height: 200px;
+    height: 60px;
     overflow-y: scroll;
 }
 
@@ -111,14 +112,13 @@
 
 }
 .hangxe_kien>div img{
-    width: 60px;
-    margin-left:0;
+    width: 49px;
+    margin:5px;
 }
 .hangxe_kien>div form{
     display: flex;
     justify-content: center;
     align-items: center;
-      
 }
 
 .hangxe_kien>div form>button{
@@ -137,45 +137,40 @@
     
 }
 .hangxe_kien>div label{
-    padding-top: 10px;
+    padding-top: 14px;
     color: white;
+    font-size: small;
 }
 
 .locconhien{
     display: inline;
 }
-
 </style>
-
-
 <body>
     <div class="Search_Options">
-        
         <div>
-       
             <p><h3><b>Search Options</b></h3></p>
             <div class="loc" >
                 <button onclick="toggleBrand(this)" id="cac"><span id="trai"><b style="font-size:15px;">Brand</b></span><span id="phai"><i class="bi bi-chevron-down"></i></span></button>
-
                 <div class="loccon"   id="thuonghieu">
                     <div class="Search_form">
-                    
-                        <input type="Text" placeholder="Search" aria-label="Search">
-                        
-                    
+                        <input type="Text" placeholder="Search" aria-label="Search">                                  
                     </div>
-                    <div class="hangxe_kien"> 
-                        <div >
+                    <?php foreach($checkbrand as $item):?>
+                    <div class="hangxe_kien">
+                        <div>
                             <form action="/Selct.html" method="GET">
                                 <input  type="text" id="loc" name="loc" style="display: none;" value="1">
                                 <button id="checkbox2" type="submit" class="submit-button"></button>
                             </form>
-                            <img src="/img/A4E497.png"/>
-                            <label for="loc">Checkbox</label><br>
-                        </div>        
+                            <img src="<?php echo $item["icon_brand"]; ?>"/>
+                            <label for="loc"><?php echo $item["brand_name"]; ?></span></label><br>
+                        </div>
                     </div>
+                    <?php endforeach;?>    
                 </div>
             </div>
+
             <div class="loc" >
                 <button onclick="Vehicle()" id="cac"><span id="trai"><b style="font-size:15px;">Vehicle Type</b></span><span id="phai"><i class="bi bi-chevron-down"></i></span></button>
 

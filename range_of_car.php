@@ -1,22 +1,9 @@
 <?php
     require_once("functions/product.php");
     $newest_products = newest_car();
-    $brand_alls = brand_all();
-    $brands = [];
-    $types = [];
-    $styles = [];
+    $brand_id = $GET["id"];
+    // $brand_alls = brand_detail($brand_id);
     
-    foreach ($brand_alls as $item) {
-        $brands[] = strtolower($item['brand_name']);
-        $types[] = strtolower($item['type']);
-        $styles[] = strtolower($item['style']);
-    }
-
-    // Loại bỏ các giá trị trùng lặp
-    $brands = array_unique($brands);
-    $types = array_unique($types);
-    $styles = array_unique($styles);
-
     // Số xe hiển thị mỗi trang
     $items_per_page = 12;
 
@@ -170,17 +157,17 @@
             <div class="col-md-9">
                 <div class="row" id="carListings">
                     <?php foreach($current_page_items as $item): ?>
-                        <div class="col-md-4 mb-4 car-card" 
-                            data-brand="<?php echo strtolower($item['brand']); ?>" 
-                            data-type="<?php echo strtolower($item['type']); ?>" 
-                            data-style="<?php echo strtolower($item['style']); ?>">
+                        <div class="col-md-4 mb-4 car-card">
                             <div class="card">
                                 <a href="/detail.php?id=<?php echo $item["newcar_id"]; ?>">
                                     <img src="<?php echo $item["thumbnail"]; ?>" class="card-img-top" alt="<?php echo $item["car_name"]; ?>">
                                 </a>
                                 <div style="width: 100%;" class="card-body">
                                 <h6 class="card-title" style="margin-bottom:5px;font-weight:700"><?php echo $item["car_name"]; ?></h6>
-                                <i class="bi bi-tags" style="color:gray; margin:6px;font-size:small;"></i><span style="color:gray; margin-right:10px;font-size:small;">Chery</span>
+                                <i class="bi bi-tags" style="color:gray; margin:6px;font-size:small;"></i><span style="color:gray; margin-right:10px;font-size:small;">
+                                    <?php foreach($brand_alls["new_car"] as $item):?>
+                                        <?php echo $item["brand_name"]; ?></span>
+                                    <?php endforeach;?>    
                                 <i class="bi bi-car-front" style="color:gray;margin:6px;font-size:small;"></i><span style="color:gray;font-size:small;">SUV</span>
                                     <a style="width:100%; margin-top:10px;" href="/detail.php?id=<?php echo $item["newcar_id"]; ?>" class="btn btn custom-gray">View More</a>
                                 </div>
