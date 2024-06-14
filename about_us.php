@@ -26,7 +26,6 @@
         <p>Welcome To Henan Borderless International Trade Co., Ltd.</p>
         <p>We are committed to providing high-quality and professional services to our customers, creating a comprehensive automotive sales ecosystem. With over 10 years of experience and accumulated professional skills in the automotive industry, we constantly innovate and improve product quality with customer needs at the forefront, which has made us a leader in the automotive industry.</p>
         <p>Our main products include electric cars, used cars, and other well-known international brands that cover various consumer groups. Through years of market practice and technological innovation, our vehicle performance and quality have reached advanced levels both domestically and internationally. Our goal is to become a leader in the automotive sales industry, achieve mutual benefit with customers, and provide them with more professional, reliable, and comfortable services during the car-buying process.</p>
-        <!-- Hình ảnh -->
         <img src="images/comingsoon-04-1024x491.png" alt="Brand Story Image" class="responsive-image">
     </section>
 
