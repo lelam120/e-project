@@ -14,8 +14,8 @@
 
 ul{
 
-list-style: none;
-display: flex;
+    list-style: none;
+    display: flex;
 
 
 }
@@ -26,21 +26,21 @@ color:  rgb(0, 0, 0);
 }
 
 .navcon{
-margin-left: 20px;
+    margin-left: 20px;
 }
 
 .navheader{
-margin: auto;
-width: 100%;
-height: 70px;
-padding: 20px 50px;
-display: flex;
-justify-content: space-between;
-background-color: transparent;
-/* border: 1px solid rgba(255, 255, 255, 0.747); */
-border-bottom: 1px solid rgba(255, 255, 255, 0.747);
-backdrop-filter: blur(20px) ;
-box-shadow: 0 0 30px rgba(0, 0, 0, 0.747);
+    margin: auto;
+    width: 100%;
+    height: 70px;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    background-color: transparent;
+    /* border: 1px solid rgba(255, 255, 255, 0.747); */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.747);
+    backdrop-filter: blur(20px) ;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.747);
 
 }
 

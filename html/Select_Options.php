@@ -1,6 +1,8 @@
 <?php
     require_once("functions/product.php");
     $checkbrand = brand_all();
+
+    
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -159,7 +161,8 @@
                     <?php foreach($checkbrand as $item):?>
                     <div class="hangxe_kien">
                         <div>
-                            <form action="/Selct.html" method="GET">
+                            <form action="/range_of_car.php" method="GET">
+                                <input value="<?php echo $bodysitai;  ?>" name="bodystyle" type="hidden" >
                                 <input  type="text" id="loc" name="loc" style="display: none;" value="1">
                                 <button id="checkbox2" type="submit" class="submit-button"></button>
                             </form>
@@ -177,8 +180,8 @@
                 <div class="loccon"   id="Vehicle_Type">
                     <div class="hangxe_kien">             
                         <div>     
-                            <form action="/Selct.html" method="GET">
-                                <input  type="text" id="loc" name="loc" style="display: none;" value="1">
+                            <form action="/range_of_car.php" method="GET">
+                                <input  type="text" id="loc" name="suv" style="display: none;" value="1">
                                 <button style="margin-right: 6px;" id="checkbox2" type="submit" class="submit-button"></button>
                                 <label for="loc">Checkbox</label><br>
                             </form>
@@ -191,9 +194,10 @@
                 <div class="loccon"   id="Body_Style">
                     <div class="hangxe_kien">
                         <div >            
-                            <form action="/Selct.html" method="GET">
+                            <form action="/range_of_car.php" method="GET">
+                                <input value="<?php echo $hangxe;  ?>" name="loc" type="hidden" >
                                 <button style="margin-right: 6px;" id="checkbox2" type="submit" class="submit-button"></button>
-                                <input  type="text" id="loc" name="loc" style="display: none;" value="1">
+                                <input  type="text" id="loc" name="bodystyle" style="display: none;" value="1">
                                 <label for="loc">Checkbox</label><br>
                             </form>
                         </div>

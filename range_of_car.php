@@ -1,7 +1,24 @@
 <?php
+
+ 
     require_once("functions/product.php");
-    $newest_products = newest_car();
-    $brand_id = $GET["id"];
+    $newest_products = null;
+    $hangxe  = isset($_GET['loc']) ? intval($_GET['loc']) : 0;
+    $bodysitai  = isset($_GET['bodystyle']) ? intval($_GET['bodystyle']) : 0;
+   
+    if ($hangxe == 0 && $bodysitai == 0) {
+        $newest_products = newest_car();
+    } else if ($hangxe == 0 && $bodysitai != 0) {
+        // $newest_products = newest_car();
+
+        die('loctheobodysityle');
+    }else if ($hangxe != 0 && $bodysitai == 0) {
+        // $newest_products = newest_car();
+
+        die('loctheohangxe');
+    }else if ($hangxe != 0 && $bodysitai != 0){
+        die('loctheohangxe va bodystyel');
+    }
     // $brand_alls = brand_detail($brand_id);
     
     // Số xe hiển thị mỗi trang
