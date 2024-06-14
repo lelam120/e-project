@@ -1,154 +1,87 @@
-/* about_us.css */
+/* Đặt lại các thuộc tính mặc định cho tất cả các phần tử */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-/* General Styles */
+/* Định dạng cho phần body */
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    margin: 0;
-    padding: 0;
+    color: #333;
+    background-color: #f4f4f4;
+    padding: 20px;
 }
 
-header, footer {
-    background-color: #333;
-    color: white;
-    padding: 1rem 0;
+/* Định dạng cho phần header */
+header {
+    background: #333;
+    color: #fff;
+    padding: 10px 0;
     text-align: center;
 }
 
+/* Định dạng cho phần điều hướng */
 nav ul {
     list-style: none;
-    padding: 0;
     display: flex;
     justify-content: center;
-    background-color: #444;
-    margin: 0;
+    background: #444;
+    padding: 10px;
 }
 
 nav ul li {
-    margin: 0 15px;
+    margin: 0 10px;
 }
 
 nav ul li a {
-    color: white;
+    color: #fff;
     text-decoration: none;
-    font-weight: bold;
+    padding: 5px 10px;
 }
 
 nav ul li a:hover {
-    text-decoration: underline;
+    background: #555;
+    border-radius: 5px;
 }
 
+/* Định dạng cho các section */
 section {
-    padding: 2rem;
-    margin: 1rem 0;
+    background: #fff;
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
-h1, h2 {
+/* Định dạng cho các tiêu đề trong section */
+section h1, section h2 {
+    margin-bottom: 10px;
     color: #333;
 }
 
-form {
-    display: flex;
-    flex-direction: column;
-    max-width: 600px;
-    margin: auto;
+/* Định dạng cho phần văn bản trong section */
+section p {
+    margin-bottom: 10px;
+    line-height: 1.6;
 }
 
-form label {
-    margin-top: 1rem;
-}
-
-form input, form textarea, form button {
-    padding: 0.5rem;
-    margin-top: 0.5rem;
-}
-
-form button {
-    background-color: #333;
-    color: white;
-    border: none;
-    cursor: pointer;
-}
-
-form button:hover {
-    background-color: #555;
-}
-
-ul {
-    list-style: none;
-    padding: 0;
-}
-
-ul li {
-    margin: 0.5rem 0;
-}
-
-ul li a {
-    color: #007BFF;
-    text-decoration: none;
-}
-
-ul li a:hover {
-    text-decoration: underline;
-}
-
-img {
+/* Định dạng cho các hình ảnh trong section */
+section img {
+    display: block;
     max-width: 100%;
     height: auto;
+    margin: 10px 0;
 }
 
-/* Contact Us Section */
-#contact-us {
-    background-color: #f9f9f9;
-    padding: 2rem;
+/* Định dạng cho phần footer */
+footer {
+    background: #333;
+    color: #fff;
     text-align: center;
-}
-
-#contact-us h1, #contact-us h2 {
-    color: #444;
-}
-
-#contact-us form {
-    background-color: #fff;
-    border: 1px solid #ccc;
-    padding: 1rem;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-/* Brand Story Section */
-#brand-story {
-    background-color: #e9e9e9;
-    padding: 2rem;
-}
-
-#brand-story h1 {
-    text-align: center;
-    color: #222;
-}
-
-#brand-story p {
-    margin: 1rem 0;
-    text-align: justify;
-}
-
-/* Professionalism Section */
-#professionalism {
-    background-color: #f1f1f1;
-    padding: 2rem;
-}
-
-#professionalism h1 {
-    text-align: center;
-    color: #222;
-}
-
-#professionalism h2 {
-    color: #333;
-    margin-top: 1.5rem;
-}
-
-#professionalism p {
-    margin: 0.5rem 0;
-    text-align: justify;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
 }
