@@ -28,7 +28,7 @@
         margin-top: 0; /* Giúp căn chỉnh dropdown */
       }
 </style>
-<link href="css/index.css" rel="stylesheet">
+
 
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
