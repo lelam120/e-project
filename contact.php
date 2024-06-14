@@ -6,6 +6,7 @@
     <title>Document</title>
     <?php include_once("html/style.php"); ?>
     <link href="css/styles.css" rel="stylesheet">
+    <link href="css/index.css" rel="stylesheet">
     <style>
         .boxbox{
             background-color: white;
@@ -70,6 +71,7 @@
         }
         .contact-form {
             padding: 20px;
+            padding-top:0px;
             border-radius: 5px;
             background-color: #fff;
         }
@@ -80,6 +82,7 @@
         }
         .contact-form p{
             color:gray;
+            padding-top: 15px;
         }
         .contact-form .form-group {
             margin-bottom: 20px;
