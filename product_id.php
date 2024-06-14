@@ -1,12 +1,12 @@
 <?php
-   require_once("functions/product.php");
-   $product_id  = isset($_GET['id']) ? intval($_GET['id']) : 0;
+//    require_once("functions/product.php");
+//    $product_id  = isset($_GET['id']) ? intval($_GET['id']) : 0;
 
-   $car = product_detail($product_id);
+//    $car = product_detail($product_id);
   
-    if ($car ==null){
-        header('Location:/404.php');
-    }
+//     if ($car ==null){
+//         header('Location:/404.php');
+//     }
 
 
 
@@ -18,14 +18,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    
-    <?php include_once("html/style.php"); ?>
+    <title>Detial</title>
     <link href="css/product_id.css" rel="stylesheet">
+    <?php include_once("html/style.php"); ?>
+ 
    
 </head>
-    
-  
+
 
 <body>
     <header>
