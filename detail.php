@@ -1,12 +1,12 @@
 <?php
-//    require_once("functions/product.php");
-//    $product_id  = isset($_GET['id']) ? intval($_GET['id']) : 0;
+   require_once("functions/product.php");
+   $product_id  = isset($_GET['id']) ? intval($_GET['id']) : 0;
 
-//    $car = product_detail($product_id);
+   $car = product_detail($product_id);
   
-//     if ($car ==null){
-//         header('Location:/404.php');
-//     }
+    if ($car ==null){
+        header('Location:/404.php');
+    }
 
 
 
@@ -27,6 +27,7 @@
 
 
 <body>
+    
     <header>
         <?php include_once("html/Header.php"); ?>
     </header>
