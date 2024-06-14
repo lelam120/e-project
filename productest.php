@@ -22,7 +22,10 @@
     <link href="css/pro_id.css" rel="stylesheet">
     <?php include_once("html/style.php"); ?>
  
-   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.140.0/examples/js/controls/OrbitControls.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
 </head>
 
 
@@ -87,8 +90,9 @@
         </div>
     </section>
     </main>
-    <div class="cavane" >
+    <div class="cavane" id="kiendeptrai" >
     <main class="main2">
+ 
         <section class="hai" >
             <!-- <div class="trai">
                 <div class="thongtin">
@@ -233,6 +237,7 @@
         </div>
     </section>
    </div>
+   <canvas class="webgl"></canvas>
    </div>
 
 
