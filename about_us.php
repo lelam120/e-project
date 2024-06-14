@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us - Henan Borderless International Trade Co., Ltd.</title>
-    <link rel="stylesheet" href="about-us.css"> <!-- Đổi đường dẫn từ styles.css thành about-us.css -->
+    <link rel="stylesheet" href="about-us-new.css">
+
 </head>
 <body>
     <div class="container">
