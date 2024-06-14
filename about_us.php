@@ -3,47 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Borderless Car Brand Story</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-        .header {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 10px;
-        }
-        .content {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 20px;
-        }
-        .brand-story {
-            max-width: 800px;
-            text-align: justify;
-        }
-        .brand-story img {
-            max-width: 100%;
-            height: auto;
-        }
-    </style>
+    <title>About Us - Henan Borderless International Trade Co., Ltd.</title>
+    <link rel="stylesheet" href="about-us.css"> <!-- Đổi đường dẫn từ styles.css thành about-us.css -->
 </head>
 <body>
-    <header class="header">
-        <h1>Borderless Car Brand Story</h1>
-    </header>
-    <div class="content">
-        <img src="C:\Users\LAPTOP\Downloads\comingsoon-04-1024x491.jpg" alt="Brand Image">
-        <div class="brand-story">
-            <h2>Our Story</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam consectetur justo eu nisi posuere, sed finibus urna iaculis. Proin non erat auctor, tristique mauris id, fringilla augue. Morbi non venenatis est. Integer fringilla dolor nec malesuada consectetur. Vestibulum vel convallis quam. Mauris fermentum volutpat nulla, ac malesuada elit bibendum eget. Duis eu condimentum ipsum. Integer venenatis lacus nisl, in dictum eros fermentum vel.</p>
-            <p>Nunc aliquam, elit vel viverra volutpat, orci justo consequat nisl, nec iaculis libero purus ac orci. Suspendisse potenti. Suspendisse laoreet, arcu eget malesuada placerat, quam risus sodales metus, non fermentum ex lacus nec risus. Nulla sit amet ante sed dui eleifend dignissim. Duis ac arcu quis ex fermentum feugiat non in leo.</p>
-            <p>Sed a maximus mauris, non viverra justo. Proin semper ligula vel quam scelerisque posuere. In eget enim vel neque laoreet aliquam. Donec lobortis orci arcu, eget convallis lectus consectetur nec. Cras luctus pretium elit, non dictum ligula dapibus vel. Integer quis sapien accumsan, dignissim ex id, eleifend ipsum.</p>
-        </div>
+    <div class="container">
+        <header>
+            <h1>Henan Borderless International Trade Co., Ltd.</h1>
+        </header>
+        <section>
+            <h2>About Us</h2>
+            <p>Henan Borderless International Trade Co., Ltd. has over 10 years of experience in creating a comprehensive automotive ecosystem. We specialize in electric vehicles, used cars, and other international brands, focusing on <span class="highlight">high quality</span>, <span class="highlight">professionalism</span>, <span class="highlight">product diversity</span>, <span class="highlight">competitive pricing</span>, and <span class="highlight">integrity</span>.</p>
+            <p>Our services include:</p>
+            <ul>
+                <li>Customization of vehicles</li>
+                <li>Product consultation</li>
+                <li>Post-sale support</li>
+            </ul>
+            <p>We are committed to delivering the best products and services to our customers, with a promise of quality and reliability. Our team of experts is always available to support and advise customers to ensure their highest satisfaction.</p>
+        </section>
+        <section>
+            <h2>Mission and Vision</h2>
+            <p>Our mission is to create a comprehensive and sustainable automotive ecosystem where customers can find everything they need from high-quality vehicles to dedicated after-sales services. We constantly strive to be one of the leading companies in the international automotive industry, with a vision to provide the best experiences for our customers.</p>
+        </section>
+        <section>
+            <h2>Core Values</h2>
+            <p>We believe in the values of <span class="highlight">quality</span>, <span class="highlight">integrity</span>, and <span class="highlight">professionalism</span>. These values form the foundation of all our operations, helping us build trust and satisfaction among our customers.</p>
+        </section>
     </div>
 </body>
 </html>
