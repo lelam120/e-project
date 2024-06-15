@@ -16,7 +16,7 @@
     <nav>
         <ul>
             <li><a href="#brand-story">Brand Story</a></li>
-            <li><a href="#professionalism">Professionalism</a></li>
+            
         </ul>
     </nav>
 
