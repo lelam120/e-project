@@ -272,7 +272,7 @@ window.addEventListener('scroll',()=>{
 
 const camera = new THREE.PerspectiveCamera(35,sizes.width/sizes.height,0.1,1000)
 
-// camera.rotation.z = -8 / 180 * Math.PI;
+
 
 
 camera.position.set(0, 0.5, 5); 
@@ -319,24 +319,16 @@ function animate() {
     requestAnimationFrame(animate);
    
 
-     // Update renderer size to fit window dimensions
-    //  const width = 286;
-    // const height = 200;
-    // renderer.setSize(width, height);
-    
-   // Cập nhật tỷ lệ khung hình của camer
-    // camera.aspect = width / height;
-    // camera.updateProjectionMatrix();
+  
     if (indeex == true) {
         const positions = starGeometry.getAttribute('position').array;
       
         for (let i = 0; i < positions.length / 3; i++) {
-          // Move each star
+      
           positions[i * 3] += 0.2; // Move along the x-axis
           positions[i * 3 + 1] += 0; // Move along the y-axis
           positions[i * 3 + 2] += 2; // Move along the z-axis
       
-          // Reset star position if it moves out of bounds
           if (positions[i * 3 + 1] > 300) {
             positions[i * 3 + 1] = -300;
           }
@@ -348,7 +340,6 @@ function animate() {
           }
         }
       
-        // Update position data in BufferGeometry
         starGeometry.attributes.position.needsUpdate = true;
       }
   
