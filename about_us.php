@@ -16,7 +16,6 @@
     <nav>
         <ul>
             <li><a href="#brand-story">Brand Story</a></li>
-            
         </ul>
     </nav>
 
