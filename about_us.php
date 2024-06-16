@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Henan Borderless International Trade Co., Ltd.</title>
+    <meta name="description" content="Henan Borderless International Trade Co., Ltd. - Leading provider of electric cars, used cars, and other automotive solutions with over 10 years of experience.">
+    <meta name="keywords" content="Henan Borderless, electric cars, used cars, automotive sales, international trade">
     <?php include_once("html/style.php"); ?>
     <link href="css/about_us.css" rel="stylesheet">
 </head>
@@ -16,13 +19,14 @@
     <nav>
         <ul>
             <li><a href="#brand-story">Brand Story</a></li>
+            <li><a href="#professionalism">Professionalism</a></li>
         </ul>
     </nav>
 
     <main>
         <!-- Brand Story Section -->
         <section id="brand-story" class="section">
-            <div class="container">
+            <div class="container text-left">
                 <h1 class="section-title">Brand Story</h1>
                 <div class="section-content">
                     <p>Welcome to Henan Borderless International Trade Co., Ltd.</p>
