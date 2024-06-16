@@ -1,8 +1,7 @@
 /* Text Alignment */
 .text-left {
     text-align: left;
-    padding-left: 50px; /* Bạn có thể điều chỉnh giá trị này để dịch nội dung sang trái nhiều hơn hoặc ít hơn */
-}
+    margin-left  : 50px; 
 
 /* General Styles */
 body {
