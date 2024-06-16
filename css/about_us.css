@@ -1,3 +1,8 @@
+/* Text Alignment */
+.text-left {
+    text-align: left;
+}
+
 /* General Styles */
 body {
     font-family: Arial, sans-serif;
