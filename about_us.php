@@ -26,9 +26,9 @@
     <main>
         <!-- Brand Story Section -->
         <section id="brand-story" class="section">
-            <div class="container text-left">
+            <div class="container">
                 <h1 class="section-title">Brand Story</h1>
-                <div class="section-content">
+                <div class="section-content text-left">
                     <p>Welcome to Henan Borderless International Trade Co., Ltd.</p>
                     <p>We are committed to providing high-quality and professional services to our customers, creating a comprehensive automotive sales ecosystem. With over 10 years of experience and accumulated professional skills in the automotive industry, we constantly innovate and improve product quality with customer needs at the forefront, which has made us a leader in the automotive industry.</p>
                     <p>Our main products include electric cars, used cars, and other well-known international brands that cover various consumer groups. Through years of market practice and technological innovation, our vehicle performance and quality have reached advanced levels both domestically and internationally. Our goal is to become a leader in the automotive sales industry, achieve mutual benefit with customers, and provide them with more professional, reliable, and comfortable services during the car-buying process.</p>
@@ -53,7 +53,7 @@
                     </div>
                     <div class="subsection">
                         <h2>Competitive pricing</h2>
-                        <p>We have established stable cooperation relationships with multiple suppliers, have advantageous purchasing channels, and can provide flexible pricing strategies to ensure that we can offer the most favorable prices to customers.</p>
+                        <p>We have established stable cooperation relationships with multiple suppliers, have advantageous purchasing channels, và can provide flexible pricing strategies to ensure that we can offer the most favorable prices to customers.</p>
                     </div>
                     <div class="subsection">
                         <h2>Integrity-based operation</h2>
