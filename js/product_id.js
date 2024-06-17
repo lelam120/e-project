@@ -325,7 +325,7 @@ function animate() {
       
         for (let i = 0; i < positions.length / 3; i++) {
       
-          positions[i * 3] += 0.2; // Move along the x-axis
+          positions[i * 3] += 2; // Move along the x-axis
           positions[i * 3 + 1] += 0; // Move along the y-axis
           positions[i * 3 + 2] += 2; // Move along the z-axis
       
