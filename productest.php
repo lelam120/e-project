@@ -243,6 +243,6 @@
 
     <?php include_once("html/Footers.php"); ?>
     <script src="/js/product_id.js"></script>
-  
+ 
 </body>
 </html>

@@ -1,5 +1,3 @@
-
-
 const canvas = document.querySelector('canvas.webgl')
 
 
@@ -29,16 +27,22 @@ const light = new THREE.PointLight(0xc4c4c4, 10);
 light.position.set(-1.5, 2, 0);
 scene.add(light);
 
-//cubetest
-// const cubeGeometry = new THREE.BoxGeometry(1,1,1,1)
-// const cubeMaterial = new THREE.MeshBasicMaterial({
-//     color:0xff0000
-// })
-// const cube = new THREE.Mesh(
-//     cubeGeometry,
-//     cubeMaterial
-// )
-//overlay
+// cubetest
+const cubeGeometry = new THREE.BoxGeometry(1,1,1,1)
+const cubeMaterial = new THREE.MeshBasicMaterial({
+    color:0xffffff
+})
+const cube = new THREE.Mesh(
+    cubeGeometry,
+    cubeMaterial
+  
+)
+cube.visible = false;
+cube.position.set(-7,0,-60)
+cube.rotation.y = -1.2
+cube.scale.set(0.2,8,7)
+scene.add(cube);
+// overlay
 
 
 //loader
@@ -103,9 +107,9 @@ const positionAttribute = new THREE.BufferAttribute(vertices, 3);
 
 starGeometry.setAttribute('position', positionAttribute);
 
-const sprite = new THREE.TextureLoader().load('/img/chamtron.png'); // Check filename
+const sprite = new THREE.TextureLoader().load('/img/trangvcl.png'); // Check filename
 const starMaterial = new THREE.PointsMaterial({
-  color: 0xaaaaaa,
+  color: 0xffffff,
   size: 3,
   map: sprite,
   transparent: true
@@ -170,8 +174,10 @@ window.addEventListener('scroll',()=>{
         indeex = curenntSection
         curenntSection = newSection
       if (curenntSection==2){
+        cube.visible = true;
         indeex = true
       }else{
+        cube.visible = false;
         indeex = false
       }
         let targetBackgroundColor, targetLightColor;
@@ -291,26 +297,26 @@ renderer.render(scene, camera);
 
 //animation
 
-// const clock = new THREE.Clock()
-// let lastElapsedTime = 0
+const clock = new THREE.Clock()
+let lastElapsedTime = 0
 
-// const tick =()=>{
-//     const elapsedTime = clock.getElapsedTime()
-//     const deltaTime = elapsedTime-lastElapsedTime
-//     lastElapsedTime = elapsedTime
+const tick =()=>{
+    const elapsedTime = clock.getElapsedTime()
+    const deltaTime = elapsedTime-lastElapsedTime
+    lastElapsedTime = elapsedTime
    
-//     // if (!!donnut && indeex==2){
+    if (!!donnut && indeex==true){
       
-//     //     donnut.position.y = Math.sin(elapsedTime*1)*0.1-0.1
-//     // }
+        donnut.position.y = Math.sin(elapsedTime*1)*0.1+0.1
+    }
    
   
-//     renderer.render(scene, camera);
-//     window.requestAnimationFrame(tick)
+    // renderer.render(scene, camera);
+    window.requestAnimationFrame(tick)
 
-// }
+}
 
-// tick()
+tick()
 
 
 
@@ -325,7 +331,7 @@ function animate() {
       
         for (let i = 0; i < positions.length / 3; i++) {
       
-          positions[i * 3] += 2; // Move along the x-axis
+          positions[i * 3] += 1; // Move along the x-axis
           positions[i * 3 + 1] += 0; // Move along the y-axis
           positions[i * 3 + 2] += 2; // Move along the z-axis
       
