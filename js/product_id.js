@@ -28,23 +28,37 @@ light.position.set(-1.5, 2, 0);
 scene.add(light);
 
 // cubetest
-const cubeGeometry = new THREE.BoxGeometry(1,1,1,1)
-const cubeMaterial = new THREE.MeshBasicMaterial({
-    color:0xffffff
-})
-const cube = new THREE.Mesh(
-    cubeGeometry,
-    cubeMaterial
+// const cubeGeometry = new THREE.BoxGeometry(1,1,1,1)
+// const cubeMaterial = new THREE.MeshBasicMaterial({
+//     color:0xffffff
+// })
+// const cube = new THREE.Mesh(
+//     cubeGeometry,
+//     cubeMaterial
   
-)
-cube.visible = false;
-cube.position.set(-7,0,-60)
-cube.rotation.y = -1.2
-cube.scale.set(0.2,8,7)
-scene.add(cube);
+// )
+// cube.visible = false;
+// cube.position.set(-7,0,-60)
+// cube.rotation.y = -1.2
+// cube.scale.set(0.2,8,7)
+// scene.add(cube);
 // overlay
 
+///locxoay
+var sportalLight,  portalMaterial,portalParticles =[];
 
+
+
+portalLight = new THREE.PointLight(0x062d89,30,350,1.7);
+portalLight.position.set(0,0,250);
+scene.add(portalLight);
+portalLight = new THREE.PointLight(0xffffff,10,300,1.7);
+portalLight.position.set(0,0,250);
+scene.add(portalLight);
+
+
+
+// particleSetup()
 //loader
 // const loadingManager = new THREE.LoadingManager(
 //     ()=>{
@@ -174,14 +188,14 @@ window.addEventListener('scroll',()=>{
         indeex = curenntSection
         curenntSection = newSection
       if (curenntSection==2){
-        cube.visible = true;
+        // cube.visible = true;
         indeex = true
       }else{
-        cube.visible = false;
+        // cube.visible = false;
         indeex = false
       }
         let targetBackgroundColor, targetLightColor;
-       
+
 
         if (curenntSection == 2){
             
@@ -189,8 +203,8 @@ window.addEventListener('scroll',()=>{
             light.color.set(0xc4c4c4);
        
         }else if (curenntSection==3){
-       
-            targetBackgroundColor = { r: 71 / 255, g: 49 / 255, b: 9 / 255 };
+        
+            targetBackgroundColor = { r: 243/ 255, g:255/ 255, b:255/ 255 };
             light.color.set(0xffa500);
            
         }else if (curenntSection == 1){

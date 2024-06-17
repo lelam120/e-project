@@ -238,11 +238,11 @@ main .mot .motchitiet .phai .liicon>i:hover{
 }
  .main2 .hai .phai .FAQ>div{
 
-   
-    box-shadow: -5px -5px 50px rgb(76, 76, 90);
+    background-color: white;
+    box-shadow: -10px  -10px 70px #0e0e0e6c;
     border-radius: 10px;
     padding: 50px;
-  
+    
 }
 
 .main2 .hai .phai .FAQ>div  .traloihoi{
@@ -442,4 +442,19 @@ margin-right: 20px;
 .icon-container i {
     font-size: 27px; /* Kích thước icon */
     color:#2c9f1c;
+}
+
+.Highlighted_Features #tieudelonHighlighted_Features{
+
+    color:rgb(241, 241, 241);
+  
+}
+.Highlighted_Features #tieudenhoHighlighted_Features{
+
+    color:rgb(241, 241, 241);
+  
+}
+.Highlighted_Features #chuthich{
+    color:rgb(168, 168, 168);
+  
 }
