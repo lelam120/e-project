@@ -26,11 +26,11 @@ body {
 
 .section-content {
     text-align: justify;
+    margin-left: 0; /* Adjust the left margin to align the text to the left */
 }
 
-.text-left {
-    text-align: left;
-    margin-left: 100px;
+.brand-story-content {
+    text-align: left; /* Align all content within brand story to the left */
 }
 
 .responsive-image {
