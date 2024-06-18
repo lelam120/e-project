@@ -178,49 +178,13 @@
 
 
 
-<div class="xz-cards-block xz-cards-ae02 slick-initialized slick-slider slick-dotted" data-cols="1"><div class="slick-list draggable"><div class="slick-track" style="opacity: 1; width: 2825px; transform: translate3d(-565px, 0px, 0px);"><div class="xz-card-ae02 slick-slide slick-cloned" data-slick-index="-1" id="" aria-hidden="true" style="width: 565px;" tabindex="-1">
 
-	<p class="txt_one">“ This creative team is attentive, focus on the details and are really darn good at what they do.  We determine together what needs to be done to stay ahead of the game.”</p>
-	<div class="pic">
-		<img decoding="async" width="128" height="128" src="https://www.borderlesscar.com/wp-content/uploads/2023/07/thumb1.png" class="attachment-medium_large size-medium_large" alt="">		<div class="pic_right">
-		<h4 class="tit_two">Richard Anderson</h4>
-		<p class="txt_two">Customers from Canada</p>
-		</div>
-	</div>
-
-</div><div class="xz-card-ae02 slick-slide slick-current slick-active" data-slick-index="0" aria-hidden="false" style="width: 565px;" tabindex="0" role="tabpanel" id="slick-slide00" aria-describedby="slick-slide-control00">
-
-	<p class="txt_one">“ This creative team is attentive, focus on the details and are really darn good at what they do.  We determine together what needs to be done to stay ahead of the game.”</p>
-	<div class="pic">
-		<img decoding="async" width="128" height="128" src="https://www.borderlesscar.com/wp-content/uploads/2023/07/thumb1.png" class="attachment-medium_large size-medium_large" alt="">		<div class="pic_right">
-		<h4 class="tit_two">Richard Anderson</h4>
-		<p class="txt_two">Customers from Canada</p>
-		</div>
-	</div>
-
-</div><div class="xz-card-ae02 slick-slide" data-slick-index="1" aria-hidden="true" style="width: 565px;" tabindex="-1" role="tabpanel" id="slick-slide01" aria-describedby="slick-slide-control01">
-
-	<p class="txt_one">“ This creative team is attentive, focus on the details and are really darn good at what they do.  We determine together what needs to be done to stay ahead of the game.”</p>
-	<div class="pic">
-		<img decoding="async" width="128" height="128" src="https://www.borderlesscar.com/wp-content/uploads/2023/07/thumb1.png" class="attachment-medium_large size-medium_large" alt="">		<div class="pic_right">
-		<h4 class="tit_two">Richard Anderson</h4>
-		<p class="txt_two">Customers from Canada</p>
-		</div>
-	</div>
-
-</div><div class="xz-card-ae02 slick-slide slick-cloned" data-slick-index="2" id="" aria-hidden="true" style="width: 565px;" tabindex="-1">
-
-	<p class="txt_one">“ This creative team is attentive, focus on the details and are really darn good at what they do.  We determine together what needs to be done to stay ahead of the game.”</p>
-	<div class="pic">
-		<img decoding="async" width="128" height="128" src="https://www.borderlesscar.com/wp-content/uploads/2023/07/thumb1.png" class="attachment-medium_large size-medium_large" alt="">		<div class="pic_right">
-		<h4 class="tit_two">Richard Anderson</h4>
-		<p class="txt_two">Customers from Canada</p>
-		</div>
 
 </div>
     
-   
+   <footer>
         <?php include_once("html/Footers.php"); ?>
+	</footer>
    
 </body>
 </html>
