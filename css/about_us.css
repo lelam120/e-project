@@ -1,260 +1,93 @@
-/* General Styles */
 body {
     font-family: Arial, sans-serif;
-    color: #333;
-    line-height: 1.6;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
 header {
-    background: #222;
-    color: #fff;
-    padding: 10px 0;
+    background-color: #333;
+    color: white;
+    padding: 15px;
     text-align: center;
 }
 
+nav {
+    background-color: #444;
+    overflow: hidden;
+}
+
 nav ul {
-    list-style: none;
+    list-style-type: none;
+    margin: 0;
     padding: 0;
     text-align: center;
-    background: #333;
-    margin: 0;
 }
 
 nav ul li {
     display: inline;
-    margin-right: 10px;
 }
 
 nav ul li a {
-    text-decoration: none;
-    color: #fff;
-    padding: 10px 15px;
     display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
 }
 
 nav ul li a:hover {
-    background: #575757;
+    background-color: #ddd;
+    color: black;
 }
 
 .section {
-    padding: 40px 20px;
-    background: #f9f9f9;
+    padding: 20px;
 }
 
 .section-title {
     font-size: 2em;
-    margin-bottom: 20px;
-    text-align: center;
-    color: #333;
+    margin-bottom: 10px;
 }
 
 .section-content {
-    margin-bottom: 20px;
-    text-align: left;
+    margin-bottom: 15px;
+}
+
+.responsive-image {
+    max-width: 100%;
+    height: auto;
 }
 
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
 }
 
-.wp-block-group {
-    margin-bottom: 40px;
-}
-
-/* Media Query for Mobile Devices */
-@media (max-width: 768px) {
-    nav ul li {
-        display: block;
-        margin-bottom: 10px;
-    }
-
-    .wp-block-media-text__content,
-    .wp-block-media-text__media {
-        display: block;
-        width: 100%;
-        text-align: center;
-    }
-}
-
-/* Professionalism Section */
-.xz-container {
-    background: #fff;
-    padding: 20px 0;
-}
-
-.xz-main {
-    padding: 0 20px;
-}
-
-.about-sec-intro {
-    padding: 40px 20px;
-    background: #f5f5f5;
-}
-
-.about-intro-tit-sec p {
-    font-size: 1.2em;
-    text-align: center;
-}
-
-.about-intro-tit-sec h2 {
-    font-size: 2.5em;
-    text-align: center;
-    margin-top: 10px;
-    color: #0073e6;
-}
-
-.wp-block-media-text {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.wp-block-media-text__content {
-    max-width: 50%;
-}
-
-.wp-block-media-text__media {
-    max-width: 45%;
-}
-
-.wp-block-media-text__media img {
-    width: 100%;
-    height: auto;
-}
-
-.xzbtn-block {
-    text-align: center;
+#brand-story {
     margin-top: 20px;
 }
 
-.xz-btn {
-    background: #0073e6;
-    color: #fff;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
+.subsection {
+    margin-top: 20px;
 }
 
-.xz-btn:hover {
-    background: #005bb5;
-}
-
-/* Why Choose Borderless Section */
-.about-sec-why {
-    padding: 40px 20px;
-}
-
-.xz-cards-block {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-.xz-card-mly3 {
-    background: #fff;
-    border-radius: 10px;
-    padding: 20px;
-    flex: 1 1 calc(33.333% - 20px);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
-
-.iconfont {
-    font-size: 2.5em;
-    color: #0073e6;
-    margin-bottom: 10px;
-}
-
-.tit {
+.subsection h2 {
     font-size: 1.5em;
     margin-bottom: 10px;
 }
 
-.txt {
-    font-size: 1em;
-    color: #666;
+/* New styles for the content with image */
+.content-with-image {
+    display: flex;
+    align-items: flex-start;
 }
 
-/* Services Section */
-.about-sec-service {
-    padding: 40px 20px;
-    background: url('https://www.borderlesscar.com/wp-content/uploads/2023/07/about-sec-bg.jpg') no-repeat center center/cover;
+.text-content {
+    flex: 1;
 }
 
-.about-service-nav p {
-    display: inline-block;
-    margin: 0 10px;
-    padding: 10px 20px;
-    cursor: pointer;
-    color: #fff;
-    border-bottom: 2px solid transparent;
-}
-
-.about-service-nav p.current {
-    border-bottom: 2px solid #fff;
-}
-
-.xz-cards-ae13 .service,
-.xz-cards-ae13 .pic {
-    display: inline-block;
-    vertical-align: top;
-    width: 48%;
-}
-
-.xz-cards-ae13 .pic img {
-    width: 100%;
+.right-image {
+    margin-left: 20px;
+    max-width: 50%;
     height: auto;
-    border-radius: 10px;
-}
-
-/* Testimonials Section */
-.about-sec-say {
-    padding: 40px 20px;
-}
-
-.xz-cards-ae02 {
-    display: flex;
-    overflow-x: auto;
-}
-
-.xz-card-ae02 {
-    background: #fff;
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    min-width: 300px;
-    margin-right: 20px;
-    text-align: center;
-}
-
-.txt_one {
-    font-size: 1.1em;
-    color: #666;
-    margin-bottom: 20px;
-}
-
-.pic {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.pic img {
-    border-radius: 50%;
-    margin-right: 10px;
-}
-
-.tit_two {
-    font-size: 1.2em;
-    color: #0073e6;
-}
-
-.txt_two {
-    font-size: 0.9em;
-    color: #666;
 }
