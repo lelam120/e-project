@@ -26,6 +26,12 @@ main .mot .motchitiet>div{
 
    padding: 20px;
 }
+main .mot .motchitiet .trai{
+
+   display: flex;
+   justify-content: right;
+   align-items: center;
+ }
 
 
 main .mot .motchitiet .phai .Tieude .car_name {

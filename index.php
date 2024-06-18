@@ -14,7 +14,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <?php include_once("html/style.php"); ?>
-    <link href="css/indexcac.css" rel="stylesheet">
+    <link href="css/trangchu.css" rel="stylesheet">
 </head>
 
 
@@ -163,8 +163,8 @@
                 <p> <b ><a id="link" href="">READ MORE</a><span id="link" class="muiten">></span></b></p>
             </div>
             <div data-aos="flip-left" class="phai">
-                <p><h2><b>Logistics</b></h2></p>
-                <p class="ghichu">Our car sales company places great emphasis on logistics and delivery services, providing customers with high-quality delivery experiences. Our logistics system has a sophisticated supply chain management and real-time monitoring mechanism in place to ensure the rapid and accurate completion of delivery tasks.</p>
+                <p><h2><b>Export Qualification</b></h2></p>
+                <p class="ghichu">Our export qualifications are in line with national policies and regulations, and we hold legal and valid export qualification certificates. In the export business, we strictly abide by relevant laws, regulations and industry standards to ensure the quality, safety and compliance of exported goods.</p>
                 <p><b id="link"><a id="link" href="">READ MORE</a><span id="link"  class="muiten">></span></b></p>
                 <img src="/img/home-about2.jpg"/>
             
@@ -209,14 +209,16 @@
         </section>
         <section class="sau">
             <p id ="tieudenho">Our Cases</p>
-            <p>Latest News</p>
-            <div>
+            <p id ="tieudeto">Latest News</p>
+            <div data-aos="fade-up" >
                 <div class="trai">
-                    <p>Russian customers purchased the 2023 GWM Jingang Poer</p>
-                    <p>Recently, Borderlesscar successfully delivered a 2023 GWM Jingang Poer to a customer in Russia, which signifies the maturity of our business and the gradual opening...</p>
-                    <p><a>Read More</a><p>
+                    <p id="tieude">Russian customers purchased the 2023 GWM Jingang Poer</p>
+                    <p id="chuthich">Recently, Borderlesscar successfully delivered a 2023 GWM Jingang Poer to a customer in Russia, which signifies the maturity of our business and the gradual opening...</p>
+                    <p><a href="/hot.php" >Read More ></a><p>
                 </div>
-                <div class="phai"></div>
+                <div class="phai">
+                    <img src="/img/lamborghini-revuelto.jpg" alt="">
+                </div>
             </div>
             
             

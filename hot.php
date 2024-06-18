@@ -41,7 +41,7 @@
         <div class="motchitiet">
             <div class="trai">
                 
-                <img src="/img/Changan-Automobile1.jpg" alt=""/>
+                <img style="width: 100%;" src="/img/sieuxe.jpeg" alt=""/>
 
                
             </div>
