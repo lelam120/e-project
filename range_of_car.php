@@ -1,18 +1,6 @@
 <?php
-<<<<<<< HEAD
 // Kết nối đến database
 $conn = new mysqli("localhost", "root", "root", "carvan");
-=======
-    require_once("functions/product.php");
-    $newest_products = null;
-    $hangxe  = isset($_GET['loc']) ? intval($_GET['loc']) : 0;
-    $bodysitai  = isset($_GET['bodystyle']) ? intval($_GET['bodystyle']) : 0;
-   
-    if ($hangxe == 0 && $bodysitai == 0) {
-        $newest_products = new_car();
-    } else if ($hangxe == 0 && $bodysitai != 0) {
-        // $newest_products = newest_car();
->>>>>>> b28ffed22e242aeafe112ec0ef26b3c955a4c912
 
         die('loctheobodysityle');
     }else if ($hangxe != 0 && $bodysitai == 0) {
