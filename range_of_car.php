@@ -1,6 +1,6 @@
 <?php
 // Kết nối đến database
-$conn = new mysqli("localhost", "root", "root", "eproject");
+$conn = new mysqli("localhost", "root", "root", "carvan");
 
 // Kiểm tra kết nối
 if ($conn->connect_error) {
