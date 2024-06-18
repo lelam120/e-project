@@ -16,7 +16,7 @@
     <nav>
         <ul>
             <li><a href="#brand-story">Brand Story</a></li>
-            <li><a href="#professionalism">Professionalism</a></li>
+            <!-- Add other navigation items as needed -->
         </ul>
     </nav>
 
@@ -33,7 +33,7 @@
             <p class="section-content text-left">
                 Our main products include electric cars, used cars, and other well-known international brands that cover various consumer groups. Through years of market practice and technological innovation, our vehicle performance and quality have reached advanced levels both domestically and internationally. Our goal is to become a leader in the automotive sales industry, achieve mutual benefit with customers, and provide them with more professional, reliable, and comfortable services during the car-buying process.
             </p>
-            <!-- Hình ảnh -->
+            <!-- Image -->
             <img src="images/comingsoon-04-1024x491.png" alt="Brand Story Image" class="responsive-image">
         </div>
     </section>
