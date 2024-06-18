@@ -1,46 +1,36 @@
 <?php
+
+ 
     require_once("functions/product.php");
-    $old_car = old_car();
-    $brand_alls = brand_all();
-    $brands = [];
-    $types = [];
-    $styles = [];
-    
-    foreach ($brand_alls as $item) {
-        $brands[] = strtolower($item['brand_name']);
-        $types[] = strtolower($item['type']);
-        $styles[] = strtolower($item['style']);
+    $newest_products = null;
+    $hangxe  = isset($_GET['loc']) ? intval($_GET['loc']) : 0;
+    $bodysitai  = isset($_GET['bodystyle']) ? intval($_GET['bodystyle']) : 0;
+   
+    if ($hangxe == 0 && $bodysitai == 0) {
+        $newest_products = old_car();
+    } else if ($hangxe == 0 && $bodysitai != 0) {
+        // $newest_products = newest_car();
+
+        die('loctheobodysityle');
+    }else if ($hangxe != 0 && $bodysitai == 0) {
+        // $newest_products = newest_car();
+
+        die('loctheohangxe');
+    }else if ($hangxe != 0 && $bodysitai != 0){
+        die('loctheohangxe va bodystyel');
     }
-
-    // Loại bỏ các giá trị trùng lặp
-    $brands = array_unique($brands);
-    $types = array_unique($types);
-    $styles = array_unique($styles);
-
-
-
-
-    // Lấy dữ liệu xe cho trang hiện tại
-    $start_index = ($current_page - 1) * $items_per_page;
-    $current_page_items = array_slice($old_car, $start_index, $items_per_page);
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>PreOwned Car</title>
     <?php include_once("html/style.php"); ?>
     <link href="css/styles.css" rel="stylesheet">
     <link href="css/index.css" rel="stylesheet">
-
 </head>
 <style>
-        body {
-            background-color: #f0f0f0; /* Màu nền của body */
-            margin: 0;
-            padding: 0;
-        }
         .boxbox{
             background-color: white; /* Màu nền của boxbox */
             width: 70%; /* Độ rộng của boxbox */
@@ -139,6 +129,19 @@
             font-size: 27px; /* Kích thước icon */
             color:#2c9f1c;
         }
+        .card {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+            overflow: hidden;
+        }
+
+        .card:hover {
+            transform: scale(1.1);
+        }
+        
 </style>
 <body>
     <header>
@@ -146,10 +149,10 @@
     </header>
     <section style="height:100%";>
     <div class="position-relative">
-        <img style="width: 100%;" src="https://www.borderlesscar.com/wp-content/uploads/2023/07/toppic-used.jpg" class="img-fluid">
+        <img style="width: 100%;" src="https://www.borderlesscar.com/wp-content/uploads/2023/07/toppic-ev.jpg" class="img-fluid">
             <div class="position-absolute" style="top: 40%; left: 42%;">
                 <div class="d-flex align-items-center">
-                    <h1 class="text-light" style="font-weight:800">Used Car</h1>
+                    <h1 class="text-light" style="font-weight:800">Range Of Car</h1>
                 </div> 
             </div>
             <div class="bg py-4" style="background-color: #2c9f1c; height:100px;">
@@ -165,24 +168,22 @@
             <!-- Search Form -->
             <div class="col-md-3">
             <?php include_once("html/Select_Options.php"); ?>
-
             </div>
             <div class="col-md-9">
                 <div class="row" id="carListings">
-                    <?php foreach($current_page_items as $item): ?>
-                        <div class="col-md-4 mb-4 car-card" 
-                            data-brand="<?php echo strtolower($item['brand']); ?>" 
-                            data-type="<?php echo strtolower($item['type']); ?>" 
-                            data-style="<?php echo strtolower($item['style']); ?>">
+                    <?php foreach($newest_products as $item): ?>
+                        <div class="col-md-4 mb-4 car-card">
                             <div class="card">
-                                <a href="/detail.php?id=<?php echo $item["oldcar_id"]; ?>">
+                                <a href="/detail.php?id=<?php echo $item["newcar_id"]; ?>">
                                     <img src="<?php echo $item["thumbnail"]; ?>" class="card-img-top" alt="<?php echo $item["car_name"]; ?>">
                                 </a>
                                 <div style="width: 100%;" class="card-body">
-                                <h6 class="card-title" style="margin-top:10px;font-weight:600"><?php echo $item["car_name"]; ?></h6>
-                                <i class="bi bi-tags" style="color:gray; margin:6px;font-size:small;"></i><span style="color:gray; margin-right:10px;font-size:small;">Chery</span>
-                                <i class="bi bi-car-front" style="color:gray;margin:6px;font-size:small;"></i><span style="color:gray;font-size:small;">SUV</span>
-                                    <a style="width:100%; margin-top:10px;" href="/detail.php?id=<?php echo $item["oldcar_id"]; ?>" class="btn btn custom-gray">View More</a>
+                                <h6 class="card-title" style="margin-bottom:5px;font-weight:700;text-align:center"><?php echo $item["car_name"]; ?></h6>
+                                <div style="text-align:center">
+                                    <i class="bi bi-tags" style="color:gray; margin:6px;font-size:small;"></i><span style="color:gray; font-size:small;"><?php echo $item["brand_name"]; ?></span>
+                                    <i class="bi bi-car-front" style="color:gray;margin:6px;font-size:small;"></i><span style="color:gray;font-size:small;"><?php echo $item["type"]; ?></span>
+                                </div>
+                                <a style="width:100%; margin-top:10px;" href="/detail.php?id=<?php echo $item["newcar_id"]; ?>" class="btn btn custom-gray">View More</a>
                                 </div>
                             </div>
                         </div>
