@@ -1,9 +1,4 @@
-<?php
-    require_once("functions/product.php");
-    $checkbrand = brand_all();
 
-    
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -174,21 +169,21 @@
                 </div>
             </div>
 
-            <div class="loc" >
+            <!-- <div class="loc" >
                 <button onclick="Vehicle()" id="cac"><span id="trai"><b style="font-size:15px;">Vehicle Type</b></span><span id="phai"><i class="bi bi-chevron-down"></i></span></button>
 
                 <div class="loccon"   id="Vehicle_Type">
                     <div class="hangxe_kien">             
                         <div>     
                             <form action="/range_of_car.php" method="GET">
-                                <input  type="text" id="loc" name="suv" style="display: none;" value="1">
+                                <input  type="text" id="loc" name="suv" style="display: none;" value="<?php echo $item["brand_id"];?>"/>
                                 <button style="margin-right: 6px;" id="checkbox2" type="submit" class="submit-button"></button>
                                 <label for="loc">Checkbox</label><br>
                             </form>
                         </div>      
                     </div>
                 </div>
-            </div>
+            </div> -->
             <div class="loc" >
                 <button onclick="Body()" id="cac"><span id="trai"><b style="font-size:15px;">Body Style</b></span><span id="phai"><i class="bi bi-chevron-down"></i></span></button>
                 <div class="loccon"   id="Body_Style">
@@ -197,7 +192,7 @@
                             <form action="/range_of_car.php" method="GET">
                                 <input value="<?php echo $hangxe;  ?>" name="loc" type="hidden" >
                                 <button style="margin-right: 6px;" id="checkbox2" type="submit" class="submit-button"></button>
-                                <input  type="text" id="loc" name="bodystyle" style="display: none;" value="1">
+                                <input  type="text" id="loc" name="bodystyle" style="display: none;" value="<?php echo $item["brand_id"];?>"/>
                                 <label for="loc">Checkbox</label><br>
                             </form>
                         </div>

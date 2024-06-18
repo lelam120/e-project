@@ -1,16 +1,29 @@
 <?php
-// Kết nối đến database
-$conn = new mysqli("localhost", "root", "root", "carvan");
+    require_once("functions/product.php");
+    $newest_products = null;
+    $checkbrand = null;
+
+    $hangxe  = isset($_GET['loc']) ? intval($_GET['loc']) : 0;
+    $bodysitai  = isset($_GET['bodystyle']) ? intval($_GET['bodystyle']) : 0;
+
+    if ($hangxe == 0 && $bodysitai == 0) {
+        $newest_products = new_car();
+        $checkbrand = brand_all();
+       
+    } else if ($hangxe == 0 && $bodysitai != 0) {
 
         die('loctheobodysityle');
     }else if ($hangxe != 0 && $bodysitai == 0) {
-        // $newest_products = newest_car();
+        $checkbrand = brand2($hangxe);
+        $newest_products = brand_id($hangxe);
+      
 
-        die('loctheohangxe');
     }else if ($hangxe != 0 && $bodysitai != 0){
         die('loctheohangxe va bodystyel');
     }
-
+    // $brand_alls = brand_detail($brand_id);
+   
+    // Số xe hiển thị mỗi trang
     $items_per_page = 12;
 
     // Xác định trang hiện tại
@@ -18,10 +31,14 @@ $conn = new mysqli("localhost", "root", "root", "carvan");
 
     // Tổng số trang
     $total_items = count($newest_products);
+    // echo count($newest_products);
     $total_pages = ceil($total_items / $items_per_page);
 
     // Lấy dữ liệu xe cho trang hiện tại
     $start_index = ($current_page - 1) * $items_per_page;
+
+    // $json = json_encode($newest_products);
+    // echo $json;
     $current_page_items = array_slice($newest_products, $start_index, $items_per_page);
 ?>
 <!DOCTYPE html>
@@ -184,10 +201,13 @@ $conn = new mysqli("localhost", "root", "root", "carvan");
                                 <div style="width: 100%;" class="card-body">
                                 <h6 class="card-title" style="margin-bottom:5px;font-weight:700;text-align:center"><?php echo $item["car_name"]; ?></h6>
                                 <div style="text-align:center">
-                                    <i class="bi bi-tags" style="color:gray; margin:6px;font-size:small;"></i><span style="color:gray; margin-right:10px;font-size:small;"><?php echo $item["brand_name"]; ?></span>
-                                    <i class="bi bi-car-front" style="color:gray;margin:6px;font-size:small;"></i><span style="color:gray;font-size:small;"><?php echo $item["type"]; ?></span>
+                                    <span style="color:gray;margin-bottom:10px">【 </span>
+                                    <i class="bi bi-tags" style="color:gray; margin:3px;font-size:small;"></i><span style="color:gray;font-size:small;"><?php echo $item["brand_name"]; ?></span>
+                                    <span style="color:gray;">||</span>
+                                    <i class="bi bi-car-front" style="color:gray;margin:3px;font-size:small;"></i><span style="color:gray;font-size:small;"><?php echo $item["type"]; ?></span>
+                                    <span style="color:gray;">】</span>
                                 </div>
-                                <a style="width:100%; margin-top:10px;" href="/detail.php?id=<?php echo $item["newcar_id"]; ?>" class="btn btn custom-gray">View More</a>
+                                <a style="width:100%; margin-top:20px;" href="/detail.php?id=<?php echo $item["newcar_id"]; ?>" class="btn btn custom-gray">View More</a>
                                 </div>
                             </div>
                         </div>
