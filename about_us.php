@@ -72,9 +72,9 @@
         </div>
     </section>
 
-    <footer>
+   
         <?php include_once("html/Footers.php"); ?>
-    </footer>
+   
 </body>
 
 </html>
