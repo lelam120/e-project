@@ -1,3 +1,9 @@
+/* Text Alignment */
+.text-left {
+    text-align: left;
+    margin-left: 0;
+}
+
 /* General Styles */
 body {
     font-family: Arial, sans-serif;
@@ -9,29 +15,26 @@ body {
 }
 
 .container {
-    max-width: 960px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
 }
 
 .section {
-    padding: 40px 0;
+    padding: 60px 0;
 }
 
 .section-title {
     font-size: 2.5rem;
-    text-align: center;
+    text-align: left;
     margin-bottom: 30px;
+    color: #333;
 }
 
 .section-content {
-    text-align: justify;
-    margin-left: 0;
-}
-
-.text-left {
     text-align: left;
-    margin-left: 0; 
+    margin-bottom: 20px;
+    color: #555;
 }
 
 .responsive-image {
@@ -48,6 +51,7 @@ body {
 .subsection h2 {
     font-size: 1.8rem;
     margin-bottom: 10px;
+    color: #333;
 }
 
 /* Navigation Styles */
@@ -61,6 +65,7 @@ nav {
 nav ul {
     list-style-type: none;
     padding: 0;
+    margin: 0;
 }
 
 nav ul li {
@@ -90,5 +95,16 @@ footer {
 @media (max-width: 768px) {
     .container {
         padding: 10px;
+    }
+    .section-title {
+        text-align: center;
+    }
+    nav ul li {
+        display: block;
+        margin: 0;
+    }
+    nav ul li a {
+        display: block;
+        padding: 10px 0;
     }
 }
