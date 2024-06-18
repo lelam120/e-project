@@ -1,77 +1,263 @@
+
 body {
     font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f8f8;
     margin: 0;
     padding: 0;
 }
 
-header {
-    background-color: #333;
-    color: white;
-    padding: 15px;
+h2 {
+    font-size: 2rem;
+    color: #333;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+.about-sec-intro {
+    padding: 2rem;
+    background-color: #fff;
     text-align: center;
 }
 
-nav {
-    background-color: #444;
-    overflow: hidden;
+.about-sec-intro p {
+    font-size: 1.2rem;
+    color: #666;
 }
 
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    text-align: center;
+.about-sec-intro h2 {
+    font-size: 2.5rem;
+    color: #000;
+    margin-top: 0.5rem;
 }
 
-nav ul li {
-    display: inline;
+/* Media Text Section */
+.wp-block-media-text {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    padding: 2rem;
+    background-color: #fff;
+    gap: 1rem;
 }
 
-nav ul li a {
-    display: inline-block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
+.wp-block-media-text__content {
+    flex: 1;
+    min-width: 280px;
 }
 
-nav ul li a:hover {
-    background-color: #ddd;
-    color: black;
+.wp-block-media-text__media {
+    flex: 1;
+    min-width: 280px;
 }
 
-.section {
-    padding: 20px;
-}
-
-.section-title {
-    font-size: 2em;
-    margin-bottom: 10px;
-}
-
-.section-content {
-    margin-bottom: 15px;
-}
-
-.responsive-image {
+.wp-block-media-text__media img {
     max-width: 100%;
     height: auto;
 }
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
+/* Why Choose Section */
+.about-sec-why {
+    padding: 3rem 1rem;
+    background-color: #f8f8f8;
 }
 
-#brand-story {
-    margin-top: 20px;
+.about-sec-why h2 {
+    text-align: center;
+    margin-bottom: 2rem;
 }
 
-.subsection {
-    margin-top: 20px;
+.xz-cards-block {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
 }
 
-.subsection h2 {
-    font-size: 1.5em;
-    margin-bottom: 10px;
+.xz-card-mly3 {
+    background-color: #fff;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    flex: 1 1 30%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.xz-card-mly3 .card_top {
+    margin-bottom: 1rem;
+}
+
+.xz-card-mly3 .iconfont {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.xz-card-mly3 .tit {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #000;
+}
+
+.xz-card-mly3 .txt {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Services Section */
+.about-sec-service {
+    padding: 3rem 1rem;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+}
+
+.about-sec-service h2 {
+    margin-bottom: 2rem;
+}
+
+.about-service-nav p {
+    display: inline-block;
+    margin: 0 1rem;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    background-color: #444;
+}
+
+.about-service-nav p.current {
+    background-color: #555;
+    font-weight: bold;
+}
+
+.xz-card-ae13 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+    padding: 2rem;
+    background-color: #444;
+    border-radius: 8px;
+    margin: 1rem 0;
+}
+
+.xz-card-ae13 .service,
+.xz-card-ae13 .pic {
+    flex: 1;
+    min-width: 280px;
+}
+
+.xz-card-ae13 .service {
+    text-align: left;
+}
+
+.xz-card-ae13 .service .iconfont {
+    font-size: 2.5rem;
+    color: #fff;
+    margin-bottom: 1rem;
+}
+
+.xz-card-ae13 .service .tit {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #fff;
+}
+
+.xz-card-ae13 .service .txt {
+    font-size: 1.1rem;
+    color: #ccc;
+}
+
+.xz-card-ae13 .pic img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Client Testimonials */
+.about-sec-say {
+    padding: 3rem 1rem;
+    background-color: #fff;
+}
+
+.about-sec-say h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.xz-cards-block.xz-cards-ae02 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.xz-card-ae02 {
+    background-color: #f8f8f8;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    max-width: 500px;
+    flex: 1 1 45%;
+}
+
+.xz-card-ae02 .txt_one {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.xz-card-ae02 .pic {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.xz-card-ae02 .pic img {
+    border-radius: 50%;
+    width: 64px;
+    height: 64px;
+}
+
+.xz-card-ae02 .pic_right {
+    text-align: left;
+}
+
+.xz-card-ae02 .tit_two {
+    font-size: 1.3rem;
+    margin-bottom: 0.3rem;
+    color: #f3e9e9;
+}
+
+.xz-card-ae02 .txt_two {
+    font-size: 1rem;
+    color: #999;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .wp-block-media-text {
+        flex-direction: column;
+    }
+
+    .xz-cards-block.xz-cards-mly3 {
+        flex-direction: column;
+    }
+
+    .xz-cards-block.xz-cards-ae02 {
+        flex-direction: column;
+    }
+
+    .xz-card-ae13 {
+        flex-direction: column;
+    }
+
+    .about-service-nav p {
+        margin: 0.5rem 0;
+    }
 }
