@@ -156,14 +156,14 @@
                 <button onclick="toggleBrand(this)" id="cac"><span id="trai"><b style="font-size:15px;">Brand</b></span><span id="phai"><i class="bi bi-chevron-down"></i></span></button>
                 <div class="loccon"   id="thuonghieu">
                     <div class="Search_form">
-                        <input type="Text" placeholder="Search" aria-label="Search">                                  
+                        <input style="color: white;" type="Text" placeholder="Search" aria-label="Search">                                  
                     </div>
                     <?php foreach($checkbrand as $item):?>
                     <div class="hangxe_kien">
                         <div>
                             <form action="/range_of_car.php" method="GET">
                                 <input value="<?php echo $bodysitai;  ?>" name="bodystyle" type="hidden" >
-                                <input  type="text" id="loc" name="loc" style="display: none;" value="1">
+                                <input  type="text" id="loc" name="loc" style="display: none;" value="<?php echo $item["brand_id"]; ?>">
                                 <button id="checkbox2" type="submit" class="submit-button"></button>
                             </form>
                             <img src="<?php echo $item["icon_brand"]; ?>"/>

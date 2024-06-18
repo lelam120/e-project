@@ -1,55 +1,47 @@
 <?php
-// Kết nối đến database
-$conn = new mysqli("localhost", "root", "root", "eproject");
+    require_once("functions/product.php");
+    $newest_products = null;
+    $hangxe  = isset($_GET['loc']) ? intval($_GET['loc']) : 0;
+    $bodysitai  = isset($_GET['bodystyle']) ? intval($_GET['bodystyle']) : 0;
+   
+    if ($hangxe == 0 && $bodysitai == 0) {
+        $newest_products = new_car();
+    } else if ($hangxe == 0 && $bodysitai != 0) {
+        // $newest_products = newest_car();
 
-// Kiểm tra kết nối
-if ($conn->connect_error) {
-    die("Kết nối thất bại: " . $conn->connect_error);
-}
+        die('loctheobodysityle');
+    }else if ($hangxe != 0 && $bodysitai == 0) {
+        // $newest_products = newest_car();
 
-// Lấy danh sách các hãng xe để hiển thị checkbox
-$sql = "SELECT brand_id, brand_name, icon_brand FROM brand";
-$brand_result = $conn->query($sql);
-
-// Lấy danh sách các loại xe để hiển thị nút Kiểu xe
-$sql = "SELECT DISTINCT type FROM cars";
-$type_result = $conn->query($sql);
-
-// Lấy danh sách tất cả các xe
-$sql = "SELECT car_name, thumbnail, new_brand, type,
-               (SELECT brand_name FROM brand WHERE brand_id = cars.new_brand) AS brand_name,
-               (SELECT icon_brand FROM brand WHERE brand_id = cars.new_brand) AS brand_icon
-        FROM cars WHERE old_new='new'";
-$car_result = $conn->query($sql);
-$cars = [];
-if ($car_result->num_rows > 0) {
-    while($row = $car_result->fetch_assoc()) {
-        $cars[] = $row;
+        die('loctheohangxe');
+    }else if ($hangxe != 0 && $bodysitai != 0){
+        die('loctheohangxe va bodystyel');
     }
-}
+
+    $items_per_page = 12;
+
+    // Xác định trang hiện tại
+    $current_page = isset($_GET['page']) ? (int)$_GET['page'] : 1;
+
+    // Tổng số trang
+    $total_items = count($newest_products);
+    $total_pages = ceil($total_items / $items_per_page);
+
+    // Lấy dữ liệu xe cho trang hiện tại
+    $start_index = ($current_page - 1) * $items_per_page;
+    $current_page_items = array_slice($newest_products, $start_index, $items_per_page);
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Car Brands</title>
+    <title>Range Of Car</title>
     <?php include_once("html/style.php"); ?>
     <link href="css/styles.css" rel="stylesheet">
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <!-- Bootstrap Icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <!-- jQuery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <!-- Pagination JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/simplePagination.js/1.6/jquery.simplePagination.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simplePagination.js/1.6/simplePagination.min.css">
-    
+    <link href="css/index.css" rel="stylesheet">
+</head>
 <style>
-    
         .boxbox{
             background-color: white; /* Màu nền của boxbox */
             width: 70%; /* Độ rộng của boxbox */
@@ -148,175 +140,20 @@ if ($car_result->num_rows > 0) {
             font-size: 27px; /* Kích thước icon */
             color:#2c9f1c;
         }
-        .car-card {
+        .card {
+            background-color: #fff;
             border: 1px solid #ddd;
-            border-radius: 5px;
-            padding: 10px;
-            margin: 10px; /* Khoảng cách giữa các thẻ ô tô */
-            text-align: center;
-            display: none; /* Ẩn các thẻ ô tô ban đầu */
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+            overflow: hidden;
         }
 
-        .car-card img {
-            max-width: 100%;
-            border-bottom: 1px solid #ddd;
+        .card:hover {
+            transform: scale(1.1);
         }
-        .car-card h2 {
-            font-size: 1.2em;
-            margin: 10px 0;
-        }
-        .brand-checkbox label,
-        .type-radio label {
-            display: block;
-            margin-bottom: 10px;
-        }
-        .brand-checkbox img,
-        .type-radio img {
-            width: 20px;
-            height: 20px;
-            margin-right: 10px;
-        }
-        .brand-icon {
-            width: 20px;
-            height: 20px;
-            margin-left: 5px;
-            vertical-align: middle;
-        }
-        .icon-brand {
-            font-size: 1em;
-            margin-right: 5px;
-            vertical-align: middle;
-        }
-        .pagination {
-            position: relative;
-            margin-top: 20px;
-            left:30%;
-            text-align: center; 
-        } 
-        .brand-checkbox label {
-            display: flex;
-            align-items: center;
-        }
-
-        .brand-checkbox img {
-            width: 50px; 
-            height: 50px;
-
-        }
-
-        .brand-checkbox label span {
-            font-size: 14px; 
-            font-weight: bold;
-        }
-        .Reset{
-            text-decoration: none;
-            color: #2c9f1c;
-        }
-        .reset{
-            display: flex;
-            justify-content: center;
-            margin: 10px 0;
-            font-weight: 600;
-        }
-        #showCheckboxesBtn{
-            font-weight:700;
-            height:45px;
-        }
-        #showTypeRadiosBtn{
-            font-weight:700;
-            height:45px;
-        }
-        .btn-custom {
-            display: flex;
-            align-items: center;
-            justify-content: space-between; /* Căn chỉnh các mục con trong button */
-            width: 150px; /* Đặt chiều rộng cố định để dễ dàng căn chỉnh */
-        }
-        .btn-custom i {
-            transition: transform 0.3s;
-        }
-        .btn-custom:hover i {
-            transform: rotate(180deg);
-        }
-
+        
 </style>
-<script>
-    $(document).ready(function(){
-        // Ẩn khối checkbox và radio button khi trang tải lên
-        $("#brandCheckboxes").hide();
-        $("#typeRadios").hide();
-        $("#searchBrandInput").hide();
-        // Sự kiện click nút "Chọn hãng xe"
-        $("#showCheckboxesBtn").click(function(){
-            $("#brandCheckboxes").toggle();
-        });
-
-        // Sự kiện click nút "Kiểu xe"
-        $("#showTypeRadiosBtn").click(function(){
-            $("#typeRadios").toggle();
-        });
-
-        // Sự kiện change của checkbox
-        $("input[name='brand']").change(function(){
-            filterCars();
-        });
-
-        // Sự kiện change của radio button
-        $("input[name='type']").change(function(){
-            filterCars();
-        });
-
-        function filterCars() {
-            var selectedBrands = [];
-            var selectedTypes = [];
-
-            $("input[name='brand']:checked").each(function(){
-                selectedBrands.push($(this).val());
-            });
-
-            $("input[name='type']:checked").each(function(){
-                selectedTypes.push($(this).val());
-            });
-
-            if(selectedBrands.length > 0 || selectedTypes.length > 0) {
-                $(".car-card").hide();
-                selectedBrands.forEach(function(brandId){
-                    selectedTypes.forEach(function(type){
-                        $(".car-card[data-brand='" + brandId + "'][data-type='" + type + "']").show();
-                    });
-                });
-            } else {
-                $(".car-card").show();
-            }
-            paginate();
-        }
-
-        function paginate() {
-            var items = $(".car-card:visible");
-            var numItems = items.length;
-            var perPage = 12; // Thay đổi số lượng xe trên mỗi trang tại đây
-
-            items.slice(perPage).hide();
-
-            $('.pagination').pagination({
-                items: numItems,
-                itemsOnPage: perPage,
-                cssStyle: 'light-theme',
-                onPageClick: function(pageNumber) {
-                    var showFrom = perPage * (pageNumber - 1);
-                    var showTo = showFrom + perPage;
-
-                    items.hide().slice(showFrom, showTo).show();
-                    window.scrollTo({ top: document.documentElement.scrollHeight/9, behavior: 'smooth' }); // Scroll lên đầu trang khi chuyển trang
-                }
-            });
-        }
-
-        // Hiển thị tất cả các thẻ xe khi trang tải lên
-        $(".car-card").show();
-        paginate();
-    });
-    </script>
 <body>
     <header>
         <?php include_once("html/Header.php"); ?>
@@ -337,76 +174,57 @@ if ($car_result->num_rows > 0) {
             </div>
     </div>
 
-    <div class="container" style="width: 70%;margin-top: 100px;margin-bottom:100px">
+    <div class="container mt-5">
         <div class="row">
-            <div class="col-md-3" style="background-color:#242424;margin-top:10px;margin-bottom:60px;padding:38px;height:auto;color:white;border-radius:2px;">
-            <p><h3><b>Search Options</b></h3></p>
-                <form id="brandForm">
-                    <button style="width:100%;background-color:#2c9f1c;color:white;text-align:left" type="button" class="btn btn mb-3 btn-custom" id="showCheckboxesBtn">Brand<i class="bi bi-caret-up-fill"></i></button>
-                    <div id="brandCheckboxes" class="mb-3">
-                    <input type="text" id="searchBrandInput" class="form-control mb-2" placeholder="Tìm kiếm...">
-                        <?php
-                        if ($brand_result->num_rows > 0) {
-                            while($row = $brand_result->fetch_assoc()) {
-                                echo '<div class="brand-checkbox">';
-                                echo '<label>';
-                                echo '<input style="border-radius:10px #2c9f1c; margin-left:10px; margin-right:5px;" type="checkbox" name="brand" value="'.$row['brand_id'].'">';
-                                echo '<img src="'.$row['icon_brand'].'" alt="'.$row['brand_name'].'">';
-                                echo $row['brand_name'];
-                                echo '</label>';
-                                echo '</div>';
-                            }
-                        }
-                        ?>
-                    </div>
-
-                </form>
-
-                <form id="typeForm">
-                    <button style="width:100%;background-color:#2c9f1c;color:white;text-align:left" type="button" class="btn btn mb-3 btn-custom" id="showTypeRadiosBtn">Body Style<i class="bi bi-caret-up-fill"></i></button>
-                    <div id="typeRadios" class="mb-3">
-                        <?php
-                        if ($type_result->num_rows > 0) {
-                            while($row = $type_result->fetch_assoc()) {
-                                echo '<div class="type-radio">';
-                                echo '<label>';
-                                echo '<input style="margin-left:10px;margin-right:10px;" type="checkbox" name="type" value="'.$row['type'].'">';
-                                echo $row['type'];
-                                echo '</label>';
-                                echo '</div>';
-                            }
-                        }
-                        ?>
-                    </div>
-                </form>
-                <div class="reset">
-                    <a style="font-size:15px;color:#2c9f1c;font-size:small;" class="Reset" href="/range_of_car.php" ><i style=" color:#2c9f1c;margin:2px;" class="bi bi-arrow-counterclockwise"></i>RESET ALL</a>
-                </div>
+            <!-- Search Form -->
+            <div class="col-md-3">
+            <?php include_once("html/Select_Options.php"); ?>
             </div>
             <div class="col-md-9">
-                <div class="row" id="carCards">
-                <?php
-                foreach ($cars as $row) {
-                    echo '<div style="width:300px;" class="col-md-3 car-card" data-brand="' . $row["new_brand"] . '" data-type="' . $row["type"] . '">';
-                    echo '<a href="detail.php?id=' . $row["newcar_id"] . '" style="text-decoration: none;">';
-                    echo '<img style="width:300px;height:300px;" src="' . $row["thumbnail"] . '" alt="' . $row["car_name"] . '">';
-                    echo '</a>';
-                    echo '<h5 style="font-size: 18px; font-weight: 700;">' . $row["car_name"] . '</h5>';
-                    echo '<div class="car-info">';
-                    echo '<p style="margin:0;font-size:15px;color:gray;margin-bottom:5px">';
-                    echo '<i class="bi bi-tags icon-brand"></i> ' . $row['brand_name'];
-                    echo '<span style="margin-left: 10px; margin-right: 10px;">|</span>';
-                    echo '<i class="bi bi-car-front icon-brand"></i> ' . $row['type'];
-                    echo '</p>';
-                    echo '</div>';
-                    echo '<a style="background:#f2f0ea;color:black;width:90%;padding:10px;font-weight:700;" href="detail.php?id=' . $row["newcar_id"] . '" class="btn btn">View More</a>';
-                    echo '</div>';
-                }
-                ?>
-                <div class="pagination"></div>
-
+                <div class="row" id="carListings">
+                    <?php foreach($current_page_items as $item): ?>
+                        <div class="col-md-4 mb-4 car-card">
+                            <div class="card">
+                                <a href="/detail.php?id=<?php echo $item["newcar_id"]; ?>">
+                                    <img src="<?php echo $item["thumbnail"]; ?>" class="card-img-top" alt="<?php echo $item["car_name"]; ?>">
+                                </a>
+                                <div style="width: 100%;" class="card-body">
+                                <h6 class="card-title" style="margin-bottom:5px;font-weight:700;text-align:center"><?php echo $item["car_name"]; ?></h6>
+                                <div style="text-align:center">
+                                    <i class="bi bi-tags" style="color:gray; margin:6px;font-size:small;"></i><span style="color:gray; margin-right:10px;font-size:small;"><?php echo $item["brand_name"]; ?></span>
+                                    <i class="bi bi-car-front" style="color:gray;margin:6px;font-size:small;"></i><span style="color:gray;font-size:small;"><?php echo $item["type"]; ?></span>
+                                </div>
+                                <a style="width:100%; margin-top:10px;" href="/detail.php?id=<?php echo $item["newcar_id"]; ?>" class="btn btn custom-gray">View More</a>
+                                </div>
+                            </div>
+                        </div>
+                    <?php endforeach; ?>
                 </div>
 
+                <!-- Pagination -->
+                <nav>
+                    <ul class="pagination">
+                        <?php if ($current_page > 1): ?>
+                            <li class="page-item">
+                                <a class="page-link" href="?page=<?php echo $current_page - 1; ?>" aria-label="Previous">
+                                    <span style="color: #333;" aria-hidden="true">&laquo;</span>
+                                </a>
+                            </li>
+                        <?php endif; ?>
+                        <?php for ($page = 1; $page <= $total_pages; $page++): ?>
+                            <li class="page-item <?php if ($page == $current_page) echo 'active'; ?>">
+                                <a class="page-link" href="?page=<?php echo $page; ?>"><?php echo $page; ?></a>
+                            </li>
+                        <?php endfor; ?>
+                        <?php if ($current_page < $total_pages): ?>
+                            <li class="page-item">
+                                <a class="page-link" href="?page=<?php echo $current_page + 1; ?>" aria-label="Next">
+                                    <span style="color: #333;" aria-hidden="true">&raquo;</span>
+                                </a>
+                            </li>
+                        <?php endif; ?>
+                    </ul>
+                </nav>
             </div>
         </div>
     </div>
