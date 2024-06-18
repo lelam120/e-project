@@ -1,93 +1,252 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-}
-
-header {
-    background-color: #333;
-    color: white;
-    padding: 15px;
-    text-align: center;
-}
-
-nav {
-    background-color: #444;
-    overflow: hidden;
-}
-
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-}
-
-nav ul li {
-    display: inline;
-}
-
-nav ul li a {
-    display: inline-block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
-
-nav ul li a:hover {
-    background-color: #ddd;
-    color: black;
-}
-
-.section {
-    padding: 20px;
-}
-
-.section-title {
-    font-size: 2em;
-    margin-bottom: 10px;
-}
-
-.section-content {
-    margin-bottom: 15px;
-}
-
-.responsive-image {
-    max-width: 100%;
-    height: auto;
+    line-height: 1.6;
+    background-color: #f0f0f0;
+    color: #333;
 }
 
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
+    width: 90%;
+    margin: auto;
+    overflow: hidden;
 }
 
-#brand-story {
-    margin-top: 20px;
+header {
+    background: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
 }
 
-.subsection {
-    margin-top: 20px;
+.xz-about {
+    padding: 20px;
 }
 
-.subsection h2 {
-    font-size: 1.5em;
-    margin-bottom: 10px;
+.xz-main {
+    margin: 20px 0;
 }
 
-/* New styles for the content with image */
-.content-with-image {
+.content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.wp-block-group {
+    margin-bottom: 30px;
+}
+
+.wp-block-heading {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.wp-block-media-text {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
+    margin-bottom: 20px;
 }
 
-.text-content {
+.wp-block-media-text__content {
     flex: 1;
 }
 
-.right-image {
+.wp-block-media-text__media {
+    flex: 1;
     margin-left: 20px;
-    max-width: 50%;
+}
+
+.wp-block-media-text__media img {
+    max-width: 100%;
     height: auto;
+    border-radius: 5px;
+}
+
+.xzbtn-block {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.xz-btn {
+    display: inline-block;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.xz-btn:hover {
+    background-color: #555;
+}
+
+.xz-cards-block {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.xz-card-mly3, .xz-card-ae13 {
+    background: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    flex: calc(33.33% - 20px);
+}
+
+.xz-card-ae13 {
+    flex: 100%;
+}
+
+.card_top {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.iconfont {
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+.tit {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.txt {
+    margin-top: 10px;
+}
+
+.wp-block-cover {
+    position: relative;
+    overflow: hidden;
+    margin: 20px 0;
+    border-radius: 5px;
+}
+
+.wp-block-cover__inner-container {
+    position: relative;
+    z-index: 1;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    text-align: center;
+}
+
+.wp-block-cover__image-background {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.wp-block-group.about-service-nav {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.wp-block-group.about-service-nav p {
+    display: inline-block;
+    margin: 0 10px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.xz-cards-ae13 {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.xz-card-ae13 .service {
+    flex: 1;
+}
+
+.xz-card-ae13 .pic {
+    flex: 1;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.xz-card-ae13 .pic img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.wp-block-group.about-say-x {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.xz-cards-ae02 {
+    position: relative;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+.xz-card-ae02 {
+    background: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.xz-card-ae02 .txt_one {
+    margin-bottom: 20px;
+}
+
+.xz-card-ae02 .pic {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.xz-card-ae02 .pic img {
+    width: 128px;
+    height: 128px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.xz-card-ae02 .pic_right {
+    text-align: left;
+}
+
+.xz-card-ae02 .tit_two {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.xz-card-ae02 .txt_two {
+    font-size: 14px;
+    color: #666;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .xz-cards-block, .xz-cards-ae13, .xz-cards-ae02 {
+        flex-direction: column;
+    }
+
+    .xz-card-mly3, .xz-card-ae13, .xz-card-ae02 {
+        flex: 100%;
+        margin-right: 0;
+    }
+
+    .wp-block-media-text__media {
+        margin-left: 0;
+        margin-top: 20px;
+    }
 }
