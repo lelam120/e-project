@@ -3,19 +3,7 @@ main .mot {
  
 }
 
-html{
-    scroll-snap-type: y mandatory;
-}
-header{
-    scroll-snap-align:start ;
-}
-main section{
-    scroll-snap-align:start ;
- 
-}
-footer{
-    scroll-snap-align:start ;
-}
+
 
 main .mot .motchitiet{
 

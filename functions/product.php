@@ -71,3 +71,16 @@ function newest_products(){
 }
 
 
+function detail_information($id){
+    $sql = "SELECT * FROM detail_information WHERE infor_cars = $id";
+
+    $result = query($sql);
+
+    $list = [];
+    
+    while($row = $result->fetch_assoc()){
+        $list[] = $row;
+    }
+    return $list;
+
+}

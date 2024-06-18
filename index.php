@@ -14,10 +14,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <?php include_once("html/style.php"); ?>
-    <link href="css/index.css" rel="stylesheet">
+    <link href="css/indexcac.css" rel="stylesheet">
 </head>
-    
-  
+
 
 <body>
     <header>
@@ -207,6 +206,20 @@
 
 
             </div>
+        </section>
+        <section class="sau">
+            <p id ="tieudenho">Our Cases</p>
+            <p>Latest News</p>
+            <div>
+                <div class="trai">
+                    <p>Russian customers purchased the 2023 GWM Jingang Poer</p>
+                    <p>Recently, Borderlesscar successfully delivered a 2023 GWM Jingang Poer to a customer in Russia, which signifies the maturity of our business and the gradual opening...</p>
+                    <p><a>Read More</a><p>
+                </div>
+                <div class="phai"></div>
+            </div>
+            
+            
         </section>
     </main>
     

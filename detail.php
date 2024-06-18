@@ -3,6 +3,8 @@
    $product_id  = isset($_GET['id']) ? intval($_GET['id']) : 0;
 
    $car = product_detail($product_id);
+//    $thongtin = detail_information($product_id);
+
   
     if ($car ==null){
         header('Location:/404.php');
