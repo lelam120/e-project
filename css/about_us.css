@@ -1,263 +1,260 @@
-
+/* General Styles */
 body {
     font-family: Arial, sans-serif;
-    line-height: 1.6;
     color: #333;
-    background-color: #f8f8f8;
+    line-height: 1.6;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-h2 {
-    font-size: 2rem;
+header {
+    background: #222;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+    background: #333;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 15px;
+    display: inline-block;
+}
+
+nav ul li a:hover {
+    background: #575757;
+}
+
+.section {
+    padding: 40px 20px;
+    background: #f9f9f9;
+}
+
+.section-title {
+    font-size: 2em;
+    margin-bottom: 20px;
+    text-align: center;
     color: #333;
 }
 
-p {
-    margin-bottom: 1rem;
+.section-content {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.wp-block-group {
+    margin-bottom: 40px;
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 768px) {
+    nav ul li {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .wp-block-media-text__content,
+    .wp-block-media-text__media {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* Professionalism Section */
+.xz-container {
+    background: #fff;
+    padding: 20px 0;
+}
+
+.xz-main {
+    padding: 0 20px;
 }
 
 .about-sec-intro {
-    padding: 2rem;
-    background-color: #fff;
+    padding: 40px 20px;
+    background: #f5f5f5;
+}
+
+.about-intro-tit-sec p {
+    font-size: 1.2em;
     text-align: center;
 }
 
-.about-sec-intro p {
-    font-size: 1.2rem;
-    color: #666;
+.about-intro-tit-sec h2 {
+    font-size: 2.5em;
+    text-align: center;
+    margin-top: 10px;
+    color: #0073e6;
 }
 
-.about-sec-intro h2 {
-    font-size: 2.5rem;
-    color: #000;
-    margin-top: 0.5rem;
-}
-
-/* Media Text Section */
 .wp-block-media-text {
     display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    padding: 2rem;
-    background-color: #fff;
-    gap: 1rem;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .wp-block-media-text__content {
-    flex: 1;
-    min-width: 280px;
+    max-width: 50%;
 }
 
 .wp-block-media-text__media {
-    flex: 1;
-    min-width: 280px;
+    max-width: 45%;
 }
 
 .wp-block-media-text__media img {
-    max-width: 100%;
+    width: 100%;
     height: auto;
 }
 
-/* Why Choose Section */
-.about-sec-why {
-    padding: 3rem 1rem;
-    background-color: #f8f8f8;
+.xzbtn-block {
+    text-align: center;
+    margin-top: 20px;
 }
 
-.about-sec-why h2 {
-    text-align: center;
-    margin-bottom: 2rem;
+.xz-btn {
+    background: #0073e6;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.xz-btn:hover {
+    background: #005bb5;
+}
+
+/* Why Choose Borderless Section */
+.about-sec-why {
+    padding: 40px 20px;
 }
 
 .xz-cards-block {
     display: flex;
     flex-wrap: wrap;
-    gap: 1rem;
-    justify-content: center;
+    gap: 20px;
 }
 
 .xz-card-mly3 {
-    background-color: #fff;
-    padding: 1rem;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    flex: 1 1 30%;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    flex: 1 1 calc(33.333% - 20px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
 
-.xz-card-mly3 .card_top {
-    margin-bottom: 1rem;
+.iconfont {
+    font-size: 2.5em;
+    color: #0073e6;
+    margin-bottom: 10px;
 }
 
-.xz-card-mly3 .iconfont {
-    font-size: 2rem;
-    margin-bottom: 0.5rem;
-    color: #333;
+.tit {
+    font-size: 1.5em;
+    margin-bottom: 10px;
 }
 
-.xz-card-mly3 .tit {
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
-    color: #000;
-}
-
-.xz-card-mly3 .txt {
-    font-size: 1rem;
+.txt {
+    font-size: 1em;
     color: #666;
 }
 
 /* Services Section */
 .about-sec-service {
-    padding: 3rem 1rem;
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-}
-
-.about-sec-service h2 {
-    margin-bottom: 2rem;
+    padding: 40px 20px;
+    background: url('https://www.borderlesscar.com/wp-content/uploads/2023/07/about-sec-bg.jpg') no-repeat center center/cover;
 }
 
 .about-service-nav p {
     display: inline-block;
-    margin: 0 1rem;
+    margin: 0 10px;
+    padding: 10px 20px;
     cursor: pointer;
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
-    background-color: #444;
+    color: #fff;
+    border-bottom: 2px solid transparent;
 }
 
 .about-service-nav p.current {
-    background-color: #555;
-    font-weight: bold;
+    border-bottom: 2px solid #fff;
 }
 
-.xz-card-ae13 {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    align-items: center;
-    padding: 2rem;
-    background-color: #444;
-    border-radius: 8px;
-    margin: 1rem 0;
+.xz-cards-ae13 .service,
+.xz-cards-ae13 .pic {
+    display: inline-block;
+    vertical-align: top;
+    width: 48%;
 }
 
-.xz-card-ae13 .service,
-.xz-card-ae13 .pic {
-    flex: 1;
-    min-width: 280px;
-}
-
-.xz-card-ae13 .service {
-    text-align: left;
-}
-
-.xz-card-ae13 .service .iconfont {
-    font-size: 2.5rem;
-    color: #fff;
-    margin-bottom: 1rem;
-}
-
-.xz-card-ae13 .service .tit {
-    font-size: 1.8rem;
-    margin-bottom: 1rem;
-    color: #fff;
-}
-
-.xz-card-ae13 .service .txt {
-    font-size: 1.1rem;
-    color: #ccc;
-}
-
-.xz-card-ae13 .pic img {
-    max-width: 100%;
+.xz-cards-ae13 .pic img {
+    width: 100%;
     height: auto;
-    border-radius: 8px;
+    border-radius: 10px;
 }
 
-/* Client Testimonials */
+/* Testimonials Section */
 .about-sec-say {
-    padding: 3rem 1rem;
-    background-color: #fff;
+    padding: 40px 20px;
 }
 
-.about-sec-say h2 {
-    text-align: center;
-    margin-bottom: 2rem;
-}
-
-.xz-cards-block.xz-cards-ae02 {
+.xz-cards-ae02 {
     display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    justify-content: center;
+    overflow-x: auto;
 }
 
 .xz-card-ae02 {
-    background-color: #f8f8f8;
-    padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    text-align: left;
-    max-width: 500px;
-    flex: 1 1 45%;
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    min-width: 300px;
+    margin-right: 20px;
+    text-align: center;
 }
 
-.xz-card-ae02 .txt_one {
-    font-size: 1.2rem;
+.txt_one {
+    font-size: 1.1em;
     color: #666;
-    margin-bottom: 1rem;
+    margin-bottom: 20px;
 }
 
-.xz-card-ae02 .pic {
+.pic {
     display: flex;
     align-items: center;
-    gap: 1rem;
+    justify-content: center;
 }
 
-.xz-card-ae02 .pic img {
+.pic img {
     border-radius: 50%;
-    width: 64px;
-    height: 64px;
+    margin-right: 10px;
 }
 
-.xz-card-ae02 .pic_right {
-    text-align: left;
+.tit_two {
+    font-size: 1.2em;
+    color: #0073e6;
 }
 
-.xz-card-ae02 .tit_two {
-    font-size: 1.3rem;
-    margin-bottom: 0.3rem;
-    color: #f3e9e9;
-}
-
-.xz-card-ae02 .txt_two {
-    font-size: 1rem;
-    color: #999;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .wp-block-media-text {
-        flex-direction: column;
-    }
-
-    .xz-cards-block.xz-cards-mly3 {
-        flex-direction: column;
-    }
-
-    .xz-cards-block.xz-cards-ae02 {
-        flex-direction: column;
-    }
-
-    .xz-card-ae13 {
-        flex-direction: column;
-    }
-
-    .about-service-nav p {
-        margin: 0.5rem 0;
-    }
+.txt_two {
+    font-size: 0.9em;
+    color: #666;
 }
