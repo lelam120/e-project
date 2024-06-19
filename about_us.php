@@ -4,13 +4,155 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Borderless Car</title>
-    <link href="css/about_us.css" rel="stylesheet">
+    <?php include_once("html/style.php"); ?>
 </head>
+	<style>
+
+* .xz-form-pnx {
+			--c-theme:	#BB0010;
+			--c-border:	#f0f0f0;
+			--c-bg:		#fff;
+			--c-label:	#333;
+			--c-font:	#666;
+			--c-green:	#00B160;
+			--size:		1.6rem;
+			--gap:		1.25em;
+			--h: 		3em;
+			--lh:		1.8em;
+			--pd:		.4em .625em;
+			--br:		4px;
+			--btn-w:	18.75em;
+			--btn-jc:	center;
+			--lines: 	4;
+		}
+		.xz-form-pnx {
+			font-size: var(--size);
+		}
+	
+		.xz-form-pnx .xz-form-infos{
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			grid-gap:var(--gap);
+			margin-bottom: var(--gap);
+		}
+	
+		.xz-form-pnx .xz-form-info,
+		.xz-form-pnx .xz-form-msg {
+			border:solid 1px var(--c-border);
+			background:var(--c-bg);
+			padding:var(--pd);
+			display: flex;
+			align-items: center;
+			border-radius: var(--br);
+			box-sizing: border-box;
+		}
+		.xz-form-pnx .xz-form-info {
+			height: var(--h);
+		}
+		.xz-form-pnx .xz-form-msg {
+			align-items: flex-start;
+		}
+	
+		.xz-form-pnx .xz-form-input,
+		.xz-form-pnx .xz-form-textarea {
+			width:100%;
+			border:none;
+			font-size: var(--size);
+			line-height: var(--lh);
+			outline: 0;
+			padding:0;
+			margin-left: 1em;
+			color:var(--c-font);
+		}
+		.xz-form-pnx .xz-form-textarea {
+			height: calc(var(--lh) * var(--lines));
+			min-height: var(--h);
+			font-family: inherit;
+			resize: none;
+		}
+	
+		.xz-form-pnx .xz-form-label {
+			display: block;
+			color: var(--c-label);
+			line-height: var(--lh);
+			white-space: nowrap;
+		}
+		.xz-form-pnx .xz-form-label.required:after {
+			content:"*";
+			margin-left: .625em;
+			color:var(--c-theme);
+		}
+	
+		.xz-form-pnx .xz-form-btns {
+			margin-top: var(--gap);
+			display: flex;
+			justify-content: var(--btn-jc);
+		}
+		.xz-form-pnx .xz-form-button {
+			font-size: var(--size);
+			border-radius: var(--br);
+			display: inline-flex;
+			justify-content: center;
+			align-items: center;
+			width:var(--btn-w);
+			height: var(--h);
+			background:var(--c-theme);
+			color:#fff;
+			border:none;
+			transition:all .3s;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			gap:1em;
+		}
+		.xz-form-pnx .xz-form-button path {
+			fill: #fff;
+		}
+		.xz-form-pnx .xz-form-button:hover {
+			filter:brightness(1.1);
+		}
+		.xz-form-pnx .xz-form-button:active {
+			transform:scale(.98);
+		}
+	
+		@media screen and (max-width: 500px){
+			.xz-form-pnx {
+				--gap: .8em;
+			}
+			.xz-form-pnx .xz-form-infos {
+				grid-template-columns: 1fr;
+			}
+			.xz-form-pnx .xz-form-button {
+				width:100%;
+			}
+		}
+	
+		.xzform_o {
+			position: relative;
+		}
+		.xz-form-pnx .xz-form-message.success {
+			position: absolute;
+			top:50%;
+			left:50%;
+			transform:translate(-50%,-50%);
+			z-index: 9;
+			max-width:75%;
+			display: flex;
+			text-align: center;
+			align-items: center;
+			padding:4em;
+			background:rgba(255,255,255,.8);
+			color:var(--c-green);
+			font-size:1.125em;
+			line-height: 1.8em;
+			font-weight: 500;
+			box-shadow:0 .5rem 3rem -.5rem rgba(0,0,0,.3);
+		}
+</style>
 
 <body>
-    <header>
-        <?php include_once("html/Header.php"); ?>
-    </header>
+	<?php include_once("html/Header.php"); ?>
+    
     <div class="xz-container xz-about">
 	<div class="xz-main">
 		<div class="content">
