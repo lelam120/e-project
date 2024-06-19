@@ -14,9 +14,7 @@
     display: flex;
     justify-content: center;
     border-radius: 5px;
-    position: absolute;
-    top: 0;
-   
+    margin-bottom: 200px;  
 }
 .Search_Options>div>div{
     margin: 10px 0;    
@@ -148,55 +146,43 @@
         <div>
             <p><h3><b>Search Options</b></h3></p>
             <div class="loc" >
-                <button onclick="toggleBrand(this)" id="cac"><span id="trai"><b style="font-size:15px;">Brand</b></span><span id="phai"><i class="bi bi-chevron-down"></i></span></button>
+                <button onclick="toggleBrand()" id="cac"><span id="trai"><b style="font-size:15px;">Brand</b></span><span id="phai"><i class="bi bi-chevron-down"></i></span></button>
                 <div class="loccon"   id="thuonghieu">
                     <div class="Search_form">
-                        <input style="color: white;" type="Text" placeholder="Search" aria-label="Search">                                  
+                        <input style="color: white;" type="Text" name="search" placeholder="Search" aria-label="Search">                                  
                     </div>
                     <?php foreach($checkbrand as $item):?>
                     <div class="hangxe_kien">
                         <div>
                             <form action="/range_of_car.php" method="GET">
                                 <input value="<?php echo $bodysitai;  ?>" name="bodystyle" type="hidden" >
-                                <input  type="text" id="loc" name="loc" style="display: none;" value="<?php echo $item["brand_id"]; ?>">
+                                <input  type="text" id="loc" name="brand" style="display: none;" value="<?php echo $item["brand_id"]; ?>">
                                 <button id="checkbox2" type="submit" class="submit-button"></button>
                             </form>
                             <img src="<?php echo $item["icon_brand"]; ?>"/>
-                            <label for="loc"><?php echo $item["brand_name"]; ?></span></label><br>
+                            <label for="loc"><?php echo $item["brand_name"]; ?></label><br>
                         </div>
                     </div>
                     <?php endforeach;?>    
                 </div>
             </div>
 
-            <!-- <div class="loc" >
-                <button onclick="Vehicle()" id="cac"><span id="trai"><b style="font-size:15px;">Vehicle Type</b></span><span id="phai"><i class="bi bi-chevron-down"></i></span></button>
-
-                <div class="loccon"   id="Vehicle_Type">
-                    <div class="hangxe_kien">             
-                        <div>     
-                            <form action="/range_of_car.php" method="GET">
-                                <input  type="text" id="loc" name="suv" style="display: none;" value="<?php echo $item["brand_id"];?>"/>
-                                <button style="margin-right: 6px;" id="checkbox2" type="submit" class="submit-button"></button>
-                                <label for="loc">Checkbox</label><br>
-                            </form>
-                        </div>      
-                    </div>
-                </div>
-            </div> -->
             <div class="loc" >
                 <button onclick="Body()" id="cac"><span id="trai"><b style="font-size:15px;">Body Style</b></span><span id="phai"><i class="bi bi-chevron-down"></i></span></button>
                 <div class="loccon"   id="Body_Style">
+                    <?php foreach($checkbrand as $item):?>
                     <div class="hangxe_kien">
-                        <div >            
+                        <div>
                             <form action="/range_of_car.php" method="GET">
-                                <input value="<?php echo $hangxe;  ?>" name="loc" type="hidden" >
+                                <input value="<?php echo $hangxe;  ?>" name="brand" type="hidden" >
+                                <input  type="text" id="loc" name="bodystyle" style="display: none;" value="<?php echo $item["id"]; ?>">
                                 <button style="margin-right: 6px;" id="checkbox2" type="submit" class="submit-button"></button>
-                                <input  type="text" id="loc" name="bodystyle" style="display: none;" value="<?php echo $item["brand_id"];?>"/>
-                                <label for="loc">Checkbox</label><br>
                             </form>
+                            <label for="loc"><?php echo $item["body_type"]; ?></label><br>
+
                         </div>
                     </div>
+                    <?php endforeach;?>    
                 </div>
             </div>
             <div class="reset">

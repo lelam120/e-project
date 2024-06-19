@@ -1,9 +1,10 @@
 <?php 
 require_once("database.php");
 function new_car(){
-    $sql = "SELECT car_name, thumbnail, new_brand, type,
-               (SELECT brand_name FROM brand WHERE brand_id = cars.new_brand) AS brand_name,
-               (SELECT icon_brand FROM brand WHERE brand_id = cars.new_brand) AS brand_icon
+    $sql = "SELECT *,
+                (SELECT brand_name FROM brand WHERE brand_id = cars.new_brand) AS brand_name,
+                (SELECT icon_brand FROM brand WHERE brand_id = cars.new_brand) AS brand_icon,
+                (SELECT body_type FROM cars_type WHERE id = cars.type) AS typecar
             FROM cars WHERE old_new='new'";
     $result = query($sql);
     $list = [];
@@ -13,9 +14,11 @@ function new_car(){
     return $list;
 }
 function old_car(){
-    $sql = "SELECT car_name, thumbnail, new_brand, type,
+    $sql = "SELECT *,
                (SELECT brand_name FROM brand WHERE brand_id = cars.new_brand) AS brand_name,
-               (SELECT icon_brand FROM brand WHERE brand_id = cars.new_brand) AS brand_icon
+               (SELECT icon_brand FROM brand WHERE brand_id = cars.new_brand) AS brand_icon,
+               (SELECT body_type FROM cars_type WHERE id = cars.type) AS typecar
+
             FROM cars WHERE old_new='old'";
     $result = query($sql);
     $list = [];
@@ -36,28 +39,9 @@ function car_id(){
 }
 
 function brand_all(){
-    $sql = "select * from brand order by brand_id";
-    $result = query($sql);
-    $list = [];
-    while($row = $result->fetch_assoc()){
-        $list[] = $row;
-    }
-    return $list;
-}
-
-function brand_id($id){
-    $sql =  "SELECT *, (SELECT brand_name FROM brand WHERE brand_id = cars.new_brand) AS brand_name 
-            FROM cars WHERE new_brand = $id ";
-    $result = query($sql);
-    $list = [];
-    while($row = $result->fetch_assoc()){
-        $list[] = $row;
-    }
-    return $list;
-}
-
-function brand2($id){
-    $sql =  "select * from brand where brand_id = $id   " ;
+    $sql = "SELECT *
+FROM brand, cars_type
+WHERE brand.brand_id = cars_type.id;";
     $result = query($sql);
     $list = [];
     while($row = $result->fetch_assoc()){
@@ -67,7 +51,40 @@ function brand2($id){
 }
 
 
+function brand_callNew($id){
+    $sql =  "SELECT *, (SELECT brand_name FROM brand WHERE brand_id = cars.new_brand) AS brand_name ,
+            (SELECT body_type FROM cars_type WHERE id = cars.type) AS typecar
+            FROM cars WHERE new_brand = $id and old_new='new' ";
+    $result = query($sql);
+    $list = [];
+    while($row = $result->fetch_assoc()){
+        $list[] = $row;
+    }
+    return $list;
+}
 
+function body_callNew($id){
+    $sql =  "SELECT *, (SELECT brand_name FROM brand WHERE brand_id = cars.new_brand) AS brand_name ,
+            (SELECT body_type FROM cars_type WHERE id = cars.type) AS typecar
+            FROM cars WHERE type = $id and old_new='new' ";
+    $result = query($sql);
+    $list = [];
+    while($row = $result->fetch_assoc()){
+        $list[] = $row;
+    }
+    return $list;
+}
+function brandBody_New($id_brand,$id_body){
+    $sql =  "SELECT *, (SELECT brand_name FROM brand WHERE brand_id = cars.new_brand) AS brand_name ,
+            (SELECT body_type FROM cars_type WHERE id = cars.type) AS typecar
+            FROM cars WHERE new_brand = $id_brand and type = $id_body and old_new='new'";
+    $result = query($sql);
+    $list = [];
+    while($row = $result->fetch_assoc()){
+        $list[] = $row;
+    }
+    return $list;
+}
 
 function newest_products(){
     $sql = "SELECT * FROM new_car ORDER BY newcar_id DESC LIMIT 8";

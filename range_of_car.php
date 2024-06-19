@@ -1,25 +1,23 @@
 <?php
     require_once("functions/product.php");
     $newest_products = null;
-    $checkbrand = null;
+    $checkbrand = brand_all();;
 
-    $hangxe  = isset($_GET['loc']) ? intval($_GET['loc']) : 0;
+    $hangxe  = isset($_GET['brand']) ? intval($_GET['brand']) : 0;
     $bodysitai  = isset($_GET['bodystyle']) ? intval($_GET['bodystyle']) : 0;
 
-    if ($hangxe == 0 && $bodysitai == 0) {
+    if ($hangxe == 0 & $bodysitai == 0) {
         $newest_products = new_car();
-        $checkbrand = brand_all();
        
-    } else if ($hangxe == 0 && $bodysitai != 0) {
+    } else if ($hangxe == 0 & $bodysitai != 0) {
+        $newest_products = body_callNew($bodysitai);
 
-        die('loctheobodysityle');
-    }else if ($hangxe != 0 && $bodysitai == 0) {
-        $checkbrand = brand2($hangxe);
-        $newest_products = brand_id($hangxe);
-      
-
-    }else if ($hangxe != 0 && $bodysitai != 0){
-        die('loctheohangxe va bodystyel');
+    }else if ($hangxe != 0 & $bodysitai == 0) {
+        $newest_products = brand_callNew($hangxe);
+              
+    }else if ($hangxe != 0 & $bodysitai != 0){
+        $newest_products = brandBody_New($hangxe,$bodysitai);
+        
     }
     // $brand_alls = brand_detail($brand_id);
    
@@ -41,6 +39,7 @@
     // echo $json;
     $current_page_items = array_slice($newest_products, $start_index, $items_per_page);
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -177,8 +176,8 @@
                 </div> 
             </div>
             <div class="bg py-4" style="background-color: #2c9f1c; height:100px;">
-                <form class="d-flex w-50 mx-auto" role="search">
-                    <input class="form-control" type="search" placeholder="Search Range Of Car" aria-label="Search">
+                <form class="d-flex w-50 mx-auto" role="search"  action="/range_of_car.php" method="GET">
+                    <input class="form-control" type="search" name="search" placeholder="Search Range Of Car" aria-label="Search" value="<?php echo $item["brand_id"]; ?>">
                     <button class="btn btn" style="background-color: #000;" type="submit"><i class="bi bi-search" style="color:white"></i></button>
                 </form>
             </div>
@@ -204,7 +203,7 @@
                                     <span style="color:gray;margin-bottom:10px">【 </span>
                                     <i class="bi bi-tags" style="color:gray; margin:3px;font-size:small;"></i><span style="color:gray;font-size:small;"><?php echo $item["brand_name"]; ?></span>
                                     <span style="color:gray;">||</span>
-                                    <i class="bi bi-car-front" style="color:gray;margin:3px;font-size:small;"></i><span style="color:gray;font-size:small;"><?php echo $item["type"]; ?></span>
+                                    <i class="bi bi-car-front" style="color:gray;margin:3px;font-size:small;"></i><span style="color:gray;font-size:small;"><?php echo $item["typecar"]; ?></span>
                                     <span style="color:gray;">】</span>
                                 </div>
                                 <a style="width:100%; margin-top:20px;" href="/detail.php?id=<?php echo $item["newcar_id"]; ?>" class="btn btn custom-gray">View More</a>
