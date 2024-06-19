@@ -350,7 +350,7 @@ margin-right: 20px;
 
 
 .boxbox{
-    background-color: white; /* Màu nền của boxbox */
+    background-color: transparent; /* Màu nền của boxbox */
     width: 70%; /* Độ rộng của boxbox */
     margin:auto;
     padding: 50px;
@@ -358,13 +358,17 @@ margin-right: 20px;
     box-shadow: 0 0 20px rgba(0,0,0,0.2); /* Đổ bóng */
     border-bottom: 2px solid #2c9f1c; /* Đường viền màu xanh dưới */
     margin-bottom: 100px;
+    backdrop-filter: blur(20px) ;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.747);
    
 }
 .contact-info {
+    border-radius: 5px;
     background-color: #242424;
     padding: 40px;
     background: url(img/car-shape2.png) no-repeat 50% 96% #222;
     background-size: 470px 100px;
+    border: 2px solid white;
 }
 .contact-info h2 {
     color: #6b6a69;
@@ -408,9 +412,10 @@ margin-right: 20px;
     margin-right: 10px;
 }
 .contact-form {
+    background-color: white;
     padding: 20px;
     border-radius: 5px;
-    background-color: #fff;
+    border: 2px solid black;
 }
 .contact-form h1 {
     color: #0e0e0e;
