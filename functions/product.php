@@ -27,7 +27,27 @@ function old_car(){
     }
     return $list;
 }
+function Search_form($search){
+    $sql = "SELECT *,                
+                (SELECT brand_name FROM brand WHERE brand_id = cars.new_brand) AS brand_name,
+                (SELECT icon_brand FROM brand WHERE brand_id = cars.new_brand) AS brand_icon,
+                (SELECT body_type FROM cars_type WHERE id = cars.type) AS typecar 
+            FROM cars WHERE car_name LIKE '%$search%'";
 
+    $result = query($sql);
+    $list = [];
+    while($row = $result->fetch_assoc()){
+    $list[] = $row;
+    }
+    return $list;
+}
+// $sql = "SELECT * FROM cars WHERE car_name LIKE '%$search%'";
+// $result = connect()->query($sql);
+    
+// $list = [];
+// while($row = $result->fetch_assoc()){
+//   $list[] = $row;
+// }
 function car_id(){
     $sql = "select * from cars order by newcar_id";
     $result = query($sql);

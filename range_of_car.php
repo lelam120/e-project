@@ -6,6 +6,7 @@
 
     $hangxe  = isset($_GET['brand']) ? intval($_GET['brand']) : 0;
     $bodysitai  = isset($_GET['bodystyle']) ? intval($_GET['bodystyle']) : 0;
+    $search = isset($_GET["search"])?$_GET["search"]:"";
 
     if ($hangxe == 0 & $bodysitai == 0) {
         $newest_products = new_car();
@@ -19,6 +20,8 @@
     }else if ($hangxe != 0 & $bodysitai != 0){
         $newest_products = brandBody_New($hangxe,$bodysitai);
         
+    }else if($search != 0){
+        $newest_products = Search_form($search);
     }
 
     $items_per_page = 12;
@@ -34,16 +37,6 @@
 
     $current_page_items = array_slice($newest_products, $start_index, $items_per_page);
 
-    $limit = isset($_GET["limit"]) && $_GET["limit"]!= "" ?$_GET["limit"]:20;
-    $search = isset($_GET["search"])?$_GET["search"]:"";
-
-    $sql = "SELECT * FROM cars WHERE car_name LIKE '%$search%' LIMIT $limit";
-    $result = connect()->query($sql);
-    
-    $list = [];
-    while($row = $result->fetch_assoc()){
-      $list[] = $row;
-    }
 ?>
 
   
