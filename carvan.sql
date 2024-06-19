@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:8889
--- Generation Time: Jun 16, 2024 at 09:56 AM
+-- Generation Time: Jun 18, 2024 at 02:18 PM
 -- Server version: 5.7.24
 -- PHP Version: 8.1.0
 
@@ -30,9 +30,6 @@ SET time_zone = "+00:00";
 CREATE TABLE `brand` (
   `brand_id` int(11) NOT NULL,
   `brand_name` varchar(20) DEFAULT NULL,
-  `infor` text,
-  `thumbnail` varchar(50) DEFAULT NULL,
-  `back_img` varchar(50) DEFAULT NULL,
   `icon_brand` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -40,13 +37,13 @@ CREATE TABLE `brand` (
 -- Dumping data for table `brand`
 --
 
-INSERT INTO `brand` (`brand_id`, `brand_name`, `infor`, `thumbnail`, `back_img`, `icon_brand`) VALUES
-(1, 'GWM', 'Established in 1984, GWM Group is a Chinese automotive brand. Its business operations involve the design, research and development, production, sales, and service of automobiles and components. The company focuses on key research and development as well as the application of advanced technologies such as intelligent connectivity, autonomous driving, and semiconductors.\r\n\r\nGWM has also strategically positioned itself in the clean energy sector, including power batteries, hydrogen energy, and solar energy, establishing a complete industrial chain layout. The company is currently undergoing accelerated transformation into a globally recognized intelligent technology company.\r\n\r\nNotable vehicle models already released by GWM include the Haval H6 EV, Haval Big Dog EV , Wey Blue Mountain DHT-PHEV, Wey Mooca DHT-PHEV, Wey Latte DHT-PHEV, and Tank EV.', '/img/GWM1', '/img/GWM', '/img/icon_GWM.png'),
-(2, 'Chery', 'Chery Automobile, established in 1997, has the production capacity of 900,000 vehicles, 900,000 engine sets, and 800,000 transmissions per year. It has developed five major passenger vehicle platforms: A00, A0, A, B, and SUV, with a product lineup covering eleven series and a total of twenty-one models. The company\'s products span across passenger cars, commercial vehicles, micro-cars, and other fields.\r\n\r\nThe models currently released by Chery include: Chery Tiggo 9, Chery Tiggo 8 PRO, Chery Tiggo 7, Chery Arrizo 8, Chery Arrizo 5, Chery eQ1, Chery Wujie Pro, Chery QQ Ice Cream, etc.', '/img/chery1', '/img/chery', '/img/icon_chery.png'),
-(3, 'Changan Automobile', 'Changan Automobile Co., Ltd., abbreviated as Changan Automobile, was established in 1996. Changan Automobile Global Research and Development Center is an open and collaborative smart research platform that integrates global resources. It encompasses seven major functions, including design, testing, and management, covering twelve areas such as simulation analysis, noise and vibration, and collision safety. The center includes 180 laboratories dedicated to hybrid powertrains, air conditioning systems, non-metallic materials, and a global data center built using cloud technology.\r\n\r\nCurrently, Changan Automobile has released several models, including Changan Benben E-Star, Changan Eado EV, Changan Lumin, and Changan uni-K.', '/img/Changan-Automobile1.jpg', '/img/Changan-Automobile.jpg', '/img/icon_changan.png'),
-(4, ' Hyundai', 'Hyundai Motor Company was founded in 1967 by Chung Ju-yung, the former chairman of the Hyundai Group. In the course of Hyundai\'s development, Hyundai Electronics was established in 1982, providing strong support for Hyundai Motor\'s modernization process. In 1991, the company introduced the first internally designed powertrain, the Alpha engine. In December 2000, Hyundai Motor (China) Sales Headquarters was established in Shanghai.\r\n\r\nCurrently, our available models include the Hyundai Sonata, Hyundai Tucson, and Hyundai Elantra.', '/img/hyundai1.jpg', '/img/hyundai.jpg', '/img/icon_Hyundai.png'),
-(5, ' Honda', 'Honda is a multinational transportation and machinery manufacturing company primarily engaged in the production of automobiles, motorcycles, aircraft, engines, and power equipment. It was founded by Soichiro Honda in 1948 and is headquartered in Minato-ku, Tokyo, Japan. Honda has more than 130 production facilities in 29 countries and regions worldwide, and its automobile production volume and scale rank among the top ten manufacturers in the world.\r\n\r\nCurrently, our available models include the Honda CR-V, Honda Fit, Honda Civic, Honda Accord, and more.', '/img/Honda1.jpg', '/img/Honda.jpg', '/img/icon_Honda.png'),
-(6, 'Toyota', 'Toyota Motor Corporation, founded by Kiichiro Toyoda, is an automobile manufacturing company headquartered in Toyota City, Aichi Prefecture, Japan, and Bunkyo Ward, Tokyo. The company\'s vision is to become the most trusted enterprise, achieving social recognition, customer satisfaction, and employee growth through stable operations and continuous development.\r\n\r\nCurrently, we have the following models available for sale: Toyota RAV4, Toyota C-HR, Toyota Corolla, Toyota Camry, and Toyota Avalon.', '/img/Toyota1.jpg', '/img/Toyota.jpg', '/img/icon_Toyota.png');
+INSERT INTO `brand` (`brand_id`, `brand_name`, `icon_brand`) VALUES
+(1, 'GWM', '/img/icon_GWM.png'),
+(2, 'Chery', '/img/icon_chery.png'),
+(3, 'Changan Automobile', '/img/icon_changan.png'),
+(4, ' Hyundai', '/img/icon_Hyundai.png'),
+(5, ' Honda', '/img/icon_Honda.png'),
+(6, 'Toyota', '/img/icon_Toyota.png');
 
 -- --------------------------------------------------------
 
@@ -60,70 +57,94 @@ CREATE TABLE `cars` (
   `information` text,
   `Video` varchar(50) DEFAULT NULL,
   `thumbnail` varchar(50) DEFAULT NULL,
-  `type` varchar(25) DEFAULT NULL,
   `old_new` varchar(10) DEFAULT NULL,
-  `new_brand` int(11) DEFAULT NULL
+  `new_brand` int(11) DEFAULT NULL,
+  `type` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `cars`
 --
 
-INSERT INTO `cars` (`newcar_id`, `car_name`, `information`, `Video`, `thumbnail`, `type`, `old_new`, `new_brand`) VALUES
-(1, 'GWM Wingle 7', 'GWM Wingle 7 is equipped with a 2.0T engine with a maximum power of 125kW, a maximum torque of 335N·m, a maximum speed of 160km/h, and a NEDC comprehensive fuel consumption as low as 7.3L/100km. It is a medium-sized pickup truck.\r\n', 'https://www.youtube.com/watch?v=6ucUDKRtcaw', '/img/1.jpg', 'Pickup truck', 'new', 1),
-(2, 'GWM Wingle 5', 'The GWM Wingle 5 is equipped with a 2.4L engine, with a maximum horsepower of 160Ps, maximum power of 118kW, and maximum torque of 230N·m. Its NEDC comprehensive fuel consumption is as low as 7.3L/100km, positioning it as a mid-size pickup truck.\r\n', 'https://www.youtube.com/watch?v=OGJzrkU-5GY', '/img/2.jpg', 'Pickup truck', 'new', 1),
-(3, 'GWM Jingang Poer', 'GWM Jingang Poer is equipped with a 2.0T engine with a maximum power of 140kW, a maximum torque of 400N.m, a maximum speed of 170km/h, a NEDC comprehensive fuel consumption as low as 7.9L/100km, and a minimum turning radius of 5.95m. It is positioned as a medium-sized pickup truck.\r\n', 'https://www.youtube.com/watch?v=tyrbhiJsTTY', '/img/3.jpg', 'Pickup truck', 'new', 1),
-(4, 'Tank 700 Hi4-T', 'Tank 700Tank 700 Hi4-T is equipped with a 3.0T plug-in hybrid powertrain and a front-mounted 9-speed automatic transmission. It has a maximum power of 385kw and a maximum torque of 800N·m. The top speed is 190km/h, and it can accelerate from 0 to 100km/h in just 5 seconds. It is positioned as a mid-sized SUV.\r\n', 'https://www.youtube.com/watch?v=MFj-Fb-Owp0', '/img/4.jpg', 'PHEV', 'new', 1),
-(5, 'Tank 300', 'The Tank 300 is equipped with a 2.0T turbocharged engine and an 8-speed automatic transmission. It has a maximum power of 185kw and a maximum torque of 387N·m. The top speed can reach 175km/h, and the WLTC comprehensive fuel consumption is only 9.81L/100km. It is positioned as a compact SUV.', 'https://www.youtube.com/watch?v=FFKbV8JeC0E', '/img/5.jpg', 'SUV', 'new', 1),
-(6, 'Tank 400 Hi4-T', 'The Tank 400 Hi4-T is powered by a 2.0T+9HAT powertrain, with a maximum combined power of 300kW and a maximum combined torque of 750N·m. With the assistance of advanced motors, it can accelerate from 0 to 100 km/h in under 7 seconds. With the Hi4-T parallel hybrid technology, the Tank 400 Hi4-T not only has sustainable powerful power output but also balances power performance and fuel efficiency. It is positioned as a mid-size SUV.', 'https://www.youtube.com/watch?v=9Ok_gcH84FI', '/img/6.jpg', 'PHEV', 'new', 1),
-(7, 'Wey GaoShan PHEV', 'The Wey GaoShan PHEV is powered by a 1.5T DHT+P4 plug-in hybrid powertrain, with a total electric motor power of 265 kW and total torque of 532 N·m. It can reach a top speed of 170 km/h and has a WLTC pure electric range of up to 140 km. The acceleration from 0 to 100 km/h is only 5.7 seconds. It is positioned as an MPV.', 'https://www.youtube.com/watch?v=vJnDH6_m_Xg', '/img/7.jpg', 'PHEV', 'new', 1),
-(8, 'GWM Shanhai Cannon', 'The GWM Shanhai Cannon is equipped with a 3.0T V6 twin-turbocharged engine and a 2.4T diesel engine, paired with a 9-speed automatic transmission. It has a maximum net power of 260 kW and a maximum net torque of 500 N·m. It is positioned as a medium-sized pickup truck.', 'https://www.youtube.com/watch?v=RFHyS66_3Xk', '/img/8.jpg', 'Pickup truck', 'new', 1),
-(9, 'GWM Pao EV', 'The GWM Pao EV has a maximum power output of 150kW and a maximum torque of 300N·m. It belongs to the category of pure electric pickup trucks.', 'https://www.youtube.com/watch?v=NcFF7wT6EhI', '/img/9.jpg', 'Pickup truck', 'new', 1),
-(10, 'Wey Macchiato DHT', 'The Wey Macchiato DHT-PHEV achieves a 0-100 km/h acceleration in just 7.2 seconds, with a maximum power output of 197kW and a maximum torque of 410N·m. It belongs to the category of compact SUVs.\r\n', 'https://www.youtube.com/watch?v=MANbRwRDrEw', '/img/10.jpg', 'PHEV', 'new', 1),
-(11, 'Chery Fengyun A8', 'Chery Fengyun A8 is equipped with the fifth-generation ACTECO 1.5TGDI efficient hybrid engine, and its hybrid intelligent electric management system achieves long-range endurance. The pure electric range is 127km in CLTC mode and the overall range is over 1400km in WLTC mode. It has a maximum power output of 265kW and a maximum torque of 530N·m. It is positioned as a compact car.', 'https://www.youtube.com/watch?v=Ae78bcreCA0', '/img/11.ipg', 'PHEV', 'new', 2),
-(12, 'EXEED TXL', 'The EXEED TXL, positioned as a mid-size SUV, features a 2.0TGDI+8AT golden power combination and 400T star power combination, allowing for a rapid acceleration of 8.8 seconds per 100 kilometers, with a maximum horsepower of 261Ps, maximum power of 192kW, and maximum torque of 400N·m.', 'https://www.youtube.com/watch?v=NK1weo5Z-o0', '/img/12.jpg', 'SUV', 'new', 2),
-(13, 'EXEED LX C-DM', 'EXEED LX C-DM is equipped with the world\'s first 3-engine power + 3-speed DHT combination, providing a comprehensive range of 1000KM, higher power, and lower fuel consumption. It has a maximum horsepower of 156Ps, a maximum power of 240kW, and a maximum torque of 545N·m. It is marketed as a compact SUV.', 'https://www.youtube.com/watch?v=mpemOAoGGko', '/img/13.jpg', 'PHEV', 'new', 2),
-(14, 'EXEED VX', 'The EXEED VX is equipped with a 2.0TGDI+8AT golden power combination, 400T star nuclear power combination, with a maximum horsepower of 261Ps, maximum power of 192kW, and maximum torque of 400N·m. It is positioned as a mid-size SUV.', 'https://www.youtube.com/watch?v=_lTCs-ctr9I', '/img/14.jpg', 'SUV', 'new', 2),
-(15, 'EXEED RX', 'EXEED RX is equipped with a 2.0TGDI engine and a 7DCT wet dual-clutch transmission. With two golden power combinations to choose from, it has a maximum horsepower of 261Ps, maximum power of 192kW, and maximum torque of 400N·m. It is positioned as a medium-sized SUV.\r\n', 'https://www.youtube.com/watch?v=H4raHlAKKHU', '/img/15.jpg', 'SUV', 'new', 2),
-(16, 'Chery iCAR 03', 'The Chery iCAR 03 is equipped with a dual-motor layout, with front and rear motors having maximum powers of 70 kW and 135 kW respectively. The maximum torque is 220 N·m, and it can reach a top speed of 150 km/h. It has a 0-100 km/h acceleration of just 6.5 seconds and a pure electric range of up to 472 km. It is positioned as a small SUV.', 'https://www.youtube.com/watch?v=mkHm4vI9WyQ', '/img/16.jpg', 'Compact SUV', 'new', 2),
-(17, 'Chery Tiggo 8', 'The Chery Tiggo 8 is equipped with a Kunpeng 1.6TGDI engine, with a maximum power output of 145kW and peak torque of 290N·m. It belongs to the mid-size SUV.', 'https://www.youtube.com/watch?v=x1uwLyE_414', '/img/17.jpg', 'SUV', 'new', 2),
-(18, 'Chery Tiggo 8 Plus', 'The Chery Tiggo 8 Plus is equipped with a 2.0 TGDI engine, with a maximum power output of 187kW and peak torque of 390N·m. It can accelerate from 0 to 100km/h in just 7.3 seconds. It belongs to the mid-size SUV.', 'https://www.youtube.com/watch?v=xHpnSZU0CS0', '/img/18.jpg', 'SUV', 'new', 2),
-(19, 'Chery Tiggo 8 Pro', 'The Chery Tiggo 8 Pro is equipped with a 2.0 TGDI engine, with a maximum power output of 187kW and peak torque of 390N·m. It belongs to the mid-size SUV.', 'https://www.youtube.com/watch?v=wT0J1i63HXk', '/img/19.jpg', 'SUV', 'new', 2),
-(20, 'Chery Tiggo7PlusPhev', 'The Chery Tiggo 7 Plus Phev is equipped with a 1.5T turbocharged engine, with a maximum power of 115kW and maximum torque of 230N·m. The total power of the electric motor is 125kW, with a total torque of 315N·m. It can accelerate from 0 to 100km/h in just 7 seconds. It belongs to the compact plug-in hybrid SUV.', 'https://www.youtube.com/watch?v=nesDIflemrs', '/img/20.jpg', 'PHEV', 'new', 2),
-(21, 'Changan NEVO A05', 'The Changan NEVO A05 is a compact car that features a permanent magnet synchronous motor and a lithium iron phosphate battery. It has a acceleration time of 6.8 seconds per 100 kilometers, a maximum speed of 185 km/h, a maximum horsepower of 110 PS, and a peak torque of 330N·m.', 'https://www.youtube.com/watch?v=yz_zqtRPHiw', '/img/21.jpg', 'PHEV', 'new', 3),
-(22, 'Changan NEVO Q05', 'Changan NEVO Q05 is equipped with a permanent magnet synchronous motor with a maximum torque of 330N.m and a maximum speed of 180km/h. It is matched with a ternary lithium battery and is positioned as a compact SUV.', 'https://www.youtube.com/watch?v=In9_rOVJ1gE', '/img/22.jpg', 'PHEV', 'new', 3),
-(23, 'Changan X5 PLUS', 'The Changan X5 PLUS is equipped with the Blue Whale\'s new generation NE1.5T high-pressure direct injection engine and a 7-speed wet dual-clutch transmission. It has a maximum horsepower of 188Ps, a maximum power of 138kW, a maximum torque of 300N·m, a top speed of 205km/h, and a WLTC combined fuel consumption of only 6.45L/100km. It is positioned as a compact SUV.', 'https://www.youtube.com/watch?v=dN8musmNFcE', '/img/23.jpg', 'SUV', 'new', 3),
-(24, 'Changan X7 PLUS', 'Changan X7 PLUS is equipped with the Blue Whale NE1.5T high-pressure direct injection engine and a 7-speed wet dual-clutch transmission. It has a maximum power of 138 kW, a top speed of 190 km/h, an acceleration of 0-100 km/h in 8.23 seconds, and a WLTC combined fuel consumption of only 7.3 L/100km. It is positioned as a compact SUV.', 'https://www.youtube.com/watch?v=s3Er2KMAF0Q', '/img/24.jpg', 'SUV', 'new', 3),
-(25, 'Changan Hunter', 'The Changan Hunter is equipped with a Blue Whale 2.0T engine and an R100G generator. It has a maximum battery capacity of 31.18, maximum horsepower of 272ps, maximum power of 200kw, maximum torque of 470N·m, and can accelerate from 0 to 100km/h in 7.9 seconds. It is positioned as a medium-sized pickup truck.\r\n', 'https://www.youtube.com/watch?v=bAMswCRI-v0', '/img/25.jpg', 'Truck', 'new', 3),
-(26, 'Changan Eado PLUS', 'The Changan Eado PLUS is equipped with either the Blue Whale NE1.4T engine or the Blue Core 1.6L engine, delivering a maximum torque of 260Nm and a maximum horsepower of 160PS. The vehicle type is sedan.', 'https://www.youtube.com/watch?v=bZX6nTIy9R0&t=1s', '/img/26.jpg', 'Sedan', 'new', 3),
-(27, 'Changan Eado DT', 'The Changan Eado DT is equipped with the BlueCore 1.6L naturally aspirated engine, delivering a maximum horsepower of 125Ps, maximum power of 92kW, and maximum torque of 160N·m. The vehicle type is sedan.\r\n', 'https://www.youtube.com/watch?v=s17vII_tS90', '/img/27.jpg', 'Sedan', 'new', 3),
-(28, 'Changan UNI-V', 'The Changan UNI-V offers 1.5T and 2.0T engines, equipped with an electric rear wing and a new front MacPherson and rear multi-link independent suspension system. The vehicle is classified as a sedan.', 'https://www.youtube.com/watch?v=5_GG33SmW3c', '/img/28.jpg', 'Sedan', 'new', 3),
-(29, 'Changan CS35 PLUS', 'Changan CS35 PLUS equipped with the Blue Whale NE1.4T high-pressure direct injection engine and the Blue Whale 7-speed wet dual-clutch transmission, has a peak torque of 260Nm. It is positioned as SUV.', 'https://www.youtube.com/watch?v=kVcbzOGuP0o', '/img/29.jpg', 'SUV', 'new', 3),
-(30, 'Changan CS55 PLUS', 'Changan CS55 PLUS equipped with the Blue Whale NE1.5T direct injection engine and the Blue Whale 7-speed wet dual-clutch transmission, has a fuel consumption of only 5.9L per 100 kilometers and a peak torque of up to 300N·m. It is positioned as an SUV.', 'https://www.youtube.com/watch?v=1GMbb-sdYKI', '/img/30.jpg', 'SUV', 'new', 3),
-(31, 'Hyundai-Custo', 'Hyundai-Custo is equipped with a 2.0T engine and 8-speed gearbox, with a maximum speed of 210km/h, WLTC comprehensive fuel consumption of 7.4L/100km, maximum power of 173.6kW, and maximum torque of 353N·m. It is a medium and large MPV.', 'https://www.youtube.com/watch?v=E5P9oLaWQXo', '/img/31.jpg', 'MPV', 'new', 4),
-(32, 'Hyundai-mistra', 'Hyundai-mistra is equipped with a 1.8T engine and CVT continuously variable transmission, with a maximum power of 125kW, a maximum torque of 253N·m, a maximum speed of 202km/h, and a WLTC comprehensive fuel consumption of 5.73L/100km. It is a medium-sized car.\r\n', 'https://www.youtube.com/watch?v=II_n9dkBXaM', '/img/32.jpg', 'Sedan', 'new', 4),
-(33, 'Hyundai LAFESTA', 'Hyundai LAFESTA is equipped with a 1.5T-GDI high-power engine that delivers a strong power output of 200Ps. It has a maximum horsepower of 200Ps, a maximum power of 147kW, a maximum torque of 253N·m, and is positioned as a compact sedan.\r\n', 'https://www.youtube.com/watch?v=izTjHckwXDs', '/img/33.jpg', 'Sedan', 'new', 4),
-(34, 'Hyundai Elantra', 'The Hyundai Elantra is equipped with a 1.5L naturally aspirated engine, with a maximum power of 84.5 kW and peak torque of 144 N·m. The vehicle is positioned as a compact sedan.', 'https://www.youtube.com/watch?v=5KmPv3NNHGE', '/img/34.jpg', 'Sedan', 'new', 4),
-(35, 'Hyundai Tucson', 'The Hyundai Tucson is equipped with a 1.5T turbocharged engine, with a maximum power of 147 kW and peak torque of 253 N·m. The vehicle is positioned as a compact SUV.', 'https://www.youtube.com/watch?v=x_qdVWzDCXI', '/img/35.jpg', 'SUV', 'new', 4),
-(36, 'Hyundai Sonata', 'The Hyundai Sonata is equipped with a 2.0T turbocharged engine, with a maximum power of 176.5 kW and peak torque of 353 N·m. The vehicle is positioned as a sedan.\r\n', 'https://www.youtube.com/watch?v=kmOeRTrfcvQ', '/img/36.jpg', 'Sedan', 'new', 4),
-(37, 'Honda e:NS1', 'The Honda e:NS1 is equipped with a permanent magnet synchronous motor and matched with a ternary lithium battery. It has a CLTC range of 510km and an acceleration time of only 8.7 seconds per 100km. It has a maximum horsepower of 204Ps, a maximum power of 150kW, a maximum torque of 310N·m, and it is positioned as a small SUV.', 'https://www.youtube.com/watch?v=F7vO17PWW68', '/img/37.jpg', 'SUV', 'new', 5),
-(38, 'Honda Accord', 'The Honda Accord is equipped with a 1.5T turbocharged engine, delivering a maximum power of 141kw and peak torque of 260Nm. It has a maximum horsepower of 192Ps and belongs to the midsize car category.', 'https://www.youtube.com/watch?v=Occc6HL8_SQ', '/img/38.jpg', 'Sedan', 'new', 5),
-(39, 'Honda Civic', 'The Honda Civic is equipped with a 1.5T turbocharged engine, delivering a maximum power of 134kw and peak torque of 240Nm. It has a maximum horsepower of 182Ps and belongs to the compact car category.', 'https://www.youtube.com/watch?v=lOJeNgbTHoY', '/img/39.jpg', 'Sedan', 'new', 5),
-(40, 'Honda Crider', 'The Honda Crider is equipped with a 1.0T turbocharged engine, delivering a maximum power of 90kw and peak torque of 173Nm. It has a maximum horsepower of 122Ps and belongs to the compact car category.', 'https://www.youtube.com/watch?v=4S-QeayQs30', '/img/40.jpg', 'Sedan', 'new', 5),
-(41, 'Honda Fit', 'The Honda Fit is equipped with a 1.5L naturally aspirated engine, delivering a maximum power of 91kw and peak torque of 145Nm. It has a maximum horsepower of 124Ps and belongs to the compact car category.', 'https://www.youtube.com/watch?v=YeVz5azZoK0', '/img/41.jpg', 'Sedan', 'new', 5),
-(42, 'Honda CR-V', 'The Honda CR-V is equipped with a 1.5T turbocharged engine, delivering a maximum power of 142kW/6000rpm and peak torque of 243N·m. It has a maximum horsepower of 193Ps and belongs to the compact SUV category.', 'https://www.youtube.com/watch?v=AsXbinJI_c4', '/img/42.jpg', 'SUV', 'new', 5),
-(43, 'Toyota Allion', 'The Toyota Allion is equipped with a 2.0L intelligent hybrid engine and an E-CVT transmission, It has a maximum horsepower of 152Ps, maximum power of 144kW, maximum torque of 188N·m, and is positioned as a mid-size car.\r\n', 'https://www.youtube.com/watch?v=zQIjZZ3QXKo', '/img/43.jpg', 'Sedan', 'new', 6),
-(44, 'Toyota bZ3', 'The Toyota bZ3 is equipped with a Fudi motor and a lithium iron phosphate blade battery with a capacity of 65.3kWh. It has a range of 616km and can accelerate from 0 to 100 km/h in just 7.8 seconds. It has a maximum horsepower of 245Ps, a maximum power of 180kW, and a maximum torque of 303N·m. It is classified as a compact sedan.', 'https://www.youtube.com/watch?v=Pz3W29P84FM', '/img/44.jpg', 'Sedan', 'new', 6),
-(45, 'Toyota Avalon', 'The Toyota Avalon is equipped with a 2.5L naturally aspirated engine and comes with 4 adjustable driving modes. It has a maximum power of 152 kW and maximum torque of 244 Nm, paired with an 8-speed automatic transmission. It is positioned as a mid-size car.', 'https://www.youtube.com/watch?v=9b6frNGdKRY', '/img/45.jpg', 'Sedan', 'new', 6),
-(46, 'Toyota Camry', 'The Toyota Camry is equipped with a 2.5L naturally aspirated engine, with a maximum power of 152 kW and peak torque of 244 Nm. It is positioned as a sedan.', 'https://www.youtube.com/watch?v=-8oKxHIfVxE', '/img/46.jpg', 'Sedan', 'new', 6),
-(47, 'Toyota Corolla', 'The Toyota Corolla is equipped with a 1.5L naturally aspirated engine, with a maximum power of 89 kW and peak torque of 148 Nm. It is positioned as a sedan.', 'https://www.youtube.com/watch?v=vwAs5-n2fXw', '/img/47.jpg', 'Sedan', 'new', 6),
-(48, 'Toyota RAV4', 'The Toyota RAV4 is equipped with a 2.0L naturally aspirated engine, with a maximum power of 126 kW and peak torque of 206 Nm. The vehicle is positioned as a compact SUV.', 'https://www.youtube.com/watch?v=4mYlz4zmfOk', '/img/48.jpg', 'SUV', 'new', 6),
-(49, 'Toyota C-HR', 'The Toyota C-HR is equipped with a 2.0L naturally aspirated engine, with a maximum power of 126 kW and peak torque of 205 N·m. The vehicle is positioned as a compact SUV.', 'https://www.youtube.com/watch?v=B9BH4BhwiIU', '/img/49.jpg', 'SUV', 'new', 6),
-(50, 'GWM Pao', 'This car was registered in January 2022 and has driven 11,300 kilometers so far. It has been used by the owner for commuting to work with low usage. It is in good condition and has been regularly maintained, with performance comparable to a new car.', NULL, '/img/old1.png', 'Pickup truck', 'old', 1),
-(51, 'Beijing Hyundai ix35', 'This car was registered in January 2023 and has driven 6,200 kilometers so far. It has only been used for half a year and has been regularly maintained. It is in excellent condition, with performance that is comparable to a new car.', NULL, '/img/old2.png', 'SUV', 'old', 4),
-(52, 'Changan CS75 PLUS', 'This car was registered in December 2021 and has driven 36,700 kilometers so far. It has been exclusively used by the owner and is in good condition. It is still within the warranty period and its performance is comparable to a new car.', NULL, '/img/old3.png', 'SUV', 'old', 3),
-(53, 'Changan CS95', 'This car was registered in May 2020 and has driven 61,900 kilometers so far. It has been exclusively used by the owner, who has taken great care of it with regular maintenance and good driving habits.', NULL, '/img/old4.png', 'SUV', 'old', 3),
-(54, 'Chery Tiggo 8 PRO', 'This car was registered in November 2022 and has driven 16,200 kilometers so far. It was only used by the original owner and regularly maintained. The interior and exterior are in excellent condition compared to a new car, making it a cost-effective option.', NULL, '/img/old5.png', 'SUV', 'old', 2);
+INSERT INTO `cars` (`newcar_id`, `car_name`, `information`, `Video`, `thumbnail`, `old_new`, `new_brand`, `type`) VALUES
+(1, 'GWM Wingle 7', 'GWM Wingle 7 is equipped with a 2.0T engine with a maximum power of 125kW, a maximum torque of 335N·m, a maximum speed of 160km/h, and a NEDC comprehensive fuel consumption as low as 7.3L/100km. It is a medium-sized pickup truck.\r\n', 'https://www.youtube.com/watch?v=6ucUDKRtcaw', '/img/1.jpg', 'new', 1, 1),
+(2, 'GWM Wingle 5', 'The GWM Wingle 5 is equipped with a 2.4L engine, with a maximum horsepower of 160Ps, maximum power of 118kW, and maximum torque of 230N·m. Its NEDC comprehensive fuel consumption is as low as 7.3L/100km, positioning it as a mid-size pickup truck.\r\n', 'https://www.youtube.com/watch?v=OGJzrkU-5GY', '/img/2.jpg', 'new', 1, 1),
+(3, 'GWM Jingang Poer', 'GWM Jingang Poer is equipped with a 2.0T engine with a maximum power of 140kW, a maximum torque of 400N.m, a maximum speed of 170km/h, a NEDC comprehensive fuel consumption as low as 7.9L/100km, and a minimum turning radius of 5.95m. It is positioned as a medium-sized pickup truck.\r\n', 'https://www.youtube.com/watch?v=tyrbhiJsTTY', '/img/3.jpg', 'new', 1, 1),
+(4, 'Tank 700 Hi4-T', 'Tank 700Tank 700 Hi4-T is equipped with a 3.0T plug-in hybrid powertrain and a front-mounted 9-speed automatic transmission. It has a maximum power of 385kw and a maximum torque of 800N·m. The top speed is 190km/h, and it can accelerate from 0 to 100km/h in just 5 seconds. It is positioned as a mid-sized SUV.\r\n', 'https://www.youtube.com/watch?v=MFj-Fb-Owp0', '/img/4.jpg', 'new', 1, 2),
+(5, 'Tank 300', 'The Tank 300 is equipped with a 2.0T turbocharged engine and an 8-speed automatic transmission. It has a maximum power of 185kw and a maximum torque of 387N·m. The top speed can reach 175km/h, and the WLTC comprehensive fuel consumption is only 9.81L/100km. It is positioned as a compact SUV.', 'https://www.youtube.com/watch?v=FFKbV8JeC0E', '/img/5.jpg', 'new', 1, 3),
+(6, 'Tank 400 Hi4-T', 'The Tank 400 Hi4-T is powered by a 2.0T+9HAT powertrain, with a maximum combined power of 300kW and a maximum combined torque of 750N·m. With the assistance of advanced motors, it can accelerate from 0 to 100 km/h in under 7 seconds. With the Hi4-T parallel hybrid technology, the Tank 400 Hi4-T not only has sustainable powerful power output but also balances power performance and fuel efficiency. It is positioned as a mid-size SUV.', 'https://www.youtube.com/watch?v=9Ok_gcH84FI', '/img/6.jpg', 'new', 1, 2),
+(7, 'Wey GaoShan PHEV', 'The Wey GaoShan PHEV is powered by a 1.5T DHT+P4 plug-in hybrid powertrain, with a total electric motor power of 265 kW and total torque of 532 N·m. It can reach a top speed of 170 km/h and has a WLTC pure electric range of up to 140 km. The acceleration from 0 to 100 km/h is only 5.7 seconds. It is positioned as an MPV.', 'https://www.youtube.com/watch?v=vJnDH6_m_Xg', '/img/7.jpg', 'new', 1, 2),
+(8, 'GWM Shanhai Cannon', 'The GWM Shanhai Cannon is equipped with a 3.0T V6 twin-turbocharged engine and a 2.4T diesel engine, paired with a 9-speed automatic transmission. It has a maximum net power of 260 kW and a maximum net torque of 500 N·m. It is positioned as a medium-sized pickup truck.', 'https://www.youtube.com/watch?v=RFHyS66_3Xk', '/img/8.jpg', 'new', 1, 1),
+(9, 'GWM Pao EV', 'The GWM Pao EV has a maximum power output of 150kW and a maximum torque of 300N·m. It belongs to the category of pure electric pickup trucks.', 'https://www.youtube.com/watch?v=NcFF7wT6EhI', '/img/9.jpg', 'new', 1, 1),
+(10, 'Wey Macchiato DHT', 'The Wey Macchiato DHT-PHEV achieves a 0-100 km/h acceleration in just 7.2 seconds, with a maximum power output of 197kW and a maximum torque of 410N·m. It belongs to the category of compact SUVs.\r\n', 'https://www.youtube.com/watch?v=MANbRwRDrEw', '/img/10.jpg', 'new', 1, 2),
+(11, 'Chery Fengyun A8', 'Chery Fengyun A8 is equipped with the fifth-generation ACTECO 1.5TGDI efficient hybrid engine, and its hybrid intelligent electric management system achieves long-range endurance. The pure electric range is 127km in CLTC mode and the overall range is over 1400km in WLTC mode. It has a maximum power output of 265kW and a maximum torque of 530N·m. It is positioned as a compact car.', 'https://www.youtube.com/watch?v=Ae78bcreCA0', '/img/11.ipg', 'new', 2, 2),
+(12, 'EXEED TXL', 'The EXEED TXL, positioned as a mid-size SUV, features a 2.0TGDI+8AT golden power combination and 400T star power combination, allowing for a rapid acceleration of 8.8 seconds per 100 kilometers, with a maximum horsepower of 261Ps, maximum power of 192kW, and maximum torque of 400N·m.', 'https://www.youtube.com/watch?v=NK1weo5Z-o0', '/img/12.jpg', 'new', 2, 3),
+(13, 'EXEED LX C-DM', 'EXEED LX C-DM is equipped with the world\'s first 3-engine power + 3-speed DHT combination, providing a comprehensive range of 1000KM, higher power, and lower fuel consumption. It has a maximum horsepower of 156Ps, a maximum power of 240kW, and a maximum torque of 545N·m. It is marketed as a compact SUV.', 'https://www.youtube.com/watch?v=mpemOAoGGko', '/img/13.jpg', 'new', 2, 2),
+(14, 'EXEED VX', 'The EXEED VX is equipped with a 2.0TGDI+8AT golden power combination, 400T star nuclear power combination, with a maximum horsepower of 261Ps, maximum power of 192kW, and maximum torque of 400N·m. It is positioned as a mid-size SUV.', 'https://www.youtube.com/watch?v=_lTCs-ctr9I', '/img/14.jpg', 'new', 2, 3),
+(15, 'EXEED RX', 'EXEED RX is equipped with a 2.0TGDI engine and a 7DCT wet dual-clutch transmission. With two golden power combinations to choose from, it has a maximum horsepower of 261Ps, maximum power of 192kW, and maximum torque of 400N·m. It is positioned as a medium-sized SUV.\r\n', 'https://www.youtube.com/watch?v=H4raHlAKKHU', '/img/15.jpg', 'new', 2, 3),
+(16, 'Chery iCAR 03', 'The Chery iCAR 03 is equipped with a dual-motor layout, with front and rear motors having maximum powers of 70 kW and 135 kW respectively. The maximum torque is 220 N·m, and it can reach a top speed of 150 km/h. It has a 0-100 km/h acceleration of just 6.5 seconds and a pure electric range of up to 472 km. It is positioned as a small SUV.', 'https://www.youtube.com/watch?v=mkHm4vI9WyQ', '/img/16.jpg', 'new', 2, 4),
+(17, 'Chery Tiggo 8', 'The Chery Tiggo 8 is equipped with a Kunpeng 1.6TGDI engine, with a maximum power output of 145kW and peak torque of 290N·m. It belongs to the mid-size SUV.', 'https://www.youtube.com/watch?v=x1uwLyE_414', '/img/17.jpg', 'new', 2, 3),
+(18, 'Chery Tiggo 8 Plus', 'The Chery Tiggo 8 Plus is equipped with a 2.0 TGDI engine, with a maximum power output of 187kW and peak torque of 390N·m. It can accelerate from 0 to 100km/h in just 7.3 seconds. It belongs to the mid-size SUV.', 'https://www.youtube.com/watch?v=xHpnSZU0CS0', '/img/18.jpg', 'new', 2, 3),
+(19, 'Chery Tiggo 8 Pro', 'The Chery Tiggo 8 Pro is equipped with a 2.0 TGDI engine, with a maximum power output of 187kW and peak torque of 390N·m. It belongs to the mid-size SUV.', 'https://www.youtube.com/watch?v=wT0J1i63HXk', '/img/19.jpg', 'new', 2, 3),
+(20, 'Chery Tiggo7PlusPhev', 'The Chery Tiggo 7 Plus Phev is equipped with a 1.5T turbocharged engine, with a maximum power of 115kW and maximum torque of 230N·m. The total power of the electric motor is 125kW, with a total torque of 315N·m. It can accelerate from 0 to 100km/h in just 7 seconds. It belongs to the compact plug-in hybrid SUV.', 'https://www.youtube.com/watch?v=nesDIflemrs', '/img/20.jpg', 'new', 2, 2),
+(21, 'Changan NEVO A05', 'The Changan NEVO A05 is a compact car that features a permanent magnet synchronous motor and a lithium iron phosphate battery. It has a acceleration time of 6.8 seconds per 100 kilometers, a maximum speed of 185 km/h, a maximum horsepower of 110 PS, and a peak torque of 330N·m.', 'https://www.youtube.com/watch?v=yz_zqtRPHiw', '/img/21.jpg', 'new', 3, 2),
+(22, 'Changan NEVO Q05', 'Changan NEVO Q05 is equipped with a permanent magnet synchronous motor with a maximum torque of 330N.m and a maximum speed of 180km/h. It is matched with a ternary lithium battery and is positioned as a compact SUV.', 'https://www.youtube.com/watch?v=In9_rOVJ1gE', '/img/22.jpg', 'new', 3, 2),
+(23, 'Changan X5 PLUS', 'The Changan X5 PLUS is equipped with the Blue Whale\'s new generation NE1.5T high-pressure direct injection engine and a 7-speed wet dual-clutch transmission. It has a maximum horsepower of 188Ps, a maximum power of 138kW, a maximum torque of 300N·m, a top speed of 205km/h, and a WLTC combined fuel consumption of only 6.45L/100km. It is positioned as a compact SUV.', 'https://www.youtube.com/watch?v=dN8musmNFcE', '/img/23.jpg', 'new', 3, 3),
+(24, 'Changan X7 PLUS', 'Changan X7 PLUS is equipped with the Blue Whale NE1.5T high-pressure direct injection engine and a 7-speed wet dual-clutch transmission. It has a maximum power of 138 kW, a top speed of 190 km/h, an acceleration of 0-100 km/h in 8.23 seconds, and a WLTC combined fuel consumption of only 7.3 L/100km. It is positioned as a compact SUV.', 'https://www.youtube.com/watch?v=s3Er2KMAF0Q', '/img/24.jpg', 'new', 3, 3),
+(25, 'Changan Hunter', 'The Changan Hunter is equipped with a Blue Whale 2.0T engine and an R100G generator. It has a maximum battery capacity of 31.18, maximum horsepower of 272ps, maximum power of 200kw, maximum torque of 470N·m, and can accelerate from 0 to 100km/h in 7.9 seconds. It is positioned as a medium-sized pickup truck.\r\n', 'https://www.youtube.com/watch?v=bAMswCRI-v0', '/img/25.jpg', 'new', 3, 5),
+(26, 'Changan Eado PLUS', 'The Changan Eado PLUS is equipped with either the Blue Whale NE1.4T engine or the Blue Core 1.6L engine, delivering a maximum torque of 260Nm and a maximum horsepower of 160PS. The vehicle type is sedan.', 'https://www.youtube.com/watch?v=bZX6nTIy9R0&t=1s', '/img/26.jpg', 'new', 3, 6),
+(27, 'Changan Eado DT', 'The Changan Eado DT is equipped with the BlueCore 1.6L naturally aspirated engine, delivering a maximum horsepower of 125Ps, maximum power of 92kW, and maximum torque of 160N·m. The vehicle type is sedan.\r\n', 'https://www.youtube.com/watch?v=s17vII_tS90', '/img/27.jpg', 'new', 3, 6),
+(28, 'Changan UNI-V', 'The Changan UNI-V offers 1.5T and 2.0T engines, equipped with an electric rear wing and a new front MacPherson and rear multi-link independent suspension system. The vehicle is classified as a sedan.', 'https://www.youtube.com/watch?v=5_GG33SmW3c', '/img/28.jpg', 'new', 3, 6),
+(29, 'Changan CS35 PLUS', 'Changan CS35 PLUS equipped with the Blue Whale NE1.4T high-pressure direct injection engine and the Blue Whale 7-speed wet dual-clutch transmission, has a peak torque of 260Nm. It is positioned as SUV.', 'https://www.youtube.com/watch?v=kVcbzOGuP0o', '/img/29.jpg', 'new', 3, 3),
+(30, 'Changan CS55 PLUS', 'Changan CS55 PLUS equipped with the Blue Whale NE1.5T direct injection engine and the Blue Whale 7-speed wet dual-clutch transmission, has a fuel consumption of only 5.9L per 100 kilometers and a peak torque of up to 300N·m. It is positioned as an SUV.', 'https://www.youtube.com/watch?v=1GMbb-sdYKI', '/img/30.jpg', 'new', 3, 3),
+(31, 'Hyundai-Custo', 'Hyundai-Custo is equipped with a 2.0T engine and 8-speed gearbox, with a maximum speed of 210km/h, WLTC comprehensive fuel consumption of 7.4L/100km, maximum power of 173.6kW, and maximum torque of 353N·m. It is a medium and large MPV.', 'https://www.youtube.com/watch?v=E5P9oLaWQXo', '/img/31.jpg', 'new', 4, 7),
+(32, 'Hyundai-mistra', 'Hyundai-mistra is equipped with a 1.8T engine and CVT continuously variable transmission, with a maximum power of 125kW, a maximum torque of 253N·m, a maximum speed of 202km/h, and a WLTC comprehensive fuel consumption of 5.73L/100km. It is a medium-sized car.\r\n', 'https://www.youtube.com/watch?v=II_n9dkBXaM', '/img/32.jpg', 'new', 4, 6),
+(33, 'Hyundai LAFESTA', 'Hyundai LAFESTA is equipped with a 1.5T-GDI high-power engine that delivers a strong power output of 200Ps. It has a maximum horsepower of 200Ps, a maximum power of 147kW, a maximum torque of 253N·m, and is positioned as a compact sedan.\r\n', 'https://www.youtube.com/watch?v=izTjHckwXDs', '/img/33.jpg', 'new', 4, 6),
+(34, 'Hyundai Elantra', 'The Hyundai Elantra is equipped with a 1.5L naturally aspirated engine, with a maximum power of 84.5 kW and peak torque of 144 N·m. The vehicle is positioned as a compact sedan.', 'https://www.youtube.com/watch?v=5KmPv3NNHGE', '/img/34.jpg', 'new', 4, 6),
+(35, 'Hyundai Tucson', 'The Hyundai Tucson is equipped with a 1.5T turbocharged engine, with a maximum power of 147 kW and peak torque of 253 N·m. The vehicle is positioned as a compact SUV.', 'https://www.youtube.com/watch?v=x_qdVWzDCXI', '/img/35.jpg', 'new', 4, 3),
+(36, 'Hyundai Sonata', 'The Hyundai Sonata is equipped with a 2.0T turbocharged engine, with a maximum power of 176.5 kW and peak torque of 353 N·m. The vehicle is positioned as a sedan.\r\n', 'https://www.youtube.com/watch?v=kmOeRTrfcvQ', '/img/36.jpg', 'new', 4, 6),
+(37, 'Honda e:NS1', 'The Honda e:NS1 is equipped with a permanent magnet synchronous motor and matched with a ternary lithium battery. It has a CLTC range of 510km and an acceleration time of only 8.7 seconds per 100km. It has a maximum horsepower of 204Ps, a maximum power of 150kW, a maximum torque of 310N·m, and it is positioned as a small SUV.', 'https://www.youtube.com/watch?v=F7vO17PWW68', '/img/37.jpg', 'new', 5, 3),
+(38, 'Honda Accord', 'The Honda Accord is equipped with a 1.5T turbocharged engine, delivering a maximum power of 141kw and peak torque of 260Nm. It has a maximum horsepower of 192Ps and belongs to the midsize car category.', 'https://www.youtube.com/watch?v=Occc6HL8_SQ', '/img/38.jpg', 'new', 5, 6),
+(39, 'Honda Civic', 'The Honda Civic is equipped with a 1.5T turbocharged engine, delivering a maximum power of 134kw and peak torque of 240Nm. It has a maximum horsepower of 182Ps and belongs to the compact car category.', 'https://www.youtube.com/watch?v=lOJeNgbTHoY', '/img/39.jpg', 'new', 5, 6),
+(40, 'Honda Crider', 'The Honda Crider is equipped with a 1.0T turbocharged engine, delivering a maximum power of 90kw and peak torque of 173Nm. It has a maximum horsepower of 122Ps and belongs to the compact car category.', 'https://www.youtube.com/watch?v=4S-QeayQs30', '/img/40.jpg', 'new', 5, 6),
+(41, 'Honda Fit', 'The Honda Fit is equipped with a 1.5L naturally aspirated engine, delivering a maximum power of 91kw and peak torque of 145Nm. It has a maximum horsepower of 124Ps and belongs to the compact car category.', 'https://www.youtube.com/watch?v=YeVz5azZoK0', '/img/41.jpg', 'new', 5, 6),
+(42, 'Honda CR-V', 'The Honda CR-V is equipped with a 1.5T turbocharged engine, delivering a maximum power of 142kW/6000rpm and peak torque of 243N·m. It has a maximum horsepower of 193Ps and belongs to the compact SUV category.', 'https://www.youtube.com/watch?v=AsXbinJI_c4', '/img/42.jpg', 'new', 5, 3),
+(43, 'Toyota Allion', 'The Toyota Allion is equipped with a 2.0L intelligent hybrid engine and an E-CVT transmission, It has a maximum horsepower of 152Ps, maximum power of 144kW, maximum torque of 188N·m, and is positioned as a mid-size car.\r\n', 'https://www.youtube.com/watch?v=zQIjZZ3QXKo', '/img/43.jpg', 'new', 6, 6),
+(44, 'Toyota bZ3', 'The Toyota bZ3 is equipped with a Fudi motor and a lithium iron phosphate blade battery with a capacity of 65.3kWh. It has a range of 616km and can accelerate from 0 to 100 km/h in just 7.8 seconds. It has a maximum horsepower of 245Ps, a maximum power of 180kW, and a maximum torque of 303N·m. It is classified as a compact sedan.', 'https://www.youtube.com/watch?v=Pz3W29P84FM', '/img/44.jpg', 'new', 6, 6),
+(45, 'Toyota Avalon', 'The Toyota Avalon is equipped with a 2.5L naturally aspirated engine and comes with 4 adjustable driving modes. It has a maximum power of 152 kW and maximum torque of 244 Nm, paired with an 8-speed automatic transmission. It is positioned as a mid-size car.', 'https://www.youtube.com/watch?v=9b6frNGdKRY', '/img/45.jpg', 'new', 6, 6),
+(46, 'Toyota Camry', 'The Toyota Camry is equipped with a 2.5L naturally aspirated engine, with a maximum power of 152 kW and peak torque of 244 Nm. It is positioned as a sedan.', 'https://www.youtube.com/watch?v=-8oKxHIfVxE', '/img/46.jpg', 'new', 6, 6),
+(47, 'Toyota Corolla', 'The Toyota Corolla is equipped with a 1.5L naturally aspirated engine, with a maximum power of 89 kW and peak torque of 148 Nm. It is positioned as a sedan.', 'https://www.youtube.com/watch?v=vwAs5-n2fXw', '/img/47.jpg', 'new', 6, 6),
+(48, 'Toyota RAV4', 'The Toyota RAV4 is equipped with a 2.0L naturally aspirated engine, with a maximum power of 126 kW and peak torque of 206 Nm. The vehicle is positioned as a compact SUV.', 'https://www.youtube.com/watch?v=4mYlz4zmfOk', '/img/48.jpg', 'new', 6, 3),
+(49, 'Toyota C-HR', 'The Toyota C-HR is equipped with a 2.0L naturally aspirated engine, with a maximum power of 126 kW and peak torque of 205 N·m. The vehicle is positioned as a compact SUV.', 'https://www.youtube.com/watch?v=B9BH4BhwiIU', '/img/49.jpg', 'new', 6, 3),
+(50, 'GWM Pao', 'This car was registered in January 2022 and has driven 11,300 kilometers so far. It has been used by the owner for commuting to work with low usage. It is in good condition and has been regularly maintained, with performance comparable to a new car.', NULL, '/img/old1.png', 'old', 1, 1),
+(51, 'Beijing Hyundai ix35', 'This car was registered in January 2023 and has driven 6,200 kilometers so far. It has only been used for half a year and has been regularly maintained. It is in excellent condition, with performance that is comparable to a new car.', NULL, '/img/old2.png', 'old', 4, 3),
+(52, 'Changan CS75 PLUS', 'This car was registered in December 2021 and has driven 36,700 kilometers so far. It has been exclusively used by the owner and is in good condition. It is still within the warranty period and its performance is comparable to a new car.', NULL, '/img/old3.png', 'old', 3, 3),
+(53, 'Changan CS95', 'This car was registered in May 2020 and has driven 61,900 kilometers so far. It has been exclusively used by the owner, who has taken great care of it with regular maintenance and good driving habits.', NULL, '/img/old4.png', 'old', 3, 3),
+(54, 'Chery Tiggo 8 PRO', 'This car was registered in November 2022 and has driven 16,200 kilometers so far. It was only used by the original owner and regularly maintained. The interior and exterior are in excellent condition compared to a new car, making it a cost-effective option.', NULL, '/img/old5.png', 'old', 2, 3);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `cars_type`
+--
+
+CREATE TABLE `cars_type` (
+  `id` int(11) NOT NULL,
+  `body_type` varchar(25) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `cars_type`
+--
+
+INSERT INTO `cars_type` (`id`, `body_type`) VALUES
+(4, 'Compact SUV'),
+(7, 'MPV'),
+(2, 'PHEV'),
+(1, 'Pickup Truck'),
+(6, 'Sedan'),
+(3, 'SUV'),
+(5, 'Truck');
 
 -- --------------------------------------------------------
 
@@ -865,7 +886,15 @@ ALTER TABLE `brand`
 --
 ALTER TABLE `cars`
   ADD PRIMARY KEY (`newcar_id`),
-  ADD KEY `new_brand` (`new_brand`);
+  ADD KEY `new_brand` (`new_brand`),
+  ADD KEY `fk_cars_type` (`type`);
+
+--
+-- Indexes for table `cars_type`
+--
+ALTER TABLE `cars_type`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `body_type` (`body_type`);
 
 --
 -- Indexes for table `customers`
@@ -917,13 +946,19 @@ ALTER TABLE `introduction`
 -- AUTO_INCREMENT for table `brand`
 --
 ALTER TABLE `brand`
-  MODIFY `brand_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `brand_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `cars`
 --
 ALTER TABLE `cars`
   MODIFY `newcar_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=55;
+
+--
+-- AUTO_INCREMENT for table `cars_type`
+--
+ALTER TABLE `cars_type`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `customers`
@@ -969,7 +1004,8 @@ ALTER TABLE `introduction`
 -- Constraints for table `cars`
 --
 ALTER TABLE `cars`
-  ADD CONSTRAINT `cars_ibfk_1` FOREIGN KEY (`new_brand`) REFERENCES `brand` (`brand_id`);
+  ADD CONSTRAINT `cars_ibfk_1` FOREIGN KEY (`new_brand`) REFERENCES `brand` (`brand_id`),
+  ADD CONSTRAINT `fk_cars_type` FOREIGN KEY (`type`) REFERENCES `cars_type` (`id`);
 
 --
 -- Constraints for table `cus_cars`
