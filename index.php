@@ -122,7 +122,7 @@ $producthot = newest_products();
                 
                 <div class="row" id="carListings">
                     <?php foreach($producthot as $item): ?>
-                        <div class="col-md-3 mb-5 car-card">
+                        <div data-aos="zoom-in-down" class="col-md-3 mb-5 car-card">
                             <div class="card">
                                 <a href="/detail.php?id=<?php echo $item["newcar_id"]; ?>">
                                     <img src="<?php echo $item["thumbnail"]; ?>" class="card-img-top" alt="<?php echo $item["car_name"]; ?>">

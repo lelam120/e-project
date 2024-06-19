@@ -163,3 +163,71 @@ function contact_sub($name,$email,$address,$telephone,$message)  {
 
     
 }
+
+function product_detail($id )  {
+
+    $sql = "SELECT *, (SELECT brand_name FROM brand WHERE brand_id = cars.new_brand) AS brand_name, (SELECT body_type FROM cars_type WHERE id = cars.type) AS typecar FROM cars WHERE newcar_id = $id";
+
+
+    $result = query($sql);
+
+    $list ;
+    
+    while($row = $result->fetch_assoc()){
+        $list = $row;
+    }
+    return $list;
+
+    
+}
+
+
+function detail_fqa($id)  {
+
+    $sql = "SELECT * FROM faq WHERE faq_car	 = $id";
+
+
+    $result = query($sql);
+
+    $list = [];
+    
+    while($row = $result->fetch_assoc()){
+        $list[] = $row;
+    }
+    return $list;
+
+    
+}
+
+function introduction($id)  {
+
+    $sql = "SELECT * FROM introduction WHERE intro_cars = $id";
+
+
+    $result = query($sql);
+
+    $list = [];
+    
+    while($row = $result->fetch_assoc()){
+        $list[] = $row;
+    }
+    return $list;
+
+    
+}
+function highlighted_features($id)  {
+
+    $sql = "SELECT * FROM highlighted_features WHERE highlight_cars = $id";
+
+
+    $result = query($sql);
+
+    $list = [];
+    
+    while($row = $result->fetch_assoc()){
+        $list[] = $row;
+    }
+    return $list;
+
+    
+}

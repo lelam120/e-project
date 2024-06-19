@@ -12,3 +12,4 @@ $message = $_POST['message'];
 
 $cac = contact_sub($name,$email,$address,$telephone,$message);
 
+header('Location:/thankyou.php');
