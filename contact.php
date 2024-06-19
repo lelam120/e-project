@@ -6,7 +6,7 @@
     <title>Document</title>
     <?php include_once("html/style.php"); ?>
     <link href="css/styles.css" rel="stylesheet">
-    <link href="css/index.css" rel="stylesheet">
+    <link href="css/trangchu.css" rel="stylesheet">
     <style>
         .boxbox{
             background-color: white;
