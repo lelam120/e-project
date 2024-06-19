@@ -7,37 +7,19 @@
     $bodysitai  = isset($_GET['bodystyle']) ? intval($_GET['bodystyle']) : 0;
 
     if ($hangxe == 0 & $bodysitai == 0) {
-        $newest_products = new_car();
+        $newest_products = old_car();
        
     } else if ($hangxe == 0 & $bodysitai != 0) {
-        $newest_products = body_callNew($bodysitai);
+        $newest_products = body_callOld($bodysitai);
 
     }else if ($hangxe != 0 & $bodysitai == 0) {
-        $newest_products = brand_callNew($hangxe);
+        $newest_products = brand_callOld($hangxe);
               
     }else if ($hangxe != 0 & $bodysitai != 0){
-        $newest_products = brandBody_New($hangxe,$bodysitai);
+        $newest_products = brandBody_Old($hangxe,$bodysitai);
         
     }
-    // $brand_alls = brand_detail($brand_id);
-   
-    // Số xe hiển thị mỗi trang
-    $items_per_page = 12;
 
-    // Xác định trang hiện tại
-    $current_page = isset($_GET['page']) ? (int)$_GET['page'] : 1;
-
-    // Tổng số trang
-    $total_items = count($newest_products);
-    // echo count($newest_products);
-    $total_pages = ceil($total_items / $items_per_page);
-
-    // Lấy dữ liệu xe cho trang hiện tại
-    $start_index = ($current_page - 1) * $items_per_page;
-
-    // $json = json_encode($newest_products);
-    // echo $json;
-    $current_page_items = array_slice($newest_products, $start_index, $items_per_page);
 ?>
 
 <!DOCTYPE html>
@@ -169,15 +151,15 @@
     </header>
     <section style="height:100%";>
     <div class="position-relative">
-        <img style="width: 100%;" src="https://www.borderlesscar.com/wp-content/uploads/2023/07/toppic-ev.jpg" class="img-fluid">
+        <img style="width: 100%;" src="https://www.borderlesscar.com/wp-content/uploads/2023/07/toppic-used.jpg" class="img-fluid">
             <div class="position-absolute" style="top: 40%; left: 42%;">
                 <div class="d-flex align-items-center">
-                    <h1 class="text-light" style="font-weight:800">Range Of Car</h1>
+                    <h1 class="text-light" style="font-weight:800">PreOwned Car</h1>
                 </div> 
             </div>
             <div class="bg py-4" style="background-color: #2c9f1c; height:100px;">
                 <form class="d-flex w-50 mx-auto" role="search"  action="/range_of_car.php" method="GET">
-                    <input class="form-control" type="search" name="search" placeholder="Search Range Of Car" aria-label="Search" value="<?php echo $item["brand_id"]; ?>">
+                    <input class="form-control" type="search" name="search" placeholder="Search PreOwned Car" aria-label="Search" value="<?php echo $item["brand_id"]; ?>">
                     <button class="btn btn" style="background-color: #000;" type="submit"><i class="bi bi-search" style="color:white"></i></button>
                 </form>
             </div>
@@ -187,11 +169,11 @@
         <div class="row">
             <!-- Search Form -->
             <div class="col-md-3">
-            <?php include_once("html/Select_Options.php"); ?>
+            <?php include_once("html/Select_PreOwned_Cars.php"); ?>
             </div>
             <div class="col-md-9">
                 <div class="row" id="carListings">
-                    <?php foreach($current_page_items as $item): ?>
+                    <?php foreach($newest_products as $item): ?>
                         <div class="col-md-4 mb-4 car-card">
                             <div class="card">
                                 <a href="/detail.php?id=<?php echo $item["newcar_id"]; ?>">
@@ -212,31 +194,6 @@
                         </div>
                     <?php endforeach; ?>
                 </div>
-
-                <!-- Pagination -->
-                <nav>
-                    <ul class="pagination">
-                        <?php if ($current_page > 1): ?>
-                            <li class="page-item">
-                                <a class="page-link" href="?page=<?php echo $current_page - 1; ?>" aria-label="Previous">
-                                    <span style="color: #333;" aria-hidden="true">&laquo;</span>
-                                </a>
-                            </li>
-                        <?php endif; ?>
-                        <?php for ($page = 1; $page <= $total_pages; $page++): ?>
-                            <li class="page-item <?php if ($page == $current_page) echo 'active'; ?>">
-                                <a class="page-link" href="?page=<?php echo $page; ?>"><?php echo $page; ?></a>
-                            </li>
-                        <?php endfor; ?>
-                        <?php if ($current_page < $total_pages): ?>
-                            <li class="page-item">
-                                <a class="page-link" href="?page=<?php echo $current_page + 1; ?>" aria-label="Next">
-                                    <span style="color: #333;" aria-hidden="true">&raquo;</span>
-                                </a>
-                            </li>
-                        <?php endif; ?>
-                    </ul>
-                </nav>
             </div>
         </div>
     </div>

@@ -74,10 +74,45 @@ function body_callNew($id){
     }
     return $list;
 }
+function brand_callOld($id){
+    $sql =  "SELECT *, (SELECT brand_name FROM brand WHERE brand_id = cars.new_brand) AS brand_name ,
+            (SELECT body_type FROM cars_type WHERE id = cars.type) AS typecar
+            FROM cars WHERE new_brand = $id and old_new='old' ";
+    $result = query($sql);
+    $list = [];
+    while($row = $result->fetch_assoc()){
+        $list[] = $row;
+    }
+    return $list;
+}
+
+function body_callOld($id){
+    $sql =  "SELECT *, (SELECT brand_name FROM brand WHERE brand_id = cars.new_brand) AS brand_name ,
+            (SELECT body_type FROM cars_type WHERE id = cars.type) AS typecar
+            FROM cars WHERE type = $id and old_new='old' ";
+    $result = query($sql);
+    $list = [];
+    while($row = $result->fetch_assoc()){
+        $list[] = $row;
+    }
+    return $list;
+}
+
 function brandBody_New($id_brand,$id_body){
     $sql =  "SELECT *, (SELECT brand_name FROM brand WHERE brand_id = cars.new_brand) AS brand_name ,
             (SELECT body_type FROM cars_type WHERE id = cars.type) AS typecar
             FROM cars WHERE new_brand = $id_brand and type = $id_body and old_new='new'";
+    $result = query($sql);
+    $list = [];
+    while($row = $result->fetch_assoc()){
+        $list[] = $row;
+    }
+    return $list;
+}
+function brandBody_Old($id_brand,$id_body){
+    $sql =  "SELECT *, (SELECT brand_name FROM brand WHERE brand_id = cars.new_brand) AS brand_name ,
+            (SELECT body_type FROM cars_type WHERE id = cars.type) AS typecar
+            FROM cars WHERE new_brand = $id_brand and type = $id_body and old_new='old'";
     $result = query($sql);
     $list = [];
     while($row = $result->fetch_assoc()){

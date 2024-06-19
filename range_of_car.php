@@ -51,6 +51,7 @@
     <link href="css/index.css" rel="stylesheet">
 </head>
 <style>
+
         .boxbox{
             background-color: white; /* Màu nền của boxbox */
             width: 70%; /* Độ rộng của boxbox */
@@ -187,7 +188,7 @@
         <div class="row">
             <!-- Search Form -->
             <div class="col-md-3">
-            <?php include_once("html/Select_Options.php"); ?>
+            <?php include_once("html/Select_Range_Of_Cars.php"); ?>
             </div>
             <div class="col-md-9">
                 <div class="row" id="carListings">
