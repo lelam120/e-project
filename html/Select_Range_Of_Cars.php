@@ -92,7 +92,7 @@
 
 
 ::-webkit-scrollbar{
-    width: 10px;
+    width: 5px;
 }
 ::-webkit-scrollbar-thumb{
     background-color: gray;
@@ -125,14 +125,8 @@
     margin-left: 20px; 
 }
 
-.hangxe_kien>div form>button:hover{
-    /* content: "cac"; */
-    /* background-color: rgb(28, 236, 0); */
-    /* border: 1px solid rgb(255, 255, 255); */
-    
-}
 .hangxe_kien>div label{
-    padding-top: 14px;
+    padding-top: 12px;
     color: white;
     font-size: small;
 }
@@ -171,7 +165,7 @@
                 <button onclick="Body()" id="cac"><span id="trai"><b style="font-size:15px;">Body Style</b></span><span id="phai"><i class="bi bi-chevron-down"></i></span></button>
                 <div class="loccon"   id="Body_Style">
                     <?php foreach($checkbrand as $item):?>
-                    <div class="hangxe_kien">
+                    <div class="hangxe_kien" style="height:40px;">
                         <div>
                             <form action="/range_of_car.php" method="GET">
                                 <input value="<?php echo $hangxe;  ?>" name="brand" type="hidden" >

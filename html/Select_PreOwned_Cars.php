@@ -132,7 +132,7 @@
     
 }
 .hangxe_kien>div label{
-    padding-top: 14px;
+    padding-top: 12px;
     color: white;
     font-size: small;
 }
@@ -171,7 +171,7 @@
                 <button onclick="Body()" id="cac"><span id="trai"><b style="font-size:15px;">Body Style</b></span><span id="phai"><i class="bi bi-chevron-down"></i></span></button>
                 <div class="loccon"   id="Body_Style">
                     <?php foreach($checkbrand as $item):?>
-                    <div class="hangxe_kien">
+                    <div class="hangxe_kien" style="height:40px;">
                         <div>
                             <form action="/preOwned_car.php" method="GET">
                                 <input value="<?php echo $hangxe;  ?>" name="brand" type="hidden" >

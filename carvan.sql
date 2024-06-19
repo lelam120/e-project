@@ -40,9 +40,9 @@ CREATE TABLE `brand` (
 INSERT INTO `brand` (`brand_id`, `brand_name`, `icon_brand`) VALUES
 (1, 'GWM', '/img/icon_GWM.png'),
 (2, 'Chery', '/img/icon_chery.png'),
-(3, 'Changan Automobile', '/img/icon_changan.png'),
-(4, ' Hyundai', '/img/icon_Hyundai.png'),
-(5, ' Honda', '/img/icon_Honda.png'),
+(3, 'Changan', '/img/icon_changan.png'),
+(4, 'Hyundai', '/img/icon_Hyundai.png'),
+(5, 'Honda', '/img/icon_Honda.png'),
 (6, 'Toyota', '/img/icon_Toyota.png');
 
 -- --------------------------------------------------------
