@@ -7,23 +7,29 @@
     $hangxe  = isset($_GET['brand']) ? intval($_GET['brand']) : 0;
     $bodysitai  = isset($_GET['bodystyle']) ? intval($_GET['bodystyle']) : 0;
     $search = isset($_GET["search"])?$_GET["search"]:"";
-
-    if ($hangxe == 0 & $bodysitai == 0) {
-        $newest_products = new_car();
-       
-    } else if ($hangxe == 0 & $bodysitai != 0) {
-        $newest_products = body_callNew($bodysitai);
-
-    }else if ($hangxe != 0 & $bodysitai == 0) {
-        $newest_products = brand_callNew($hangxe);
-              
-    }else if ($hangxe != 0 & $bodysitai != 0){
-        $newest_products = brandBody_New($hangxe,$bodysitai);
-        
-    }else if($search != 0){
+    
+    if ($search == ""){
+        if ($hangxe == 0 & $bodysitai == 0) {
+            $newest_products = new_car();
+           
+        } else if ($hangxe == 0 & $bodysitai != 0) {
+            $newest_products = body_callNew($bodysitai);
+    
+        }else if ($hangxe != 0 & $bodysitai == 0) {
+            $newest_products = brand_callNew($hangxe);
+                  
+        }else if ($hangxe != 0 & $bodysitai != 0){
+            $newest_products = brandBody_New($hangxe,$bodysitai);
+            
+        }
+    
+    }else{
         $newest_products = Search_form($search);
+       
     }
 
+
+   
     $items_per_page = 12;
 
     // Xác định trang hiện tại
