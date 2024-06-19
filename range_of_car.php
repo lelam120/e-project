@@ -1,5 +1,6 @@
 <?php
     require_once("functions/product.php");
+    
     $newest_products = null;
     $checkbrand = brand_all();;
 
@@ -19,27 +20,34 @@
         $newest_products = brandBody_New($hangxe,$bodysitai);
         
     }
-    // $brand_alls = brand_detail($brand_id);
-   
-    // Số xe hiển thị mỗi trang
+
     $items_per_page = 12;
 
     // Xác định trang hiện tại
     $current_page = isset($_GET['page']) ? (int)$_GET['page'] : 1;
 
-    // Tổng số trang
     $total_items = count($newest_products);
-    // echo count($newest_products);
     $total_pages = ceil($total_items / $items_per_page);
 
     // Lấy dữ liệu xe cho trang hiện tại
     $start_index = ($current_page - 1) * $items_per_page;
 
-    // $json = json_encode($newest_products);
-    // echo $json;
     $current_page_items = array_slice($newest_products, $start_index, $items_per_page);
+
+    $limit = isset($_GET["limit"]) && $_GET["limit"]!= "" ?$_GET["limit"]:20;
+    $search = isset($_GET["search"])?$_GET["search"]:"";
+
+    //2.2. áp dụng giá trị tham số vào truy vấn
+   $sql = "SELECT * FROM cars WHERE car_name LIKE '%$search%' LIMIT $limit";
+    $result = connect()->query($sql);
+    
+    $list = [];
+    while($row = $result->fetch_assoc()){
+      $list[] = $row;
+    }
 ?>
 
+  
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -168,21 +176,22 @@
     <header>
         <?php include_once("html/Header.php"); ?>
     </header>
+
     <section style="height:100%";>
     <div class="position-relative">
-        <img style="width: 100%;" src="https://www.borderlesscar.com/wp-content/uploads/2023/07/toppic-ev.jpg" class="img-fluid">
-            <div class="position-absolute" style="top: 40%; left: 42%;">
-                <div class="d-flex align-items-center">
-                    <h1 class="text-light" style="font-weight:800">Range Of Car</h1>
-                </div> 
-            </div>
-            <div class="bg py-4" style="background-color: #2c9f1c; height:100px;">
-                <form class="d-flex w-50 mx-auto" role="search"  action="/range_of_car.php" method="GET">
-                    <input class="form-control" type="search" name="search" placeholder="Search Range Of Car" aria-label="Search" value="<?php echo $item["brand_id"]; ?>">
-                    <button class="btn btn" style="background-color: #000;" type="submit"><i class="bi bi-search" style="color:white"></i></button>
-                </form>
-            </div>
+    <img style="width: 100%;" src="https://www.borderlesscar.com/wp-content/uploads/2023/07/toppic-ev.jpg" class="img-fluid">
+    <div class="position-absolute" style="top: 40%; left: 42%;">
+        <div class="d-flex align-items-center">
+            <h1 class="text-light" style="font-weight:800">Range Of Car</h1>
+        </div> 
     </div>
+    <div class="bg py-4" style="background-color: #2c9f1c; height:100px;">
+        <form class="d-flex w-50 mx-auto" role="search" action="/range_of_car.php" method="GET">
+            <input value="<?php echo $search; ?>" name="search" placeholder="Search Range Of Car" type="text" class="form-control"/>
+            <button class="btn btn" style="background-color: #000;" type="submit"><i class="bi bi-search" style="color:white"></i></button>
+        </form>
+    </div>
+</div>
 
     <div class="container mt-5">
         <div class="row">
