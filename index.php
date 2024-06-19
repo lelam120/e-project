@@ -65,7 +65,7 @@ $producthot = newest_products();
                         <div class="trai" >
                             <p> <h1><b>2024 Big Sale  Event!</b></h1></p>
                              <p>Special discounts on all models, experience <br> the new era of smart mobility!</p>
-                             <button class="nutxanh"><b>Learn More</b></button>
+                             <button onclick="window.location.href='/range_of_car.php'" class="nutxanh"><b>Learn More</b></button>
                          </div>
                          <div class="phai" >
                              <img src="/img/index-zeekr007.png"/>
@@ -77,7 +77,7 @@ $producthot = newest_products();
                         <div class="trai" >
                             <p> <h1><b>2024 Grand Promotion!</b></h1></p>
                              <p>Limited-time offers, purchase now and enjoy <br> an amazing package!</p>
-                             <button class="nutxanh"><b>Learn More</b></button>
+                             <button onclick="window.location.href='/range_of_car.php'" class="nutxanh"><b>Learn More</b></button>
                          </div>
                          <div class="phai" >
                              <img src="/img/index-917.png"/>
@@ -91,13 +91,13 @@ $producthot = newest_products();
                 <p id="tieude" >Low Prices Guarantee</p>
                 <p><h1><b>All Vehicles</b></h1></p>
                 <p>We have a wealth of all vehicles models foryou to choose from.</p>
-                <button class="nutxanh" ><b>Learn More</b></button>
+                <button onclick="window.location.href='/range_of_car.php'" class="nutxanh" ><b>Learn More</b></button>
             </div>
             <div class="phai" >
                 <p id="tieude" >Quality at Minimum Expense</p>
                 <p><h1><b>Used Car</b></h1></p>
                 <p>We have a wealth of used car models for you to choose from.</p>
-                <button class="nutxanh" ><b>Learn More</b></button>
+                <button onclick="window.location.href='/preOwned_car.php'" class="nutxanh" ><b>Learn More</b></button>
             </div>
             
           
@@ -113,7 +113,7 @@ $producthot = newest_products();
                     <h1><b>Featured Vehicles Suggested</b></h1>
                 </div>
                 <div class="phai" >
-                    <button >All Vehicles</button>
+                    <button  onclick="window.location.href='/range_of_car.php'">All Vehicles</button>
                 </div>
             </div>
             <div class="duoi row mt-1 ">
