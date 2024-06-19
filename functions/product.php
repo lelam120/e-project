@@ -87,7 +87,10 @@ function brandBody_New($id_brand,$id_body){
 }
 
 function newest_products(){
-    $sql = "SELECT * FROM new_car ORDER BY newcar_id DESC LIMIT 8";
+    $sql = "SELECT *,
+                (SELECT brand_name FROM brand WHERE brand_id = cars.new_brand) AS brand_name,
+                (SELECT body_type FROM cars_type WHERE id = cars.type) AS typecar
+            FROM cars ORDER BY newcar_id ASC LIMIT 8";
 
     $result = query($sql);
 

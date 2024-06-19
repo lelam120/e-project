@@ -1,8 +1,8 @@
 
 <?php 
 
-// require_once("functions/product.php");
-// $producthot = newest_products();
+require_once("functions/product.php");
+$producthot = newest_products();
 
 ?>
 
@@ -17,7 +17,44 @@
     <link href="css/trangchu.css" rel="stylesheet">
 </head>
 
+<style>
+.custom-gray {
+    width: 80% !important;
+    margin-left: 30px;
+    padding: 15px;
 
+    height: 50px;
+    background: #f3fdf1;
+    border-radius: .4rem;
+    color: #2c9f1c;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: small;
+}
+.custom-gray:hover{
+    transform: scale(1.05);
+    color:white;
+    background-color: #2c9f1c;
+}
+.card-img-top {
+    height: 250px;
+    object-fit: cover;
+}
+
+
+.card {
+    background-color: #fff !important;
+    border: 1px solid #ddd !important;
+    border-radius: 8px !important;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1) !important;
+    transition: transform 0.3s ease-in-out !important;
+    overflow: hidden !important;
+}
+
+.card:hover {
+    transform: scale(1.1) !important;;
+}
+</style>     
 <body>
     <header>
         <?php include_once("html/Header.php"); ?>
@@ -81,24 +118,30 @@
             </div>
             <div class="duoi row mt-1 ">
               
-                  
+             
                 
-                        <?php foreach($producthot as $item): ?>
-                            <div class="col-md-3 " >
-                            
-                                <div data-aos="zoom-in-up" class="card cardxe mb-3">
-                                    <a class ="cacxe"  href="/detail.php?id=<?php echo $item["newcar_id"]; ?>">
-                                        <img src="<?php echo $item["thumbnail"]; ?>" class="card-img-top anhxe" alt="<?php echo $item["car_name"]; ?>">
-                                    </a>
-                                    <div  class="card-body thexe">
-                                        <i class="bi bi-tags" style="color:gray; margin-right:16px;">Chery</i>
-                                        <i class="bi bi-car-front" style="color:gray">SUV</i>
-                                        <h6 class="card-title" style="margin:10px"><?php echo $item["car_name"]; ?></h6>
-                                        <a href="/detail.php?id=<?php echo $item["newcar_id"]; ?>" class="btn btn custom-gray">View More</a>
-                                    </div>
+                <div class="row" id="carListings">
+                    <?php foreach($producthot as $item): ?>
+                        <div class="col-md-3 mb-5 car-card">
+                            <div class="card">
+                                <a href="/detail.php?id=<?php echo $item["newcar_id"]; ?>">
+                                    <img src="<?php echo $item["thumbnail"]; ?>" class="card-img-top" alt="<?php echo $item["car_name"]; ?>">
+                                </a>
+                                <div style="width: 100%;" class="card-body">
+                                <h6 class="card-title" style="margin-bottom:5px;font-weight:700;text-align:center"><?php echo $item["car_name"]; ?></h6>
+                                <div style="text-align:center">
+                                    <span style="color:gray;margin-bottom:10px">【 </span>
+                                    <i class="bi bi-tags" style="color:gray; margin:3px;font-size:small;"></i><span style="color:gray;font-size:small;"><?php echo $item["brand_name"]; ?></span>
+                                    <span style="color:gray;">||</span>
+                                    <i class="bi bi-car-front" style="color:gray;margin:3px;font-size:small;"></i><span style="color:gray;font-size:small;"><?php echo $item["typecar"]; ?></span>
+                                    <span style="color:gray;">】</span>
+                                </div>
+                                <a style="width:100%; margin-top:20px;" href="/detail.php?id=<?php echo $item["newcar_id"]; ?>" class="btn btn custom-gray">View More</a>
                                 </div>
                             </div>
-                        <?php endforeach; ?>
+                        </div>
+                    <?php endforeach; ?>
+                </div>  
                 
 
                 
