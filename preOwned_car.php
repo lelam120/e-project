@@ -180,7 +180,7 @@
                                     <img src="<?php echo $item["thumbnail"]; ?>" class="card-img-top" alt="<?php echo $item["car_name"]; ?>">
                                 </a>
                                 <div style="width: 100%;" class="card-body">
-                                <h6 class="card-title" style="margin-bottom:5px;font-weight:700;text-align:center"><?php echo $item["car_name"]; ?></h6>
+                                <h6 class="card-title" style="margin-bottom:5px;margin-top:10px;font-weight:700;text-align:center"><?php echo $item["car_name"]; ?></h6>
                                 <div style="text-align:center">
                                     <span style="color:gray;margin-bottom:10px">【 </span>
                                     <i class="bi bi-tags" style="color:gray; margin:3px;font-size:small;"></i><span style="color:gray;font-size:small;"><?php echo $item["brand_name"]; ?></span>
@@ -227,30 +227,30 @@
                     <div class="contact-form">
                         <h1>Get In Touch</h1>
                         <p>Complete control over products allows us to ensure our customers receive the best quality prices and service.</p>
-                        <form>
+                        <form action="/functions/form.php" method="post">
                             <div class="form-column">
                                 <div class="form-group">
                                     <label for="name"><i class="bi bi-person-fill"></i> Name *</label>
-                                    <input type="text" class="form-control" id="name" placeholder="Nhập họ và tên">
+                                    <input type="text" class="form-control" id="name" name="Name" placeholder="Nhập họ và tên">
                                 </div>
                                 <div class="form-group">
                                     <label for="email"><i class="bi bi-envelope-fill"></i> Email *</label>
-                                    <input type="email" class="form-control" id="email" placeholder="Nhập email">
+                                    <input type="email" class="form-control" id="email" name="Email" placeholder="Nhập email">
                                 </div>
                             </div>
                             <div class="form-column">
                                 <div class="form-group">
                                     <label for="country"><i class="bi bi-geo-alt-fill"></i> Country / Region *</label>
-                                    <input type="text" class="form-control" id="country" placeholder="Nhập quốc gia hoặc vùng miền">
+                                    <input type="text" class="form-control" id="country" name="address" placeholder="Nhập quốc gia hoặc vùng miền">
                                 </div>
                                 <div class="form-group">
                                     <label for="mobile"><i class="bi bi-telephone"></i> Mobile *</label>
-                                    <input type="text" class="form-control" id="mobile" placeholder="Nhập số điện thoại di động">
+                                    <input type="text" class="form-control" id="mobile" name="telephone" placeholder="Nhập số điện thoại di động">
                                 </div>
                             </div>
                             <div class="form-group full-width">
                                 <label for="message"><i class="bi bi-chat-dots-fill"></i> Message *</label>
-                                <textarea class="form-control" id="message" rows="4" placeholder="Nhập tin nhắn của bạn"></textarea>
+                                <textarea class="form-control" id="message" rows="4" name="message" placeholder="Nhập tin nhắn của bạn"></textarea>
                             </div>
                             <button style="background-color: #2c9f1c;color:white;width:100%;height:50px " type="submit" class="btn btn">Submit<i style="padding-left: 10px;" class="bi bi-send-fill"></i></button>
                         </form>
