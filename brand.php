@@ -1,8 +1,9 @@
 
 <?php 
 
-    require_once("functions/product.php");
-    $producthot = newest_products();
+    // require_once("functions/product.php");
+    // $producthot = newest_products();
+
 
 ?>
 

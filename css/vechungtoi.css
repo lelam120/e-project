@@ -1,0 +1,148 @@
+.kienmot {
+    background-image: url(/img/about-sec-bg.jpg);
+    background-size: cover;
+}
+
+.kienmot>div{
+    max-width: 1500px;
+    width: 100%;
+    margin: auto;
+
+}
+
+.kienmot>div>.tieude{
+    text-align: center;
+    font-size: 50px;
+    color: white;
+    padding-top: 70px;
+
+   
+  
+    
+}
+
+.kienmot>div>.nutchuyen{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   margin: 50px 0;
+
+  
+    
+   
+  
+    
+}
+.kienmot>div>.nutchuyen>div{
+    border-bottom: 1px solid rgba(255, 255, 255, 0.425);
+ 
+   
+     
+    
+   
+     
+ }
+
+.kienmot>div>.nutchuyen>div>button{
+    width: 320px;
+    height: 50px;
+    font-size: 20px;
+    background-color: transparent;
+     border: none;
+     color: white;
+ 
+     padding: 0;
+    
+   
+     
+ }
+
+ .kienmot>div>.nutchuyen>div .buttonhien{
+    border-bottom: 4px solid rgb(44, 159, 28);
+    font-weight: bold;
+    
+   
+     
+ }
+
+ .kienmot>div .thongtin{
+   
+    display: flex;
+    padding-bottom: 70px;
+  
+
+
+   
+     
+ }
+
+ .kienmot>div .thongtin>div{
+
+   width: 50%;
+   height: 450px;
+   transition: 0.2s;
+  
+     
+ }
+
+ .kienmot>div .thongtin .trai{
+
+    background-color: white;
+
+    padding: 50px;
+    padding-top: 70px;
+    border-radius: 10px 0 0 10px;
+    
+    
+   
+      
+}
+
+.kienmot>div .thongtin .trai>div>i{
+
+    font-size: 50px;
+    
+    position: relative;
+    
+    z-index: 2!important;
+   
+      
+}
+.kienmot>div .thongtin .trai>div>i::after{
+
+    background: rgb(44, 159, 28);
+    border-radius: 50%; 
+    color: #fff;
+    content: "";
+    display: block;
+    width: 2.5rem; 
+    height: 2.5rem; 
+    padding: 0; 
+    position: absolute;
+    left: 15px;
+    bottom: -5px; 
+    z-index: -100;
+   
+      
+}
+
+.kienmot>div .thongtin .trai .tieude{
+
+    font-size: 40px;
+    margin-top: 20px;
+    font-weight: bold;
+   
+      
+}
+
+.kienmot>div .thongtin .trai .giaithich{
+
+    color: rgb(131, 131, 116);
+ 
+   
+      
+}
+.an{
+    display: none;
+    transition: 0.2s;
+}
