@@ -27,7 +27,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Range Of Car</title>
+    <title>PreOwned Car</title>
     <?php include_once("html/style.php"); ?>
     <link href="css/styles.css" rel="stylesheet">
     <link href="css/trangchu.css" rel="stylesheet">
