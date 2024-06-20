@@ -140,6 +140,7 @@ function brandBody_Old($id_brand,$id_body){
 function newest_products(){
     $sql = "SELECT *,
                 (SELECT brand_name FROM brand WHERE brand_id = cars.new_brand) AS brand_name,
+                (SELECT back_img FROM brand WHERE brand_id = cars.new_brand) AS back_img,
                 (SELECT body_type FROM cars_type WHERE id = cars.type) AS typecar
             FROM cars ORDER BY newcar_id ASC LIMIT 8";
 

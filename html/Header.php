@@ -43,13 +43,13 @@
         <li class="nav-item">
           <a class="nav-link" href="/about_us.php">About Us</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Brand</a>
-        </li>
         <li class="nav-item dropdown">
-          <a id="rangeOfCarLink" class="nav-link dropdown" href="\range_of_car.php" role="button">
-            Range of Car
+          <a id="rangeOfCarLink" class="nav-link dropdown" href="/brand.php" role="button">
+            Brand
           </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/range_of_car.php">Range Of Car</a>
         </li>
 
         <li class="nav-item">
