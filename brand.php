@@ -111,7 +111,6 @@ main .three .phai{
 <body>
     <header>
         <?php include_once("html/Header.php"); ?>
-
     </header>
     <main>
         <section class="one">
@@ -120,7 +119,9 @@ main .three .phai{
                     <p id="tieude" >Low Prices Guarantee</p>
                     <p><h1><b>GWM</b></h1></p>
                     <p>We have a wealth of all vehicles models foryou to choose from.</p>
-                    <button onclick="window.location.href='/range_of_car.php'" class="nutxanh" ><b>Learn More</b></butto>
+                    <form method="GET" action="brand_detail.php">
+                        <button onclick="window.location.href='/brand_detail.php'" class="nutxanh" name="brand" value="<?php echo $item["brand_id"]; ?>" ><b>Learn More</b></butto>
+                    </form>                
                 </div>
   
             </div>
@@ -129,7 +130,9 @@ main .three .phai{
                     <p id="tieude" >Quality at Minimum Expense</p>
                     <p><h1><b>Chery</b></h1></p>
                     <p>We have a wealth of used car models for you to choose from.</p>
-                    <button onclick="window.location.href='/preOwned_car.php'" class="nutxanh" ><b>Learn More</b></button>
+                    <form method="GET" action="brand_detail.php">
+                        <button onclick="window.location.href='/brand_detail.php'" class="nutxanh" name="brand" value="<?php echo $item["brand_id"]; ?>" ><b>Learn More</b></butto>
+                    </form>                
                 </div>
             </div>
         </section>
@@ -139,7 +142,9 @@ main .three .phai{
                     <p id="tieude" >Low Prices Guarantee</p>
                     <p><h1><b>Changan</b></h1></p>
                     <p>We have a wealth of all vehicles models foryou to choose from.</p>
-                    <button onclick="window.location.href='/range_of_car.php'" class="nutxanh" ><b>Learn More</b></button>
+                    <form method="GET" action="brand_detail.php">
+                        <button onclick="window.location.href='/brand_detail.php'" class="nutxanh" name="brand" value="<?php echo $item["brand_id"]; ?>" ><b>Learn More</b></butto>
+                    </form>                
                 </div>
             </div>
             <div class="phai" >
@@ -147,7 +152,9 @@ main .three .phai{
                     <p id="tieude" >Quality at Minimum Expense</p>
                     <p><h1><b>Hyundai</b></h1></p>
                     <p>We have a wealth of used car models for you to choose from.</p>
-                    <button onclick="window.location.href='/preOwned_car.php'" class="nutxanh" ><b>Hyundai</b></button>
+                    <form method="GET" action="brand_detail.php">
+                        <button onclick="window.location.href='/brand_detail.php'" class="nutxanh" name="brand" value="<?php echo $item["brand_id"]; ?>" ><b>Learn More</b></butto>
+                    </form>
                 </div>
 
             </div>
@@ -158,7 +165,9 @@ main .three .phai{
                     <p id="tieude" >Low Prices Guarantee</p>
                     <p><h1><b>Honda</b></h1></p>
                     <p>We have a wealth of all vehicles models foryou to choose from.</p>
-                    <button onclick="window.location.href='/range_of_car.php'" class="nutxanh" ><b>Honda</b></button>
+                    <form method="GET" action="brand_detail.php">
+                        <button onclick="window.location.href='/brand_detail.php'" class="nutxanh" name="brand" value="<?php echo $item["brand_id"]; ?>" ><b>Learn More</b></butto>
+                    </form>
                 </div>
             </div>
             <div class="phai" >
@@ -166,7 +175,9 @@ main .three .phai{
                     <p id="tieude" >Quality at Minimum Expense</p>
                     <p><h1><b>Toyota</b></h1></p>
                     <p>We have a wealth of used car models for you to choose from.</p>
-                    <button onclick="window.location.href='/preOwned_car.php'" class="nutxanh" ><b>Toyota</b></button>
+                    <form method="GET" action="brand_detail.php">
+                        <button onclick="window.location.href='/brand_detail.php'" class="nutxanh" name="brand" value="<?php echo $item["brand_id"]; ?>" ><b>Learn More</b></butto>
+                    </form>
                 </div>
             </div>
         </section>
