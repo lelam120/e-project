@@ -1,8 +1,8 @@
 
 <?php 
 
-require_once("functions/product.php");
-$producthot = newest_products();
+// require_once("functions/product.php");
+// $producthot = newest_products();
 
 ?>
 
@@ -12,49 +12,12 @@ $producthot = newest_products();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Car</title>
     <?php include_once("html/style.php"); ?>
     <link href="css/trangchu.css" rel="stylesheet">
 </head>
 
-<style>
-.custom-gray {
-    width: 80% !important;
-    margin-left: 30px;
-    padding: 15px;
-
-    height: 50px;
-    background: #f3fdf1;
-    border-radius: .4rem;
-    color: #2c9f1c;
-    font-weight: 700;
-    text-transform: uppercase;
-    font-size: small;
-}
-.custom-gray:hover{
-    transform: scale(1.05);
-    color:white;
-    background-color: #2c9f1c;
-}
-.card-img-top {
-    height: 250px;
-    object-fit: cover;
-}
-
-
-.card {
-    background-color: #fff !important;
-    border: 1px solid #ddd !important;
-    border-radius: 8px !important;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1) !important;
-    transition: transform 0.3s ease-in-out !important;
-    overflow: hidden !important;
-}
-
-.card:hover {
-    transform: scale(1.1) !important;;
-}
-</style>     
+     
 <body>
     <header>
         <?php include_once("html/Header.php"); ?>
@@ -255,8 +218,8 @@ $producthot = newest_products();
             <p id ="tieudeto">Latest News</p>
             <div data-aos="fade-up" >
                 <div class="trai">
-                    <p id="tieude">Russian customers purchased the 2023 GWM Jingang Poer</p>
-                    <p id="chuthich">Recently, Borderlesscar successfully delivered a 2023 GWM Jingang Poer to a customer in Russia, which signifies the maturity of our business and the gradual opening...</p>
+                    <p id="tieude">Russian Customers Purchase the 2023 Lamborghini Revuelto</p>
+                    <p id="chuthich">Recently, Borderlesscar successfully delivered a 2023 Lamborghini Revuelto to a customer in Russia, marking a milestone in our business expansion. The Lamborghini Revuelto, celebrated for its stunning design ...</p>
                     <p><a href="/hot.php" >Read More ></a><p>
                 </div>
                 <div class="phai">
