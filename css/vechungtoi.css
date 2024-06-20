@@ -1,3 +1,85 @@
+.custom-gray {
+    width: 80% !important;
+    margin-left: 30px;
+    padding: 15px;
+
+    height: 50px;
+    background: #f3fdf1;
+    border-radius: .4rem;
+    color: #2c9f1c;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: small;
+}
+.custom-gray:hover{
+    transform: scale(1.05);
+    color:white;
+    background-color: #2c9f1c;
+}
+.card-img-top {
+    height: 250px;
+    object-fit: cover;
+}
+
+
+.card {
+    background-color: #fff !important;
+    border: 1px solid #ddd !important;
+    border-radius: 8px !important;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1) !important;
+    transition: transform 0.3s ease-in-out !important;
+    overflow: hidden !important;
+}
+
+.card:hover {
+    transform: scale(1.1) !important;;
+}
+main .bon > div p {
+  color: gray;
+  padding-right: 20px;
+}
+.Choose{
+    background-color:rgb(248, 248, 248);
+ 
+    margin-top:-70px;
+    margin-bottom: 100px;
+    padding-top: 150px;
+}
+.Choose h1{
+    text-align:center;
+    color:#333;
+    font-size: 3rem;
+    font-weight: 900;
+    line-height: 1.167em;
+}
+.card-top-border {
+    position: relative;
+}
+.card-top-border::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0%;
+    width: 400px;
+    height: 3px; /* Độ dày của viền */
+    background-color: green;
+    transform: translateX(-50%);
+}
+.card-text{
+    color:gray;
+}
+h4{
+    font-weight: 600;
+}
+.card-body{
+    width: 445px;
+    height: 319px;
+}
+.card-text{
+    padding: 3rem 2rem 7.1rem;
+    
+}
+
 .kienmot {
     background-image: url(/img/about-sec-bg.jpg);
     background-size: cover;
@@ -101,7 +183,7 @@
 .kienmot>div .thongtin .trai>div>i{
 
     font-size: 50px;
-    
+    color: rgb(51, 51, 51);
     position: relative;
     
     z-index: 2!important;
@@ -132,17 +214,65 @@
     margin-top: 20px;
     font-weight: bold;
    
-      
+    color: rgb(51, 51, 51);
 }
 
 .kienmot>div .thongtin .trai .giaithich{
 
     color: rgb(131, 131, 116);
  
-   
+  
       
 }
 .an{
     display: none;
     transition: 0.2s;
+}
+
+.kienhai{
+    margin-top: 100px;
+    display: flex;
+}
+
+.kienhai .trai{
+   padding-top: 170px;
+   padding-left: 170px;
+   padding-right: 100px;
+}
+.kienhai .trai .kientieude{
+    font-size: 60px;
+    font-weight: bold;
+    color: rgb(51, 51, 51);
+    margin-bottom: 50px;
+}
+.kienhai .trai .kiengiathich{
+    font-size: 26px;
+    margin-bottom: 50px;
+    color: rgb(51, 51, 51);
+    
+}
+
+.kienhai .trai>div{
+    display: flex;
+    
+}
+.kienhai .trai>div .mat>img{
+    width: 70px;
+    margin-right: 20px;
+}
+
+.kienhai .trai>div .noi #ten{
+    color:rgb(51, 51, 51) ;
+    font-weight: bold;
+    padding: 0;
+    padding-bottom: 10px;
+    font-size: 20px;
+    margin: 0;
+}
+
+.kienhai .trai>div .noi #cv{
+    color:rgb(154, 154, 154) ;
+ 
+
+    font-size: 17px;
 }

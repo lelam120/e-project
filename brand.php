@@ -116,7 +116,7 @@ main .three .phai{
     <main>
         <section class="one">
             <div class="trai">
-                <div style="position:relative;left:8%;top:10%;">
+                <div style="position:relative;left:8%;top:30%;">
                     <p id="tieude" >Low Prices Guarantee</p>
                     <p><h1><b>GWM</b></h1></p>
                     <p>We have a wealth of all vehicles models foryou to choose from.</p>
@@ -125,7 +125,7 @@ main .three .phai{
   
             </div>
             <div class="phai" >
-                <div style="position:relative;left:8%;top:10%;">
+                <div style="position:relative;left:8%;top:30%;">
                     <p id="tieude" >Quality at Minimum Expense</p>
                     <p><h1><b>Chery</b></h1></p>
                     <p>We have a wealth of used car models for you to choose from.</p>
@@ -135,7 +135,7 @@ main .three .phai{
         </section>
         <section class="two">
             <div class="trai" >
-                <div style="position:relative;left:8%;top:10%;">
+                <div style="position:relative;left:8%;top:30%;">
                     <p id="tieude" >Low Prices Guarantee</p>
                     <p><h1><b>Changan</b></h1></p>
                     <p>We have a wealth of all vehicles models foryou to choose from.</p>
@@ -143,7 +143,7 @@ main .three .phai{
                 </div>
             </div>
             <div class="phai" >
-                <div style="position:relative;left:8%;top:10%;">
+                <div style="position:relative;left:8%;top:30%;">
                     <p id="tieude" >Quality at Minimum Expense</p>
                     <p><h1><b>Hyundai</b></h1></p>
                     <p>We have a wealth of used car models for you to choose from.</p>
@@ -154,7 +154,7 @@ main .three .phai{
         </section>
         <section class="three">
             <div class="trai" >
-                <div style="position:relative;left:8%;top:10%;">
+                <div style="position:relative;left:8%;top:30%;">
                     <p id="tieude" >Low Prices Guarantee</p>
                     <p><h1><b>Honda</b></h1></p>
                     <p>We have a wealth of all vehicles models foryou to choose from.</p>
@@ -162,7 +162,7 @@ main .three .phai{
                 </div>
             </div>
             <div class="phai" >
-                <div style="position:relative;left:8%;top:10%;">
+                <div style="position:relative;left:8%;top:30%;">
                     <p id="tieude" >Quality at Minimum Expense</p>
                     <p><h1><b>Toyota</b></h1></p>
                     <p>We have a wealth of used car models for you to choose from.</p>
@@ -229,16 +229,16 @@ main .three .phai{
                         <img src="/img/Geely-Geometry.png"/>
                     </li>
                     <li>
-                        <img src="/img/nhat.png"/>
+                        <img src="/img/9EE790-1.png"/>
+                    </li>
+                    <li>
+                        <img src="/img/Avatr.png"/>
                     </li>
                     <li>
                         <img src="/img/97E78C-1.png"/>
                     </li>
                     <li>
-                        <img src="/img/97E78C-1.png"/>
-                    </li>
-                    <li>
-                        <img src="/img/97E78C-1.png"/>
+                        <img src="/img/9EE790-1.png"/>
                     </li>
                     <li>
                         <img src="/img/97E78C-1.png"/>

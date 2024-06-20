@@ -115,7 +115,7 @@
             <p>From the moment you step foot inside our 15,000 square-foot warehouse you will recognize and appreciate that <br>difference as you are treated to the most pleasant car-buying experience you can imagine.</p>
             <div class="hang" data-aos="fade-up">
                 <ul>
-                    <li>
+                <li>
                         <img src="/img/97E78C-1.png"/>
                     </li>
                     <li>
@@ -131,16 +131,16 @@
                         <img src="/img/Geely-Geometry.png"/>
                     </li>
                     <li>
-                        <img src="/img/nhat.png"/>
+                        <img src="/img/9EE790-1.png"/>
+                    </li>
+                    <li>
+                        <img src="/img/Avatr.png"/>
                     </li>
                     <li>
                         <img src="/img/97E78C-1.png"/>
                     </li>
                     <li>
-                        <img src="/img/97E78C-1.png"/>
-                    </li>
-                    <li>
-                        <img src="/img/97E78C-1.png"/>
+                        <img src="/img/9EE790-1.png"/>
                     </li>
                     <li>
                         <img src="/img/97E78C-1.png"/>
@@ -158,7 +158,7 @@
                 <p id="tieude">Who we Are</p>
                 <p><h1><b>Automotive Sales<br> Company from China</b></h1></p>
                 <p>Henan Borderless International Trade Co., Ltd. established in 2015. Our <br> committed to providing high-quality and professional services to our customers,<br> and creating a comprehensive automotive sales ecosystem.</p>
-                <button class="nutxanh" ><b>Learn More</b></button>
+                <button class="nutxanh" onclick="window.location.href='/about_us.php'" ><b>Learn More</b></button>
             </div>
         </section>
         <section class="bon">
@@ -166,12 +166,12 @@
                 <img src="/img/home-about1.jpg"/>
                 <p><h2><b>Logistics</b></h2></p>
                 <p class="ghichu" >Our car sales company places great emphasis on logistics and delivery services, providing customers with high-quality delivery experiences. Our logistics system has a sophisticated supply chain management and real-time monitoring mechanism in place to ensure the rapid and accurate completion of delivery tasks.</p>
-                <p> <b ><a id="link" href="">READ MORE</a><span id="link" class="muiten">></span></b></p>
+                <p> <b ><a id="link" href="/about_us.php">READ MORE</a><span id="link" class="muiten">></span></b></p>
             </div>
             <div data-aos="flip-left" class="phai">
                 <p><h2><b>Export Qualification</b></h2></p>
                 <p class="ghichu">Our export qualifications are in line with national policies and regulations, and we hold legal and valid export qualification certificates. In the export business, we strictly abide by relevant laws, regulations and industry standards to ensure the quality, safety and compliance of exported goods.</p>
-                <p><b id="link"><a id="link" href="">READ MORE</a><span id="link"  class="muiten">></span></b></p>
+                <p><b id="link"><a id="link" href="/brand.php">READ MORE</a><span id="link"  class="muiten">></span></b></p>
                 <img src="/img/home-about2.jpg"/>
             
 
@@ -193,20 +193,20 @@
                     <i class="bi bi-person-rolodex"></i>
                     <p><h3><b>Customized Services</b></h3></p>
                     <p>We prioritize our customers' needs and provide personalized customized services.</p>
-                    <p> <b ><a id="link" href="">READ MORE ></a></b></p>
+                    <p> <b ><a id="link" href="/about_us.php">READ MORE ></a></b></p>
                 </div>
 
                 <div data-aos="zoom-in-down" class="Namcon">
                     <i class="bi bi-people-fill"></i>
                     <p><h3><b>Consultation Service</b></h3></p>
                     <p>Our sales team is composed of professionals with many years of industry experience an…</p>
-                    <p> <b ><a id="link" href="">READ MORE ></a></b></p>
+                    <p> <b ><a id="link" href="/about_us.php">READ MORE ></a></b></p>
                 </div>
                 <div data-aos="zoom-in-down" class="Namcon">
                     <i class="bi bi-car-front"></i>
                     <p><h3><b>After-sales Service</b></h3></p>
                     <p>After customers purchase a vehicle from us, we actively follow up with them …</p>
-                    <p> <b ><a id="link" href="">READ MORE ></a></b></p>
+                    <p> <b ><a id="link" href="/about_us.php">READ MORE ></a></b></p>
                 </div>
 
 

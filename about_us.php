@@ -15,89 +15,11 @@
     <title>About Us</title>
     <?php include_once("html/style.php"); ?>
     <link href="css/trangchu.css" rel="stylesheet">
+    <link href="css/vechungtoi.css" rel="stylesheet">
 </head>
 
 <style>
-.custom-gray {
-    width: 80% !important;
-    margin-left: 30px;
-    padding: 15px;
 
-    height: 50px;
-    background: #f3fdf1;
-    border-radius: .4rem;
-    color: #2c9f1c;
-    font-weight: 700;
-    text-transform: uppercase;
-    font-size: small;
-}
-.custom-gray:hover{
-    transform: scale(1.05);
-    color:white;
-    background-color: #2c9f1c;
-}
-.card-img-top {
-    height: 250px;
-    object-fit: cover;
-}
-
-
-.card {
-    background-color: #fff !important;
-    border: 1px solid #ddd !important;
-    border-radius: 8px !important;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1) !important;
-    transition: transform 0.3s ease-in-out !important;
-    overflow: hidden !important;
-}
-
-.card:hover {
-    transform: scale(1.1) !important;;
-}
-main .bon > div p {
-  color: gray;
-  padding-right: 20px;
-}
-.Choose{
-    background-color:rgb(248, 248, 248);
-    height:1500px;
-    margin-top:-70px;
-    padding-top: 150px;
-}
-.Choose h1{
-    text-align:center;
-    color:#333;
-    font-size: 3rem;
-    font-weight: 900;
-    line-height: 1.167em;
-}
-.card-top-border {
-    position: relative;
-}
-.card-top-border::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0%;
-    width: 400px;
-    height: 3px; /* Độ dày của viền */
-    background-color: green;
-    transform: translateX(-50%);
-}
-.card-text{
-    color:gray;
-}
-h4{
-    font-weight: 600;
-}
-.card-body{
-    width: 445px;
-    height: 319px;
-}
-.card-text{
-    padding: 3rem 2rem 7.1rem;
-    
-}
 
 </style>     
 <body>
@@ -139,7 +61,7 @@ h4{
         <section class="Choose">
             <h1>Why Choose Borderless</h1>
             <section class="container mt-5">
-                <div class="row">
+                <div data-aos="zoom-in" class="row">
                     <!-- Thẻ 1 -->
                     <div class="col-md-4 mb-4">
                         <div class="card card-top-border">
@@ -150,7 +72,7 @@ h4{
                         </div>
                     </div>
                     <!-- Thẻ 2 -->
-                    <div class="col-md-4 mb-4">
+                    <div data-aos="zoom-in" class="col-md-4 mb-4">
                         <div class="card card-top-border">
                             <div class="card-body">
                                 <h4 class="card-title">Diverse product range</h4>
@@ -159,7 +81,7 @@ h4{
                         </div>
                     </div>
                     <!-- Thẻ 3 -->
-                    <div class="col-md-4 mb-4">
+                    <div data-aos="zoom-in" class="col-md-4 mb-4">
                         <div class="card card-top-border">
                             <div class="card-body">
                                 <h4 class="card-title">Quality assurance</h4>
@@ -168,7 +90,7 @@ h4{
                         </div>
                     </div>
                 </div>
-                <div class="row">
+                <div data-aos="zoom-in-up" class="row">
                     <!-- Thẻ 4 -->
                     <div class="col-md-4 mb-4">
                         <div class="card card-top-border">
@@ -179,7 +101,7 @@ h4{
                         </div>
                     </div>
                     <!-- Thẻ 5 -->
-                    <div class="col-md-4 mb-4">
+                    <div data-aos="zoom-in-up" class="col-md-4 mb-4">
                         <div class="card card-top-border">
                             <div class="card-body">
                                 <h4 class="card-title">Integrity-based operation</h4>
@@ -190,7 +112,7 @@ h4{
                     <!-- Thẻ 6 -->
                     
 
-                    <div class="col-md-4 mb-4" style="background-image: linear-gradient(0, rgba(44,159,28,.8), rgba(44,159,28,.8)) ,url(/img/bg-service1.jpg) ">
+                    <div data-aos="zoom-in-up" class="col-md-4 mb-4" style="background-image: linear-gradient(0, rgba(44,159,28,.8), rgba(44,159,28,.8)) ,url(/img/bg-service1.jpg) ">
                         <div style="margin-top:80px;">
                             <i style="padding-left:160px;font-size:50px;" class="bi bi-telephone-inbound"></i>
                             <h3 style="font-weight:600;text-align:center;font-size:28px;padding-top:10px;">Borderless customer care is here to help you anytime.</h3>
@@ -200,61 +122,70 @@ h4{
                 </div>
             </section>
         </section>
-        <section class="nam">
-            <img src="/img/img-car.png" />
-            <div class="giua" >
-                <div class="cac goc" >
-                    <p id="tieude">Our Services</p>
-                    <p ><h1 ><b id="tieude1">We Provide Best Services</b></h1></p>
-                    <div class="hr"></div>
-                    <p>we provide customers with more professional, reliable, and comfortable services during the car-buying process</p>
+       
+        <main>
+            <section class="kienmot" >
+                <div data-aos="zoom-in">
+                    <p class="tieude" >We Provide Best Services</p>
+                    <div class=" nutchuyen" >
+                        <div>
+                            <button class="buttonhien"  onclick="click1()" id="bam1" >Customized Services</button>
+                            <button class="" id="bam2" onclick="click2()" >Product Consultation</button>
+                            <button class="" id="bam3"  onclick="click3()">After-sales Service</button>
+                        </div>
+                    </div>
 
+                    <div class="thongtin"> 
+                        <div class="trai ">
+                            <div class="" id="mot" >
+                                <i class="bi bi-car-front"></i>
+                                <p class="tieude" >Customized Services</p>
+                                <p class="giaithich">We prioritize our customers' needs and provide personalized customized services. Customers can choose their preferred vehicles based on their own preferences and requirements, and our sales team will provide personalized vehicle recommendations and configuration customization based on different customer needs.</p>
 
-                </div>
-                <div data-aos="zoom-in-down" class="Namcon">
-                    <i class="bi bi-person-rolodex"></i>
-                    <p><h3><b>Customized Services</b></h3></p>
-                    <p>We prioritize our customers' needs and provide personalized customized services.</p>
-                    <p> <b ><a id="link" href="">READ MORE ></a></b></p>
-                </div>
+                            </div>
+                            <div class="an"  id="hai">
+                                <i class="bi bi-ev-station"></i>
+                                <p class="tieude" >Product Consultation Services</p>
+                                <p class="giaithich">Our sales team is composed of professionals with many years of industry experience and expertise, and can provide multi-brand, multi-configuration automobile consultation services. We help customers understand the performance and features of selected vehicle models by answering questions about automobile brands, performance, configuration, etc.</p>
 
-                <div data-aos="zoom-in-down" class="Namcon">
-                    <i class="bi bi-people-fill"></i>
-                    <p><h3><b>Consultation Service</b></h3></p>
-                    <p>Our sales team is composed of professionals with many years of industry experience an…</p>
-                    <p> <b ><a id="link" href="">READ MORE ></a></b></p>
+                            </div>
+                            <div class="an"  id="ba">
+                                <i class="bi bi-globe-americas"></i>
+                                <p class="tieude" >After-sales Service</p>
+                                <p class="giaithich">We prioritize our customers' needs and provide personalized customized services. Customers can choose their preferred vehicles based on their own preferences and requirements, and our sales team will provide personalized vehicle recommendations and configuration customization based on different customer needs.</p>
+
+                            </div>
+                        
+                        </div>
+                        <div class="phai">
+                            <img style=" width: 100%;border-radius: 0 10px 10px 0;" src="img/about-secvice-pic.jpg" alt="">
+                        </div>
+                    </div>
                 </div>
-                <div data-aos="zoom-in-down" class="Namcon">
-                    <i class="bi bi-car-front"></i>
-                    <p><h3><b>After-sales Service</b></h3></p>
-                    <p>After customers purchase a vehicle from us, we actively follow up with them …</p>
-                    <p> <b ><a id="link" href="">READ MORE ></a></b></p>
-                </div>
-            </div>
-        </section>
-        <section class="sau">
-            <p id ="tieudenho">Our Cases</p>
-            <p id ="tieudeto">Latest News</p>
-            <div data-aos="fade-up" >
-                <div class="trai">
-                    <p id="tieude">Russian customers purchased the 2023 GWM Jingang Poer</p>
-                    <p id="chuthich">Recently, Borderlesscar successfully delivered a 2023 GWM Jingang Poer to a customer in Russia, which signifies the maturity of our business and the gradual opening...</p>
-                    <p><a href="/hot.php" >Read More ></a><p>
+            </section>
+            <section class="kienhai" >
+                <div data-aos="fade-up" class="trai">
+                    <p class="kientieude" >What Clients Say </br>About Us</p>
+                    <p class="kiengiathich">“ This creative team is attentive, focus on the details and are really darn good at what they do.  We determine together what needs to be done to stay ahead of the game.”</p>
+                    <div >
+                        <div class="mat">
+                             <img src="img/thumb1.png" alt="">
+                        </div>
+                        <div class="noi">
+                             <p id="ten">Richard Anderson</p>
+                             <p id="cv">Customers from Canada</p>
+                        </div>
+                    </div>
                 </div>
                 <div class="phai">
-                    <img src="/img/lamborghini-revuelto.jpg" alt="">
+                    <img src="img/anhxecdcm.jpg" alt="">
                 </div>
-            </div>
-    
-        </section>
-    </main>
-    
-
-
+            </section>
+        </main>
     <?php include_once("html/Footers.php"); ?>
     <script>
         AOS.init();
     </script>
-    <script src="/js/index.js"></script>
+   <script src="/js/abous.js"></script>
 </body>
 </html>

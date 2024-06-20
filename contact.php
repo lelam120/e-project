@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Contact US</title>
     <?php include_once("html/style.php"); ?>
     <link href="css/styles.css" rel="stylesheet">
     <link href="css/trangchu.css" rel="stylesheet">
