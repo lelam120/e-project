@@ -71,7 +71,7 @@
                         </tbody>
                     </table>
 
-                    <button> FREE QUOTE </button>
+                    <button onclick="window.location.href='/contact.php'"> FREE QUOTE </button>
 
                     <div class="liicon" >
                         <i>Share</i>
