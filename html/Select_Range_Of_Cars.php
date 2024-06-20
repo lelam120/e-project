@@ -136,7 +136,7 @@
 }
 </style>
 <body>
-    <div class="Search_Options">
+    <div class="Search_Options" style="position:sticky;top:0;">
         <div>
             <p><h3><b>Search Options</b></h3></p>
             <div class="loc" >
@@ -186,8 +186,6 @@
     </div>
 
     <script>   
-  
-
         function toggleBrand() {
        
             var thuonghieu = document.getElementById("thuonghieu");

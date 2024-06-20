@@ -174,7 +174,7 @@
             <div class="col-md-9">
                 <div class="row" id="carListings">
                     <?php foreach($newest_products as $item): ?>
-                        <div class="col-md-4 mb-4 car-card">
+                        <div class="col-md-4 mb-4 car-card" data-aos="zoom-in-up">
                             <div class="card">
                                 <a href="/detail.php?id=<?php echo $item["newcar_id"]; ?>">
                                     <img src="<?php echo $item["thumbnail"]; ?>" class="card-img-top" alt="<?php echo $item["car_name"]; ?>">
@@ -198,7 +198,7 @@
         </div>
     </div>
     </section>
-    <section class="boxbox">
+    <section class="boxbox" data-aos="fade-up">
         <div class="container mt-5">
             <div class="row">
                 <div class="col-md-5">
@@ -260,5 +260,8 @@
         </div>
     </section>
     <?php include_once("html/Footers.php"); ?>
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>

@@ -170,6 +170,7 @@
         }
         
 </style>
+
 <body>
     <header>
         <?php include_once("html/Header.php"); ?>
@@ -198,9 +199,9 @@
             <?php include_once("html/Select_Range_Of_Cars.php"); ?>
             </div>
             <div class="col-md-9">
-                <div class="row" id="carListings">
+                <div class="row util-animate-fadeIn" id="carListings" >
                     <?php foreach($current_page_items as $item): ?>
-                        <div class="col-md-4 mb-4 car-card">
+                        <div class="col-md-4 mb-4 car-card"  data-aos="zoom-in-up">
                             <div class="card">
                                 <a href="/detail.php?id=<?php echo $item["newcar_id"]; ?>">
                                     <img src="<?php echo $item["thumbnail"]; ?>" class="card-img-top" alt="<?php echo $item["car_name"]; ?>">
@@ -223,7 +224,7 @@
 
                 <!-- Pagination -->
                 <nav>
-                    <ul class="pagination">
+                    <ul class="pagination"  data-aos="zoom-in-up">
                         <?php if ($current_page > 1): ?>
                             <li class="page-item">
                                 <a class="page-link" href="?page=<?php echo $current_page - 1; ?>" aria-label="Previous">
@@ -249,7 +250,7 @@
         </div>
     </div>
     </section>
-    <section class="boxbox">
+    <section class="boxbox"  data-aos="zoom-in-up">
         <div class="container mt-5">
             <div class="row">
                 <div class="col-md-5">
@@ -311,5 +312,8 @@
         </div>
     </section>
     <?php include_once("html/Footers.php"); ?>
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>
