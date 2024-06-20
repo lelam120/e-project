@@ -32,7 +32,7 @@
 }
 
 .card:hover {
-    transform: scale(1.1) !important;;
+    transform: scale(1.1) !important;
 }
 main .bon > div p {
   color: gray;
@@ -40,7 +40,6 @@ main .bon > div p {
 }
 .Choose{
     background-color:rgb(248, 248, 248);
- 
     margin-top:-70px;
     margin-bottom: 100px;
     padding-top: 150px;
@@ -70,13 +69,20 @@ main .bon > div p {
 }
 h4{
     font-weight: 600;
+    color: black;
 }
 .card-body{
     width: 445px;
     height: 319px;
 }
+.card-body i{
+    font-size: 50px;
+    color: #2c9f1c;
+    margin-right: 10px;
+}
+
 .card-text{
-    padding: 3rem 2rem 7.1rem;
+    padding: 1.5rem 1.4rem 7.1rem;
     
 }
 

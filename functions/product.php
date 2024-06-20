@@ -188,7 +188,7 @@ function product_detail($id )  {
 
     $result = query($sql);
 
-    $list ;
+    $list = [];
     
     while($row = $result->fetch_assoc()){
         $list = $row;

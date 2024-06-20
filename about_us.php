@@ -16,12 +16,9 @@
     <?php include_once("html/style.php"); ?>
     <link href="css/trangchu.css" rel="stylesheet">
     <link href="css/vechungtoi.css" rel="stylesheet">
+    
 </head>
-
-<style>
-
-
-</style>     
+  
 <body>
     <header>
         <?php include_once("html/Header.php"); ?>
@@ -66,7 +63,10 @@
                     <div class="col-md-4 mb-4">
                         <div class="card card-top-border">
                             <div class="card-body">
-                                <h4 class="card-title">Professionalism</h4>
+                                <div style="display:flex;align-items:center">
+                                    <i class="bi bi-lightbulb"></i>
+                                    <h4 style="color: black;" class="card-title">Professionalism</h4>
+                                </div>
                                 <p class="card-text">As a professional import and export trading company, we have rich experience and professional skills. We understand the trends and demands of domestic and foreign markets and can provide customized services according to different customer needs.</p>
                             </div>
                         </div>
@@ -75,7 +75,10 @@
                     <div data-aos="zoom-in" class="col-md-4 mb-4">
                         <div class="card card-top-border">
                             <div class="card-body">
-                                <h4 class="card-title">Diverse product range</h4>
+                                <div style="display:flex;align-items:center">
+                                    <i class="bi bi-gear-wide-connected"></i>
+                                    <h4 style="color: black;" class="card-title">Diverse product range</h4>
+                                </div>
                                 <p class="card-text">Our main products include new energy vehicles, used cars, electric motorcycles, electric tricycles, electric skateboards, and charging piles. We offer a complete range of brands, years, and models for customers to choose from.</p>
                             </div>
                         </div>
@@ -84,7 +87,10 @@
                     <div data-aos="zoom-in" class="col-md-4 mb-4">
                         <div class="card card-top-border">
                             <div class="card-body">
-                                <h4 class="card-title">Quality assurance</h4>
+                                <div style="display:flex;align-items:center">
+                                    <i class="bi bi-shield-check"></i>
+                                    <h4 style="color: black;" class="card-title">Quality assurance</h4>
+                                </div>
                                 <p class="card-text">We have established long-term cooperative relationships with many well-known domestic and foreign automobile manufacturers and suppliers, and all products are guaranteed to be of high quality. We strictly control each import and export project to ensure that we can provide customers with excellent products and services.</p>
                             </div>
                         </div>
@@ -95,7 +101,10 @@
                     <div class="col-md-4 mb-4">
                         <div class="card card-top-border">
                             <div class="card-body">
-                                <h4 class="card-title">Competitive pricing</h4>
+                                <div style="display:flex;align-items:center">
+                                    <i class="bi bi-cash-coin"></i>
+                                    <h4 style="color: black;" class="card-title">Competitive pricing</h4>
+                                </div>
                                 <p class="card-text">We have established stable cooperation relationships with multiple suppliers, have advantageous purchasing channels, and can provide flexible pricing strategies to ensure that we can offer the most favorable prices to customers.</p>
                             </div>
                         </div>
@@ -104,7 +113,10 @@
                     <div data-aos="zoom-in-up" class="col-md-4 mb-4">
                         <div class="card card-top-border">
                             <div class="card-body">
-                                <h4 class="card-title">Integrity-based operation</h4>
+                                <div style="display:flex;align-items:center">
+                                    <i class="bi bi-layers"></i>
+                                    <h4 style="color: black;" class="card-title">Integrity-based operation</h4>
+                                </div>
                                 <p class="card-text">As a company that operates with integrity, we always prioritize customer benefits and guarantee service quality and product quality. We value the trust and support of customers and continuously improve our service level, which has won the praise and trust of many customers.</p>
                             </div>
                         </div>
