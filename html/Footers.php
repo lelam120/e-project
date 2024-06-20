@@ -49,9 +49,9 @@
                     </div>
                     <div>
                         <p id="giua_tieude">Links</p>
-                        <p>Brand Story</p>
-                        <p>Logistics</p>
-                        <p>Export Qualification</p>
+                        <p>Case</p>
+                        <p>News</p>
+                        <p>Contact Us</p>
                         
                     </div>
                     <div>

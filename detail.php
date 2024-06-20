@@ -87,21 +87,21 @@
 
     <section class="hai" >
         <div class="trai">
-            <div class="thongtin">
+            <div  class="thongtin">
                 <p class="Introduction" >Introduction</p>
                 <p class="Highlighted_Features" >Highlighted Features</p>
                 <p class="FQA" >FQA</p>
             </div>
-            <div class="hoi" >
+            <div class="hoi" style="position:sticky;top:0;" >
                 <div>
                     <p id="tieude" >How Can We Help You?</p>
                     <p id="gioithiet" >Borderless customer care is here to help you anytime.</p>
-                    <button>FREE QUOTE</button>
+                    <button onclick="window.location.href='/contact.php'">FREE QUOTE</button>
                 </div>
             </div>
         </div>
         <div class="phai">
-            <div class="Introduction">
+            <div data-aos="fade-up" class="Introduction">
                 <p class="tieude">Introduction </p>
                 <ul>
                  
@@ -112,7 +112,7 @@
                     <?php endforeach; ?>
                 </ul>
             </div>
-            <div class="Highlighted_Features">
+            <div data-aos="fade-up" class="Highlighted_Features">
                 <p class="tieude">Highlighted_Features</p>
                 <ul>
                     <?php foreach($highlighted_features as $item): ?>
@@ -124,7 +124,7 @@
                   
                 </ul>
             </div>
-            <div class="FAQ" >
+            <div data-aos="zoom-in" class="FAQ" >
                  <p class="tieude">FAQ</p>
                  <div>
                    
@@ -154,7 +154,9 @@
 
 
     <?php include_once("html/Footers.php"); ?>
-
+    <script>
+        AOS.init();
+    </script>
   
 </body>
 </html>

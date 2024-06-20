@@ -76,7 +76,7 @@
                         </tbody>
                     </table>
 
-                    <button> FREE QUOTE </button>
+                    <button onclick="window.location.href='/contact.php'"> FREE QUOTE </button>
 
                     <div class="liicon" >
                         <i>Share</i>
@@ -232,7 +232,7 @@
                                 <label for="message"><i class="bi bi-chat-dots-fill"></i> Message *</label>
                                 <textarea class="form-control" id="message" rows="4" name="message" placeholder="Nhập tin nhắn của bạn"></textarea>
                             </div>
-                            <button style="background-color: #2c9f1c;color:white;width:100%;height:50px " type="submit" class="btn btn">Submit<i style="padding-left: 10px;" class="bi bi-send-fill"></i></button>
+                            <button  style="background-color: #2c9f1c;color:white;width:100%;height:50px " type="submit" class="btn btn">Submit<i style="padding-left: 10px;" class="bi bi-send-fill"></i></button>
                         </form>
                     </div>
                 </div>
