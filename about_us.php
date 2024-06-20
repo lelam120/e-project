@@ -47,8 +47,11 @@
 
         <section class="bon">
             <div data-aos="flip-left" class="trai">
-                <P>Our committed to providing high-quality and professional services to our customers, and creating a comprehensive automotive sales ecosystem. With over 10 years of experience and accumulated professional skills in the automotive industry, we constantly innovate and improve product quality with customer needs at the forefront, which has made us a leader in the automotive industry.</P>
-                <p>Our main products include electric cars, used cars, and other well-known international brands that cover various consumer groups. Through years of market practice and technological innovation, our vehicle performance and quality have reached advanced levels both domestically and internationally. Our goal is to become a leader in the automotive sales industry, achieve mutual benefit with customers, and provide them with more professional, reliable, and comfortable services during the car-buying process.</p>
+            <p>Henan Borderless International Trade Co., Ltd. is a company specializing in the export of new energy vehicles, including electric cars, SUVs, sedans, mini-cars, used cars, and auto parts.
+            <br>The company was founded in 2021 and is headquartered in Zhengzhou Economic and Technological Development Zone, Henan, China</p>
+                <p>
+Established in 2021, Henan Borderless International Trade Co., Ltd. has become a rising star in China's new energy vehicle export market. They focus on providing a comprehensive selection of electric cars, SUVs, sedans, mini-cars, and even used cars, catering to diverse customer needs. Their commitment extends beyond vehicles, offering genuine auto parts and exceptional after-sales support.</P>
+              
                 <button  style="width:170px;height:55px;color:#2c9f1c" onclick="window.location.href='/'" class="nutxanh"><b style="color:white; font-size:13px;font-weight:900;">LEARN MORE</b></button>
             </div>
             <div data-aos="flip-left" class="phai">
@@ -141,9 +144,9 @@
                     <p class="tieude" >We Provide Best Services</p>
                     <div class=" nutchuyen" >
                         <div>
-                            <button class="buttonhien"  onclick="click1()" id="bam1" >Customized Services</button>
+                            <button class="buttonhien"  onclick="click1()" id="bam1" >Past Events</button>
                             <button class="" id="bam2" onclick="click2()" >Product Consultation</button>
-                            <button class="" id="bam3"  onclick="click3()">After-sales Service</button>
+                            <button class="" id="bam3"  onclick="click3()">Upcoming Events</button>
                         </div>
                     </div>
 
@@ -151,8 +154,11 @@
                         <div class="trai ">
                             <div class="" id="mot" >
                                 <i class="bi bi-car-front"></i>
-                                <p class="tieude" >Customized Services</p>
-                                <p class="giaithich">We prioritize our customers' needs and provide personalized customized services. Customers can choose their preferred vehicles based on their own preferences and requirements, and our sales team will provide personalized vehicle recommendations and configuration customization based on different customer needs.</p>
+                                <p class="tieude" >Past Events</p>
+                                <p class="giaithich">2021: Company establishment in Zhengzhou Economic and Technological Development Zone, Henan, China.</br>
+                                    2022: Signed long-term strategic cooperation partnerships with 4S Stores to supply electric vehicles from various brands.
+                                    2023: Expanded market to Central Asian countries, including Uzbekistan.</br>
+                                    April 2024: Signed car purchase contract with customers in Tashkent, Uzbekistan, involving multiple BYD Song models</p>
 
                             </div>
                             <div class="an"  id="hai">
@@ -163,8 +169,10 @@
                             </div>
                             <div class="an"  id="ba">
                                 <i class="bi bi-globe-americas"></i>
-                                <p class="tieude" >After-sales Service</p>
-                                <p class="giaithich">We prioritize our customers' needs and provide personalized customized services. Customers can choose their preferred vehicles based on their own preferences and requirements, and our sales team will provide personalized vehicle recommendations and configuration customization based on different customer needs.</p>
+                                <p class="tieude" >Upcoming Events</p>
+                                <p class="giaithich">July 2024: Participate in Auto Shanghai to showcase the latest products and services.</br>
+Q3 2024: Establish a representative office in Tashkent, Uzbekistan.</br>
+2025: Expand market to African and South American countries.</p>
 
                             </div>
                         
