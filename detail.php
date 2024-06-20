@@ -47,7 +47,7 @@
         <div class="motchitiet">
             <div class="trai">
                 
-                <img  src="<?php echo $car['thumbnail'] ?>" alt=""/>
+                <img style="width: 700px ;" src="<?php echo $car['thumbnail'] ?>" alt=""/>
 
                
             </div>
