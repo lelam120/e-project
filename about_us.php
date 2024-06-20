@@ -104,7 +104,17 @@ h4{
     <header>
         <?php include_once("html/Header.php"); ?>
     </header>
+    <div class="position-relative">
+        <img style="width: 100%;" src="https://www.borderlesscar.com/wp-content/uploads/2023/07/toppic-about.jpg" class="img-fluid">
+            <div class="position-absolute" style="top: 40%; left: 42%;">
+                <div class="d-flex align-items-center">
+                    <h1 class="text-light" style="font-weight:800">About Us</h1>
+                </div> 
+            </div>
+
+    </div>
     <main>
+
         <section class="produc" >
             <div class="tren" >
                 <div class="trai" style="width: 50%;" >
