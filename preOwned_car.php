@@ -231,26 +231,26 @@
                             <div class="form-column">
                                 <div class="form-group">
                                     <label for="name"><i class="bi bi-person-fill"></i> Name *</label>
-                                    <input type="text" class="form-control" id="name" name="Name" placeholder="Nhập họ và tên">
+                                    <input type="text" class="form-control" id="name" name="Name" placeholder="Name"required>
                                 </div>
                                 <div class="form-group">
                                     <label for="email"><i class="bi bi-envelope-fill"></i> Email *</label>
-                                    <input type="email" class="form-control" id="email" name="Email" placeholder="Nhập email">
+                                    <input type="email" class="form-control" id="email" name="Email" placeholder="Email"required>
                                 </div>
                             </div>
                             <div class="form-column">
                                 <div class="form-group">
                                     <label for="country"><i class="bi bi-geo-alt-fill"></i> Country / Region *</label>
-                                    <input type="text" class="form-control" id="country" name="address" placeholder="Nhập quốc gia hoặc vùng miền">
+                                    <input type="text" class="form-control" id="country" name="address" placeholder="Address"required>
                                 </div>
                                 <div class="form-group">
                                     <label for="mobile"><i class="bi bi-telephone"></i> Mobile *</label>
-                                    <input type="text" class="form-control" id="mobile" name="telephone" placeholder="Nhập số điện thoại di động">
+                                    <input type="number"  class="form-control" id="mobile" name="telephone" placeholder="Telephone"required>
                                 </div>
                             </div>
                             <div class="form-group full-width">
                                 <label for="message"><i class="bi bi-chat-dots-fill"></i> Message *</label>
-                                <textarea class="form-control" id="message" rows="4" name="message" placeholder="Nhập tin nhắn của bạn"></textarea>
+                                <textarea class="form-control" id="message" rows="4" name="message" placeholder="Message"required></textarea>
                             </div>
                             <button style="background-color: #2c9f1c;color:white;width:100%;height:50px " type="submit" class="btn btn">Submit<i style="padding-left: 10px;" class="bi bi-send-fill"></i></button>
                         </form>

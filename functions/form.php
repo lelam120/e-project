@@ -1,15 +1,25 @@
-<?php 
-
+<?php
 require_once("product.php");
 
-$name = $_POST['Name'];
-$email = $_POST['Email'];
-$address = $_POST['address']; // Assuming this field captures country/region
-$telephone = $_POST['telephone'];
-$message = $_POST['message'];
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $name = trim($_POST['Name']);
+    $email = trim($_POST['Email']);
+    $address = trim($_POST['address']); 
+    $telephone = trim($_POST['telephone']);
+    $message = trim($_POST['message']);
 
 
+    if ($name == '' || $email == '' || $address == '' || $message == '') {
+        header('Location: /404.php');
+        exit; 
+    }
 
-$cac = contact_sub($name,$email,$address,$telephone,$message);
+ 
+    $cac = contact_sub($name, $email, $address, $telephone, $message);
 
-header('Location:/thankyou.php');
+
+    header('Location: /thankyou.php');
+    exit;
+}
+?>
