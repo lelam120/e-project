@@ -32,20 +32,17 @@
    
     $items_per_page = 12;
 
-    // Xác định trang hiện tại
     $current_page = isset($_GET['page']) ? (int)$_GET['page'] : 1;
 
     $total_items = count($newest_products);
     $total_pages = ceil($total_items / $items_per_page);
 
-    // Lấy dữ liệu xe cho trang hiện tại
     $start_index = ($current_page - 1) * $items_per_page;
 
     $current_page_items = array_slice($newest_products, $start_index, $items_per_page);
 
 ?>
 
-  
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -59,13 +56,13 @@
 <style>
 
         .boxbox{
-            background-color: white; /* Màu nền của boxbox */
-            width: 70%; /* Độ rộng của boxbox */
+            background-color: white; 
+            width: 70%; 
             margin:auto;
             padding: 50px;
-            border: 2px solid #fff; /* Viền của boxbox */
-            box-shadow: 0 0 20px rgba(0,0,0,0.2); /* Đổ bóng */
-            border-bottom: 2px solid #2c9f1c; /* Đường viền màu xanh dưới */
+            border: 2px solid #fff; 
+            box-shadow: 0 0 20px rgba(0,0,0,0.2); 
+            border-bottom: 2px solid #2c9f1c; 
         }
         .contact-info {
             background-color: #242424;
@@ -108,7 +105,7 @@
        }
         .contact-info a:hover{
             text-decoration: none;
-            color: #2c9f1c; /* Đổi màu khi hover */
+            color: #2c9f1c; 
         }
         .contact-info i {
             color: #21b83a;
@@ -139,21 +136,21 @@
             justify-content: space-between;
         }
         .form-column .form-group {
-            width: 48%; /* Adjust width as needed */
+            width: 48%; 
         }
         .form-group.full-width {
             width: 100%;
         }
         .form-group textarea {
-            height: 150px; /* Adjust height as needed */
+            height: 150px;
         }
         .icon-container {
             display: flex;
-            justify-content: center; /* Căn giữa các icon */
-            gap: 20px; /* Khoảng cách giữa các icon */
+            justify-content: center; 
+            gap: 20px; 
         }
         .icon-container i {
-            font-size: 27px; /* Kích thước icon */
+            font-size: 27px; 
             color:#2c9f1c;
         }
         .card {
@@ -194,7 +191,6 @@
 
     <div class="container mt-5">
         <div class="row">
-            <!-- Search Form -->
             <div class="col-md-3">
             <?php include_once("html/Select_Range_Of_Cars.php"); ?>
             </div>
@@ -222,7 +218,6 @@
                     <?php endforeach; ?>
                 </div>
 
-                <!-- Pagination -->
                 <nav>
                     <ul class="pagination"  data-aos="zoom-in-up">
                         <?php if ($current_page > 1): ?>

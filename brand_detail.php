@@ -1,46 +1,38 @@
 <?php
     require_once("functions/product.php");
-    $newest_products = null;
-    $checkbrand = brand_all();;
 
-    $hangxe  = isset($_GET['brand']) ? intval($_GET['brand']) : 0;
-    $bodysitai  = isset($_GET['bodystyle']) ? intval($_GET['bodystyle']) : 0;
-
-    if ($hangxe == 0 & $bodysitai == 0) {
-        $newest_products = old_car();
-       
-    } else if ($hangxe == 0 & $bodysitai != 0) {
-        $newest_products = body_callOld($bodysitai);
-
-    }else if ($hangxe != 0 & $bodysitai == 0) {
-        $newest_products = brand_callOld($hangxe);
-              
-    }else if ($hangxe != 0 & $bodysitai != 0){
-        $newest_products = brandBody_Old($hangxe,$bodysitai);
-        
+    if (isset($_GET['brand'])) {
+        $brand = $_GET['brand'];
+        $brand_detail = brand_detail($brand);
+    } else {
+        echo "No ID received";
     }
-
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PreOwned Car</title>
+    <title><?php foreach($brand_detail as $item):?><?php echo 'Brand ' .$item['brand_name']?><?php endforeach;?></title>
     <?php include_once("html/style.php"); ?>
     <link href="css/styles.css" rel="stylesheet">
     <link href="css/trangchu.css" rel="stylesheet">
+
 </head>
 <style>
         .boxbox{
-            background-color: white; 
-            width: 70%; 
-            margin:auto;
+            background-color: white;
+            width: 75%; /* Adjust width as needed */
+            padding: 30px;
+            position: relative;
+            top: 400px;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 10; /* Ensure it's above the background image */
             padding: 50px;
-            border: 2px solid #fff; 
-            box-shadow: 0 0 20px rgba(0,0,0,0.2); 
-            border-bottom: 2px solid #2c9f1c; 
+            border: 2px solid #fff; /* Viền của boxbox */
+            box-shadow: 0 0 20px rgba(0,0,0,0.2); /* Đổ bóng */
+            border-bottom: 2px solid #2c9f1c; /* Đường viền màu xanh dưới */
         }
         .contact-info {
             background-color: #242424;
@@ -83,7 +75,7 @@
        }
         .contact-info a:hover{
             text-decoration: none;
-            color: #2c9f1c; 
+            color: #2c9f1c; /* Đổi màu khi hover */
         }
         .contact-info i {
             color: #21b83a;
@@ -91,6 +83,7 @@
         }
         .contact-form {
             padding: 20px;
+            padding-top:0px;
             border-radius: 5px;
             background-color: #fff;
         }
@@ -101,6 +94,7 @@
         }
         .contact-form p{
             color:gray;
+            padding-top: 15px;
         }
         .contact-form .form-group {
             margin-bottom: 20px;
@@ -114,91 +108,55 @@
             justify-content: space-between;
         }
         .form-column .form-group {
-            width: 48%; 
+            width: 48%; /* Adjust width as needed */
         }
         .form-group.full-width {
             width: 100%;
         }
         .form-group textarea {
-            height: 150px; 
+            height: 150px; /* Adjust height as needed */
         }
         .icon-container {
             display: flex;
-            justify-content: center;
-            gap: 20px; 
+            justify-content: center; /* Căn giữa các icon */
+            gap: 20px; /* Khoảng cách giữa các icon */
         }
         .icon-container i {
-            font-size: 27px;
+            font-size: 27px; /* Kích thước icon */
             color:#2c9f1c;
         }
-        .card {
-            background-color: #fff;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease-in-out;
-            overflow: hidden;
-        }
 
-        .card:hover {
-            transform: scale(1.1);
-        }
-        
-</style>
+      
+    </style>
 <body>
     <header>
         <?php include_once("html/Header.php"); ?>
     </header>
-    <section style="height:100%";>
-    <div class="position-relative">
-        <img style="width: 100%;" src="https://www.borderlesscar.com/wp-content/uploads/2023/07/toppic-used.jpg" class="img-fluid">
-            <div class="position-absolute" style="top: 40%; left: 42%;">
+    <?php foreach($brand_detail as $item): ?>
+        <div class="position-relative">
+            <img style="width: 100%;" src="<?php echo $item["back_img"]; ?>" class="img-fluid">
+            <div class="position-absolute" style="top: 45%; left: 46%;">
                 <div class="d-flex align-items-center">
-                    <h1 class="text-light" style="font-weight:800">PreOwned Car</h1>
+                    <h1 class="text-light" style="font-weight:900;font-size:50px;"><?php echo $item['brand_name']?></h1>
                 </div> 
             </div>
-            <div class="bg py-4" style="background-color: #2c9f1c; height:100px;">
-                <form class="d-flex w-50 mx-auto" role="search"  action="/range_of_car.php" method="GET">
-                    <input class="form-control" type="search" name="search" placeholder="Search PreOwned Car" aria-label="Search" value="<?php echo $item["brand_id"]; ?>">
-                    <button class="btn btn" style="background-color: #000;" type="submit"><i class="bi bi-search" style="color:white"></i></button>
-                </form>
-            </div>
-    </div>
-
-    <div class="container mt-5">
-        <div class="row">
-            <!-- Search Form -->
-            <div class="col-md-3">
-            <?php include_once("html/Select_PreOwned_Cars.php"); ?>
-            </div>
-            <div class="col-md-9">
-                <div class="row" id="carListings">
-                    <?php foreach($newest_products as $item): ?>
-                        <div class="col-md-4 mb-4 car-card" data-aos="zoom-in-up">
-                            <div class="card">
-                                <a href="/detail.php?id=<?php echo $item["newcar_id"]; ?>">
-                                    <img src="<?php echo $item["thumbnail"]; ?>" class="card-img-top" alt="<?php echo $item["car_name"]; ?>">
-                                </a>
-                                <div style="width: 100%;" class="card-body">
-                                <h6 class="card-title" style="margin-bottom:5px;margin-top:10px;font-weight:700;text-align:center"><?php echo $item["car_name"]; ?></h6>
-                                <div style="text-align:center">
-                                    <span style="color:gray;margin-bottom:10px">【 </span>
-                                    <i class="bi bi-tags" style="color:gray; margin:3px;font-size:small;"></i><span style="color:gray;font-size:small;"><?php echo $item["brand_name"]; ?></span>
-                                    <span style="color:gray;">||</span>
-                                    <i class="bi bi-car-front" style="color:gray;margin:3px;font-size:small;"></i><span style="color:gray;font-size:small;"><?php echo $item["typecar"]; ?></span>
-                                    <span style="color:gray;">】</span>
-                                </div>
-                                <a style="width:100%; margin-top:20px;" href="/detail.php?id=<?php echo $item["newcar_id"]; ?>" class="btn btn custom-gray">View More</a>
-                                </div>
-                            </div>
-                        </div>
-                    <?php endforeach; ?>
-                </div>
-            </div>
         </div>
-    </div>
-    </section>
-    <section class="boxbox" data-aos="fade-up">
+        <main>
+            <section class="produc" >
+                <div class="tren" >
+                    <div class="trai" style="width: 50%;" >
+                        <p style="font-size: 40px;color:black;" id="tieude"><?php echo $item['brand_name']?></p>
+                        <hr style="width:100px;border-width: 3px;color:green;">
+                        <p style="color:black;"><?php echo nl2br($item['infor']); ?></p>
+                       </div>
+                    <div class="phai" style="background-image:url(<?php echo $item["thumbnail"]; ?>);width:710px; height:443px;border-radius:4px;"></div>
+                </div>
+            </section>
+            <div style="width:100%;height:300px;background-image:linear-gradient(0,rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)) ,url(https://www.borderlesscar.com/wp-content/uploads/2023/07/banner2-10.jpg)">
+                <h5 style="padding:120px 400px;font-weight:800;">Borderless Car is a professional car import and export trade company. We want to create a borderless world auto industry. The following is the vehicle models that we are selling.</h5>
+            </div>
+        </main>
+        <section class="boxbox">
         <div class="container mt-5">
             <div class="row">
                 <div class="col-md-5">
@@ -231,26 +189,26 @@
                             <div class="form-column">
                                 <div class="form-group">
                                     <label for="name"><i class="bi bi-person-fill"></i> Name *</label>
-                                    <input type="text" class="form-control" id="name" name="Name" placeholder="Name"required>
+                                    <input type="text" class="form-control" id="name" name="Name" placeholder="Name *" required>
                                 </div>
                                 <div class="form-group">
                                     <label for="email"><i class="bi bi-envelope-fill"></i> Email *</label>
-                                    <input type="email" class="form-control" id="email" name="Email" placeholder="Email"required>
+                                    <input type="email" class="form-control" id="email" name="Email" placeholder="Email *" required>
                                 </div>
                             </div>
                             <div class="form-column">
                                 <div class="form-group">
                                     <label for="country"><i class="bi bi-geo-alt-fill"></i> Country / Region *</label>
-                                    <input type="text" class="form-control" id="country" name="address" placeholder="Address"required>
+                                    <input type="text" class="form-control" id="country" name="address" placeholder="Address *" required>
                                 </div>
                                 <div class="form-group">
                                     <label for="mobile"><i class="bi bi-telephone"></i> Mobile *</label>
-                                    <input type="number"  class="form-control" id="mobile" name="telephone" placeholder="Telephone"required>
+                                    <input type="number" class="form-control" id="mobile" name="telephone" placeholder="Telephone *" required>
                                 </div>
                             </div>
                             <div class="form-group full-width">
                                 <label for="message"><i class="bi bi-chat-dots-fill"></i> Message *</label>
-                                <textarea class="form-control" id="message" rows="4" name="message" placeholder="Message"required></textarea>
+                                <textarea class="form-control" id="message" rows="4" name="message" placeholder="Message *" ></textarea>
                             </div>
                             <button style="background-color: #2c9f1c;color:white;width:100%;height:50px " type="submit" class="btn btn">Submit<i style="padding-left: 10px;" class="bi bi-send-fill"></i></button>
                         </form>
@@ -259,6 +217,46 @@
             </div>
         </div>
     </section>
+    
+    <?php endforeach; ?>
+    <main>
+    <section class="nam">
+            <img src="/img/img-car.png" />
+            <div class="giua" >
+                <div class="cac goc" >
+                    <p id="tieude">Vehicle Diversity</p>
+                    <p ><h1 ><b id="tieude1">We provide a variety of vehicle types</b></h1></p>
+                    <div class="hr"></div>
+                    <p>We provide customers with professional, reliable and more comfortable information during the car buying process</p>
+
+
+                </div>
+                <div data-aos="zoom-in-down" class="Namcon">
+                <i class="bi bi-car-front-fill"></i>
+                    <p><h3><b>New vehicle optional</b></h3></p>
+                    <p>We always update the latest versions and retain some old versions to suit all customers.</p>
+                    <p> <b ><a id="link" href="/range_of_car.php">READ MORE ></a></b></p>
+                </div>
+
+                <div data-aos="zoom-in-down" class="Namcon">
+                    <i class="bi bi-people-fill"></i>
+                    <p><h3><b>Consultation Service</b></h3></p>
+                    <p>Our sales team is composed of professionals with many years of industry experience an…</p>
+                    <p> <b ><a id="link" href="/about_us.php">READ MORE ></a></b></p>
+                </div>
+                <div data-aos="zoom-in-down" class="Namcon">
+                    <i class="bi bi-car-front"></i>
+                    <p><h3><b>Old car models</b></h3></p>
+                    <p>We provide used car models for customers with low income …</p>
+                    <p> <b ><a id="link" href="/preOwned_car.php">READ MORE ></a></b></p>
+                </div>
+
+
+
+            </div>
+        </section>
+    </main>
+
     <?php include_once("html/Footers.php"); ?>
     <script>
         AOS.init();

@@ -1,8 +1,8 @@
 
 <?php 
 
-    // require_once("functions/product.php");
-    // $producthot = newest_products();
+    require_once("functions/product.php");
+    $producthot = newest_products();
 
 ?>
 
@@ -30,10 +30,8 @@
                     <h1 class="text-light" style="font-weight:800">About Us</h1>
                 </div> 
             </div>
-
     </div>
     <main>
-
         <section class="produc" >
             <div class="tren" >
                 <div class="trai" style="width: 50%;" >
@@ -49,8 +47,7 @@
             <div data-aos="flip-left" class="trai">
             <p>Henan Borderless International Trade Co., Ltd. is a company specializing in the export of new energy vehicles, including electric cars, SUVs, sedans, mini-cars, used cars, and auto parts.
             <br>The company was founded in 2021 and is headquartered in Zhengzhou Economic and Technological Development Zone, Henan, China</p>
-                <p>
-Established in 2021, Henan Borderless International Trade Co., Ltd. has become a rising star in China's new energy vehicle export market. They focus on providing a comprehensive selection of electric cars, SUVs, sedans, mini-cars, and even used cars, catering to diverse customer needs. Their commitment extends beyond vehicles, offering genuine auto parts and exceptional after-sales support.</P>
+                <p>Established in 2021, Henan Borderless International Trade Co., Ltd. has become a rising star in China's new energy vehicle export market. They focus on providing a comprehensive selection of electric cars, SUVs, sedans, mini-cars, and even used cars, catering to diverse customer needs. Their commitment extends beyond vehicles, offering genuine auto parts and exceptional after-sales support.</P>
               
                 <button  style="width:170px;height:55px;color:#2c9f1c" onclick="window.location.href='/'" class="nutxanh"><b style="color:white; font-size:13px;font-weight:900;">LEARN MORE</b></button>
             </div>

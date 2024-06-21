@@ -12,7 +12,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Car</title>
+    <title>Home</title>
     <?php include_once("html/style.php"); ?>
     <link href="css/trangchu.css" rel="stylesheet">
 </head>

@@ -29,7 +29,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Detial</title>
+    <title>Detail</title>
     <link href="css/detail.css" rel="stylesheet">
     <?php include_once("html/style.php"); ?>
  

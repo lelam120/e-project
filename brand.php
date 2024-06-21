@@ -1,13 +1,10 @@
-
-<?php 
-
+<?php
     require_once("functions/product.php");
     $producthot = newest_products();
+    $checkbrand = brands();;
 
-
+    $hangxe  = isset($_GET['brand']) ? intval($_GET['brand']) : 0;
 ?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -63,46 +60,7 @@ main .one .trai{
         animation-iteration-count: 1;
         transition-timing-function: ease-in-out;
     }
-main .one .phai{
-    background-image: linear-gradient(0,rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)) ,url(/img/chery.jpg) ;
-    animation-name: headervao;
-    animation-duration: 2s;
-    height: 445px;
-    animation-iteration-count: 1;
-    transition-timing-function: ease-in-out; 
-}
-main .two .trai{
-        background-image:url(/img/Changan-Automobile.jpg) ;
-        animation-name: headervao;
-        animation-duration: 2s;
-        height: 445px;
-        animation-iteration-count: 1;
-        transition-timing-function: ease-in-out;
-    }
-main .two .phai{
-    background-image:url(/img/hyundai.jpg) ;
-    animation-name: headervao;
-    animation-duration: 2s;
-    height: 445px;
-    animation-iteration-count: 1;
-    transition-timing-function: ease-in-out; 
-} 
-main .three .trai{
-        background-image:linear-gradient(0,rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)) ,url(/img/Honda.jpg) ;
-        animation-name: headervao;
-        animation-duration: 2s;
-        height: 445px;
-        animation-iteration-count: 1;
-        transition-timing-function: ease-in-out;
-    }
-main .three .phai{
-    background-image:linear-gradient(0,rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)) ,url(/img/Toyota.jpg) ;
-    animation-name: headervao;
-    animation-duration: 2s;
-    height: 445px;
-    animation-iteration-count: 1;
-    transition-timing-function: ease-in-out; 
-}
+
 #tieude{
     color: rgb(79, 209, 59);
     font-weight: 700;
@@ -111,65 +69,25 @@ main .three .phai{
 <body>
     <header>
         <?php include_once("html/Header.php"); ?>
-
     </header>
     <main>
-        <section class="one">
-            <div class="trai">
-                <div style="position:relative;left:8%;top:30%;">
-                    <p id="tieude" >Low Prices Guarantee</p>
-                    <p><h1><b>GWM</b></h1></p>
-                    <p>We have a wealth of all vehicles models foryou to choose from.</p>
-                    <button onclick="window.location.href='/range_of_car.php'" class="nutxanh" ><b>Learn More</b></butto>
-                </div>
-  
-            </div>
-            <div class="phai" >
-                <div style="position:relative;left:8%;top:30%;">
-                    <p id="tieude" >Quality at Minimum Expense</p>
-                    <p><h1><b>Chery</b></h1></p>
-                    <p>We have a wealth of used car models for you to choose from.</p>
-                    <button onclick="window.location.href='/preOwned_car.php'" class="nutxanh" ><b>Learn More</b></button>
-                </div>
-            </div>
-        </section>
-        <section class="two">
-            <div class="trai" >
-                <div style="position:relative;left:8%;top:30%;">
-                    <p id="tieude" >Low Prices Guarantee</p>
-                    <p><h1><b>Changan</b></h1></p>
-                    <p>We have a wealth of all vehicles models foryou to choose from.</p>
-                    <button onclick="window.location.href='/range_of_car.php'" class="nutxanh" ><b>Learn More</b></button>
-                </div>
-            </div>
-            <div class="phai" >
-                <div style="position:relative;left:8%;top:30%;">
-                    <p id="tieude" >Quality at Minimum Expense</p>
-                    <p><h1><b>Hyundai</b></h1></p>
-                    <p>We have a wealth of used car models for you to choose from.</p>
-                    <button onclick="window.location.href='/preOwned_car.php'" class="nutxanh" ><b>Hyundai</b></button>
-                </div>
+            <?php foreach($checkbrand as $item): ?>
+                <section class="one">
+                    <div class="trai" style="background-image:linear-gradient(0,rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0.4)) , url(<?php echo $item["back_img"]; ?>); ">
+                        <div style="position:relative;left:8%;top:30%;">
+                            <p id="tieude" >Low Prices Guarantee</p>
+                            <p><h1><b><?php echo $item["brand_name"]; ?></b></h1></p>
+                            <p>We have a wealth of all vehicles models foryou to choose from.</p>
+                            <form method="GET" action="brand_detail.php">
+                                <input type="hidden"  name="brand" value="<?php echo $item["brand_id"]; ?>">
+                                <button class="nutxanh"><b>Learn More</b></button>
+                            </form>                
+                        </div>
+                    </div>
+                </section>
+            <?php endforeach; ?>
 
-            </div>
-        </section>
-        <section class="three">
-            <div class="trai" >
-                <div style="position:relative;left:8%;top:30%;">
-                    <p id="tieude" >Low Prices Guarantee</p>
-                    <p><h1><b>Honda</b></h1></p>
-                    <p>We have a wealth of all vehicles models foryou to choose from.</p>
-                    <button onclick="window.location.href='/range_of_car.php'" class="nutxanh" ><b>Honda</b></button>
-                </div>
-            </div>
-            <div class="phai" >
-                <div style="position:relative;left:8%;top:30%;">
-                    <p id="tieude" >Quality at Minimum Expense</p>
-                    <p><h1><b>Toyota</b></h1></p>
-                    <p>We have a wealth of used car models for you to choose from.</p>
-                    <button onclick="window.location.href='/preOwned_car.php'" class="nutxanh" ><b>Toyota</b></button>
-                </div>
-            </div>
-        </section>
+
         <section class="produc" >
             <div class="tren" >
                 <div class="trai" >
@@ -246,8 +164,6 @@ main .three .phai{
                 </ul>
             </div>
         </div>
-
-
 
     </main>
     
