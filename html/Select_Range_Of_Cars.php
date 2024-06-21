@@ -136,7 +136,7 @@
 }
 </style>
 <body>
-    <div class="Search_Options" style="position:sticky;top:0;">
+    <div class="Search_Options" style="position:sticky;top:0;" data-aos="zoom-in-up">
         <div>
             <p><h3><b>Search Options</b></h3></p>
             <div class="loc" >
@@ -222,6 +222,9 @@
             thuonghieu.classList.add("locconhien");
         }
      }
+
+    AOS.init();
+
     </script>
 </body>
 </html>
