@@ -1,13 +1,3 @@
-
-<?php 
-
-    require_once("functions/product.php");
-    $producthot = newest_products();
-
-
-?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -120,10 +110,10 @@ main .three .phai{
                     <p><h1><b>GWM</b></h1></p>
                     <p>We have a wealth of all vehicles models foryou to choose from.</p>
                     <form method="GET" action="brand_detail.php">
-                        <button onclick="window.location.href='/brand_detail.php'" class="nutxanh" name="brand" value="<?php echo $item["brand_id"]; ?>" ><b>Learn More</b></butto>
+                        <input type="hidden"  name="brand" value="1">
+                        <button class="nutxanh"><b>Learn More</b></button>
                     </form>                
                 </div>
-  
             </div>
             <div class="phai" >
                 <div style="position:relative;left:8%;top:30%;">
@@ -131,7 +121,8 @@ main .three .phai{
                     <p><h1><b>Chery</b></h1></p>
                     <p>We have a wealth of used car models for you to choose from.</p>
                     <form method="GET" action="brand_detail.php">
-                        <button onclick="window.location.href='/brand_detail.php'" class="nutxanh" name="brand" value="<?php echo $item["brand_id"]; ?>" ><b>Learn More</b></butto>
+                        <input type="hidden"  name="brand" value="2">
+                        <button class="nutxanh"><b>Learn More</b></button>                    
                     </form>                
                 </div>
             </div>
@@ -143,8 +134,9 @@ main .three .phai{
                     <p><h1><b>Changan</b></h1></p>
                     <p>We have a wealth of all vehicles models foryou to choose from.</p>
                     <form method="GET" action="brand_detail.php">
-                        <button onclick="window.location.href='/brand_detail.php'" class="nutxanh" name="brand" value="<?php echo $item["brand_id"]; ?>" ><b>Learn More</b></butto>
-                    </form>                
+                        <input type="hidden"  name="brand" value="3">
+                        <button class="nutxanh"><b>Learn More</b></button>                    
+                    </form>                  
                 </div>
             </div>
             <div class="phai" >
@@ -153,8 +145,9 @@ main .three .phai{
                     <p><h1><b>Hyundai</b></h1></p>
                     <p>We have a wealth of used car models for you to choose from.</p>
                     <form method="GET" action="brand_detail.php">
-                        <button onclick="window.location.href='/brand_detail.php'" class="nutxanh" name="brand" value="<?php echo $item["brand_id"]; ?>" ><b>Learn More</b></butto>
-                    </form>
+                        <input type="hidden"  name="brand" value="4">
+                        <button class="nutxanh"><b>Learn More</b></button>                    
+                    </form>     
                 </div>
 
             </div>
@@ -166,8 +159,9 @@ main .three .phai{
                     <p><h1><b>Honda</b></h1></p>
                     <p>We have a wealth of all vehicles models foryou to choose from.</p>
                     <form method="GET" action="brand_detail.php">
-                        <button onclick="window.location.href='/brand_detail.php'" class="nutxanh" name="brand" value="<?php echo $item["brand_id"]; ?>" ><b>Learn More</b></butto>
-                    </form>
+                        <input type="hidden"  name="brand" value="5">
+                        <button class="nutxanh"><b>Learn More</b></button>                    
+                    </form>     
                 </div>
             </div>
             <div class="phai" >
@@ -176,8 +170,9 @@ main .three .phai{
                     <p><h1><b>Toyota</b></h1></p>
                     <p>We have a wealth of used car models for you to choose from.</p>
                     <form method="GET" action="brand_detail.php">
-                        <button onclick="window.location.href='/brand_detail.php'" class="nutxanh" name="brand" value="<?php echo $item["brand_id"]; ?>" ><b>Learn More</b></butto>
-                    </form>
+                        <input type="hidden"  name="brand" value="6">
+                        <button class="nutxanh"><b>Learn More</b></button>                    
+                    </form>     
                 </div>
             </div>
         </section>

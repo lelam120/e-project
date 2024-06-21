@@ -37,13 +37,7 @@ function Search_form($search){
     }
     return $list;
 }
-// $sql = "SELECT * FROM cars WHERE car_name LIKE '%$search%'";
-// $result = connect()->query($sql);
-    
-// $list = [];
-// while($row = $result->fetch_assoc()){
-//   $list[] = $row;
-// }
+
 function car_id(){
     $sql = "select * from cars order by newcar_id";
     $result = query($sql);
@@ -56,8 +50,8 @@ function car_id(){
 
 function brand_all(){
     $sql = "SELECT *
-FROM brand, cars_type
-WHERE brand.brand_id = cars_type.id;";
+                FROM brand, cars_type
+                WHERE brand.brand_id = cars_type.id;";
     $result = query($sql);
     $list = [];
     while($row = $result->fetch_assoc()){
@@ -65,6 +59,16 @@ WHERE brand.brand_id = cars_type.id;";
     }
     return $list;
 }
+function brand_detail($id){
+    $sql = "SELECT * FROM brand WHERE brand_id = $id";
+    $result = query($sql);
+    $list = [];
+    while($row = $result->fetch_assoc()){
+    $list[] = $row;
+    }
+    return $list;
+}
+
 
 
 function brand_callNew($id){
