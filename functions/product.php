@@ -248,3 +248,16 @@ function highlighted_features($id)  {
 
     
 }
+
+function chucu_car($id){
+    $sql = "SELECT * FROM old_car_user WHERE car_old_car_user = $id";
+
+    $result = query($sql);
+
+    $list ;
+    
+    while($row = $result->fetch_assoc()){
+        $list = $row;
+    }
+    return $list;
+}

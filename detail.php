@@ -12,8 +12,10 @@
     $fqa = detail_fqa($product_id);
     $introduction = introduction($product_id);
     $highlighted_features = highlighted_features($product_id);
+    $chucu = chucu_car($product_id);
 
-    // $json = json_encode( $fqa, JSON_PRETTY_PRINT);
+
+    // $json = json_encode( $chucu, JSON_PRETTY_PRINT);
     // echo $json;
     // die("ca")
 
@@ -34,7 +36,32 @@
    
 </head>
 
-
+<style>
+.chucu{
+    margin-top:20px ;
+    display: flex;
+}
+.chucu .img>img{
+   width: 80px;
+   height: 80px;
+   border-radius:50px;
+   border: 3px solid rgb(107, 107, 107) ;
+}
+.chucu .thogntin #name{
+    font-size:22px;
+    font-weight: bold;
+    color: rgb(51, 51, 51);
+    margin :0;
+    margin-top:5px ;
+    margin-bottom: 10px;
+  
+}
+.chucu .thogntin {
+    margin-left:10px ;
+    color: rgb(163, 163, 163);
+  
+}
+</style>
 <body>
     
     <header>
@@ -124,6 +151,7 @@
                   
                 </ul>
             </div>
+           <?php if ($chucu != null){ require_once("functions/oldcaruser.php"); }?>
             <div data-aos="zoom-in" class="FAQ" >
                  <p class="tieude">FAQ</p>
                  <div>
