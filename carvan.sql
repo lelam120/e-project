@@ -2,8 +2,8 @@
 -- version 5.1.2
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost:8889
--- Generation Time: Jun 18, 2024 at 02:18 PM
+-- Host: localhost:3306
+-- Generation Time: Jun 20, 2024 at 06:58 PM
 -- Server version: 5.7.24
 -- PHP Version: 8.1.0
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `cars`
+-- Database: `carvan`
 --
 
 -- --------------------------------------------------------
@@ -30,20 +30,23 @@ SET time_zone = "+00:00";
 CREATE TABLE `brand` (
   `brand_id` int(11) NOT NULL,
   `brand_name` varchar(20) DEFAULT NULL,
-  `icon_brand` varchar(50) NOT NULL
+  `infor` text,
+  `thumbnail` varchar(50) DEFAULT NULL,
+  `back_img` varchar(50) DEFAULT NULL,
+  `icon_brand` varchar(25) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `brand`
 --
 
-INSERT INTO `brand` (`brand_id`, `brand_name`, `icon_brand`) VALUES
-(1, 'GWM', '/img/icon_GWM.png'),
-(2, 'Chery', '/img/icon_chery.png'),
-(3, 'Changan', '/img/icon_changan.png'),
-(4, 'Hyundai', '/img/icon_Hyundai.png'),
-(5, 'Honda', '/img/icon_Honda.png'),
-(6, 'Toyota', '/img/icon_Toyota.png');
+INSERT INTO `brand` (`brand_id`, `brand_name`, `infor`, `thumbnail`, `back_img`, `icon_brand`) VALUES
+(1, 'GWM', 'Established in 1984, GWM Group is a Chinese automotive brand. Its business operations involve the design, research and development, production, sales, and service of automobiles and components. The company focuses on key research and development as well as the application of advanced technologies such as intelligent connectivity, autonomous driving, and semiconductors.\\n GWM has also strategically positioned itself in the clean energy sector, including power batteries, hydrogen energy, and solar energy, establishing a complete industrial chain layout. The company is currently undergoing accelerated transformation into a globally recognized intelligent technology company. \\n Notable vehicle models already released by GWM include the Haval H6 EV, Haval Big Dog EV , Wey Blue Mountain DHT-PHEV, Wey Mooca DHT-PHEV, Wey Latte DHT-PHEV, and Tank EV.\n', '/img/GWM1', '/img/GWM', '/img/icon_GWM.png'),
+(2, 'Chery', 'Chery Automobile, established in 1997, has the production capacity of 900,000 vehicles, 900,000 engine sets, and 800,000 transmissions per year. It has developed five major passenger vehicle platforms: A00, A0, A, B, and SUV, with a product lineup covering eleven series and a total of twenty-one models. The company\'s products span across passenger cars, commercial vehicles, micro-cars, and other fields. \\n The models currently released by Chery include: Chery Tiggo 9, Chery Tiggo 8 PRO, Chery Tiggo 7, Chery Arrizo 8, Chery Arrizo 5, Chery eQ1, Chery Wujie Pro, Chery QQ Ice Cream, etc.', '/img/chery1', '/img/chery', '/img/icon_chery.png'),
+(3, 'Changan', 'Changan Automobile Co., Ltd., abbreviated as Changan Automobile, was established in 1996. Changan Automobile Global Research and Development Center is an open and collaborative smart research platform that integrates global resources. It encompasses seven major functions, including design, testing, and management, covering twelve areas such as simulation analysis, noise and vibration, and collision safety. The center includes 180 laboratories dedicated to hybrid powertrains, air conditioning systems, non-metallic materials, and a global data center built using cloud technology. \\n', '/img/Changan-Automobile1.jpg', '/img/Changan-Automobile.jpg', '/img/icon_changan.png'),
+(4, ' Hyundai', 'Hyundai Motor Company was founded in 1967 by Chung Ju-yung, the former chairman of the Hyundai Group. In the course of Hyundai\'s development, Hyundai Electronics was established in 1982, providing strong support for Hyundai Motor\'s modernization process. In 1991, the company introduced the first internally designed powertrain, the Alpha engine. In December 2000, Hyundai Motor (China) Sales Headquarters was established in Shanghai. /n Currently, our available models include the Hyundai Sonata, Hyundai Tucson, and Hyundai Elantra.', '/img/hyundai1.jpg', '/img/hyundai.jpg', '/img/icon_Hyundai.png'),
+(5, ' Honda', 'Honda is a multinational transportation and machinery manufacturing company primarily engaged in the production of automobiles, motorcycles, aircraft, engines, and power equipment. It was founded by Soichiro Honda in 1948 and is headquartered in Minato-ku, Tokyo, Japan. Honda has more than 130 production facilities in 29 countries and regions worldwide, and its automobile production volume and scale rank among the top ten manufacturers in the world. /n Currently, our available models include the Honda CR-V, Honda Fit, Honda Civic, Honda Accord, and more.', '/img/Honda1.jpg', '/img/Honda.jpg', '/img/icon_Honda.png'),
+(6, 'Toyota', 'Toyota Motor Corporation, founded by Kiichiro Toyoda, is an automobile manufacturing company headquartered in Toyota City, Aichi Prefecture, Japan, and Bunkyo Ward, Tokyo. The company\'s vision is to become the most trusted enterprise, achieving social recognition, customer satisfaction, and employee growth through stable operations and continuous development. /n Currently, we have the following models available for sale: Toyota RAV4, Toyota C-HR, Toyota Corolla, Toyota Camry, and Toyota Avalon.', '/img/Toyota1.jpg', '/img/Toyota.jpg', '/img/icon_Toyota.png');
 
 -- --------------------------------------------------------
 
@@ -160,6 +163,15 @@ CREATE TABLE `customers` (
   `Mobile` varchar(10) DEFAULT NULL,
   `Message` text
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `customers`
+--
+
+INSERT INTO `customers` (`id`, `cus_name`, `email`, `Country/Region`, `Mobile`, `Message`) VALUES
+(1, '', '', '', '20010', ''),
+(2, 'Huy', 'dsfjsladjfsaoij@gmail.com', 'vietma,', '9789868790', 'sấDA'),
+(3, 'Iphone 40', 'dsfjsladjfsaoij@gmail.com', 'vietma,', '972131223', 'hentai');
 
 -- --------------------------------------------------------
 
@@ -964,7 +976,7 @@ ALTER TABLE `cars_type`
 -- AUTO_INCREMENT for table `customers`
 --
 ALTER TABLE `customers`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `cus_cars`
