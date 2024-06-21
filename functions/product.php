@@ -59,6 +59,15 @@ function brand_all(){
     }
     return $list;
 }
+function brands(){
+    $sql = "SELECT * FROM brand order by brand_id";
+    $result = query($sql);
+    $list = [];
+    while($row = $result->fetch_assoc()){
+        $list[] = $row;
+    }
+    return $list;
+}
 function brand_detail($id){
     $sql = "SELECT * FROM brand WHERE brand_id = $id";
     $result = query($sql);
