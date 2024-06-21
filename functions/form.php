@@ -17,7 +17,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
  
    
-
+ 
 
     $to_email = "kien2005kiensn@gmail.com";
 
@@ -37,7 +37,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   
     $headers = "From: $from_email";
 
-
+    
     if (mail($to_email, $subject, $message, $headers)) {
         $cac = contact_sub($name, $email, $address, $telephone, $message);
         header('Location: /thankyou.php');
