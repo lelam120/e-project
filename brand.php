@@ -1,6 +1,6 @@
 <?php
     require_once("functions/product.php");
-
+    $producthot = newest_products();
     $checkbrand = brands();;
 
     $hangxe  = isset($_GET['brand']) ? intval($_GET['brand']) : 0;
@@ -164,8 +164,6 @@ main .one .trai{
                 </ul>
             </div>
         </div>
-
-
 
     </main>
     
