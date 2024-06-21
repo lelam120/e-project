@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.2
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost:3306
--- Generation Time: Jun 21, 2024 at 03:19 AM
--- Server version: 5.7.24
--- PHP Version: 8.1.0
+-- Máy chủ: 127.0.0.1
+-- Thời gian đã tạo: Th6 21, 2024 lúc 05:26 AM
+-- Phiên bản máy phục vụ: 10.4.32-MariaDB
+-- Phiên bản PHP: 8.0.30
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,31 +18,31 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `carvan`
+-- Cơ sở dữ liệu: `carvan`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `brand`
+-- Cấu trúc bảng cho bảng `brand`
 --
 
 CREATE TABLE `brand` (
   `brand_id` int(11) NOT NULL,
   `brand_name` varchar(20) DEFAULT NULL,
-  `infor` text,
+  `infor` text DEFAULT NULL,
   `thumbnail` varchar(50) DEFAULT NULL,
   `back_img` varchar(50) DEFAULT NULL,
   `icon_brand` varchar(25) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
--- Dumping data for table `brand`
+-- Đang đổ dữ liệu cho bảng `brand`
 --
 
 INSERT INTO `brand` (`brand_id`, `brand_name`, `infor`, `thumbnail`, `back_img`, `icon_brand`) VALUES
-(1, 'GWM', 'Established in 1984, GWM Group is a Chinese automotive brand. Its business operations involve the design, research and development, production, sales, and service of automobiles and components. The company focuses on key research and development as well as the application of advanced technologies such as intelligent connectivity, autonomous driving, and semiconductors.\\n GWM has also strategically positioned itself in the clean energy sector, including power batteries, hydrogen energy, and solar energy, establishing a complete industrial chain layout. The company is currently undergoing accelerated transformation into a globally recognized intelligent technology company. \\n Notable vehicle models already released by GWM include the Haval H6 EV, Haval Big Dog EV , Wey Blue Mountain DHT-PHEV, Wey Mooca DHT-PHEV, Wey Latte DHT-PHEV, and Tank EV.\r\n', '/img/GWM1.jpg', '/img/GWM.jpg', '/img/icon_GWM.png'),
-(2, 'Chery', 'Chery Automobile, established in 1997, has the production capacity of 900,000 vehicles, 900,000 engine sets, and 800,000 transmissions per year. It has developed five major passenger vehicle platforms: A00, A0, A, B, and SUV, with a product lineup covering eleven series and a total of twenty-one models. The company\'s products span across passenger cars, commercial vehicles, micro-cars, and other fields. \\n The models currently released by Chery include: Chery Tiggo 9, Chery Tiggo 8 PRO, Chery Tiggo 7, Chery Arrizo 8, Chery Arrizo 5, Chery eQ1, Chery Wujie Pro, Chery QQ Ice Cream, etc.', '/img/chery1.jpg', '/img/chery.jpg', '/img/icon_chery.png'),
+(1, 'GWM', 'Established in 1984, GWM Group is a Chinese automotive brand. Its business operations involve the design, research and development, production, sales, and service of automobiles and components. The company focuses on key research and development as well as the application of advanced technologies such as intelligent connectivity, autonomous driving, and semiconductors.\\n GWM has also strategically positioned itself in the clean energy sector, including power batteries, hydrogen energy, and solar energy, establishing a complete industrial chain layout. The company is currently undergoing accelerated transformation into a globally recognized intelligent technology company. \\n Notable vehicle models already released by GWM include the Haval H6 EV, Haval Big Dog EV , Wey Blue Mountain DHT-PHEV, Wey Mooca DHT-PHEV, Wey Latte DHT-PHEV, and Tank EV.\n', '/img/GWM1', '/img/GWM', '/img/icon_GWM.png'),
+(2, 'Chery', 'Chery Automobile, established in 1997, has the production capacity of 900,000 vehicles, 900,000 engine sets, and 800,000 transmissions per year. It has developed five major passenger vehicle platforms: A00, A0, A, B, and SUV, with a product lineup covering eleven series and a total of twenty-one models. The company\'s products span across passenger cars, commercial vehicles, micro-cars, and other fields. \\n The models currently released by Chery include: Chery Tiggo 9, Chery Tiggo 8 PRO, Chery Tiggo 7, Chery Arrizo 8, Chery Arrizo 5, Chery eQ1, Chery Wujie Pro, Chery QQ Ice Cream, etc.', '/img/chery1', '/img/chery', '/img/icon_chery.png'),
 (3, 'Changan', 'Changan Automobile Co., Ltd., abbreviated as Changan Automobile, was established in 1996. Changan Automobile Global Research and Development Center is an open and collaborative smart research platform that integrates global resources. It encompasses seven major functions, including design, testing, and management, covering twelve areas such as simulation analysis, noise and vibration, and collision safety. The center includes 180 laboratories dedicated to hybrid powertrains, air conditioning systems, non-metallic materials, and a global data center built using cloud technology. \\n', '/img/Changan-Automobile1.jpg', '/img/Changan-Automobile.jpg', '/img/icon_changan.png'),
 (4, ' Hyundai', 'Hyundai Motor Company was founded in 1967 by Chung Ju-yung, the former chairman of the Hyundai Group. In the course of Hyundai\'s development, Hyundai Electronics was established in 1982, providing strong support for Hyundai Motor\'s modernization process. In 1991, the company introduced the first internally designed powertrain, the Alpha engine. In December 2000, Hyundai Motor (China) Sales Headquarters was established in Shanghai. /n Currently, our available models include the Hyundai Sonata, Hyundai Tucson, and Hyundai Elantra.', '/img/hyundai1.jpg', '/img/hyundai.jpg', '/img/icon_Hyundai.png'),
 (5, ' Honda', 'Honda is a multinational transportation and machinery manufacturing company primarily engaged in the production of automobiles, motorcycles, aircraft, engines, and power equipment. It was founded by Soichiro Honda in 1948 and is headquartered in Minato-ku, Tokyo, Japan. Honda has more than 130 production facilities in 29 countries and regions worldwide, and its automobile production volume and scale rank among the top ten manufacturers in the world. /n Currently, our available models include the Honda CR-V, Honda Fit, Honda Civic, Honda Accord, and more.', '/img/Honda1.jpg', '/img/Honda.jpg', '/img/icon_Honda.png'),
@@ -51,22 +51,22 @@ INSERT INTO `brand` (`brand_id`, `brand_name`, `infor`, `thumbnail`, `back_img`,
 -- --------------------------------------------------------
 
 --
--- Table structure for table `cars`
+-- Cấu trúc bảng cho bảng `cars`
 --
 
 CREATE TABLE `cars` (
   `newcar_id` int(11) NOT NULL,
   `car_name` varchar(20) DEFAULT NULL,
-  `information` text,
+  `information` text DEFAULT NULL,
   `Video` varchar(50) DEFAULT NULL,
   `thumbnail` varchar(50) DEFAULT NULL,
   `old_new` varchar(10) DEFAULT NULL,
   `new_brand` int(11) DEFAULT NULL,
   `type` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
--- Dumping data for table `cars`
+-- Đang đổ dữ liệu cho bảng `cars`
 --
 
 INSERT INTO `cars` (`newcar_id`, `car_name`, `information`, `Video`, `thumbnail`, `old_new`, `new_brand`, `type`) VALUES
@@ -128,16 +128,16 @@ INSERT INTO `cars` (`newcar_id`, `car_name`, `information`, `Video`, `thumbnail`
 -- --------------------------------------------------------
 
 --
--- Table structure for table `cars_type`
+-- Cấu trúc bảng cho bảng `cars_type`
 --
 
 CREATE TABLE `cars_type` (
   `id` int(11) NOT NULL,
   `body_type` varchar(25) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
--- Dumping data for table `cars_type`
+-- Đang đổ dữ liệu cho bảng `cars_type`
 --
 
 INSERT INTO `cars_type` (`id`, `body_type`) VALUES
@@ -152,7 +152,7 @@ INSERT INTO `cars_type` (`id`, `body_type`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `customers`
+-- Cấu trúc bảng cho bảng `customers`
 --
 
 CREATE TABLE `customers` (
@@ -161,45 +161,48 @@ CREATE TABLE `customers` (
   `email` varchar(50) DEFAULT NULL,
   `Country/Region` varchar(255) DEFAULT NULL,
   `Mobile` varchar(10) DEFAULT NULL,
-  `Message` text
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `Message` text DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
--- Dumping data for table `customers`
+-- Đang đổ dữ liệu cho bảng `customers`
 --
 
 INSERT INTO `customers` (`id`, `cus_name`, `email`, `Country/Region`, `Mobile`, `Message`) VALUES
-(1, '', '', '', '20010', ''),
-(2, 'Huy', 'dsfjsladjfsaoij@gmail.com', 'vietma,', '9789868790', 'sấDA'),
-(3, 'Iphone 40', 'dsfjsladjfsaoij@gmail.com', 'vietma,', '972131223', 'hentai');
+(1, 'kiendepgai', 'kien2005kiensn@gmail.com', 'Số 3 ngõ 140 ,Vương Thừa Vũ, Thanh Xuân', '978986870', 'nmbkbkb'),
+(2, 'kiendepgai', 'kien2005kiensn@gmail.com', 'Số 3 ngõ 140 ,Vương Thừa Vũ, Thanh Xuân', '978986870', 'asdas'),
+(3, '', '', '', '216', ''),
+(4, '', '', 'Số 3 ngõ 140 ,Vương Thừa Vũ, Thanh Xuân', '978986870', ''),
+(5, 'kiendepgai', 'kien2005kiensn@gmail.com', 'Số 3 ngõ 140 ,Vương Thừa Vũ, Thanh Xuân', '978986870', 'as'),
+(6, 'kien', 'kien2005kiensn@gmail.com', 'Số 3 ngõ 140 ,Vương Thừa Vũ, Thanh Xuân', '978986870', 'aa');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `cus_cars`
+-- Cấu trúc bảng cho bảng `cus_cars`
 --
 
 CREATE TABLE `cus_cars` (
   `registration_id` int(11) NOT NULL,
   `customer_id` int(11) DEFAULT NULL,
   `car_id` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `detail_information`
+-- Cấu trúc bảng cho bảng `detail_information`
 --
 
 CREATE TABLE `detail_information` (
   `id` int(11) NOT NULL,
-  `main_point` text,
-  `detail` text,
+  `main_point` text DEFAULT NULL,
+  `detail` text DEFAULT NULL,
   `infor_cars` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
--- Dumping data for table `detail_information`
+-- Đang đổ dữ liệu cho bảng `detail_information`
 --
 
 INSERT INTO `detail_information` (`id`, `main_point`, `detail`, `infor_cars`) VALUES
@@ -434,18 +437,18 @@ INSERT INTO `detail_information` (`id`, `main_point`, `detail`, `infor_cars`) VA
 -- --------------------------------------------------------
 
 --
--- Table structure for table `faq`
+-- Cấu trúc bảng cho bảng `faq`
 --
 
 CREATE TABLE `faq` (
   `faq_id` int(11) NOT NULL,
-  `Question` text,
-  `answer` text,
+  `Question` text DEFAULT NULL,
+  `answer` text DEFAULT NULL,
   `faq_car` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
--- Dumping data for table `faq`
+-- Đang đổ dữ liệu cho bảng `faq`
 --
 
 INSERT INTO `faq` (`faq_id`, `Question`, `answer`, `faq_car`) VALUES
@@ -523,23 +526,28 @@ INSERT INTO `faq` (`faq_id`, `Question`, `answer`, `faq_car`) VALUES
 (72, 'How is the storage space of the Toyota RAV4?', 'The dimensions of the Toyota RAV4\'s cargo area are 1885, 1495, and 1240mm. The total capacity is approximately 1000 liters. If the rear seats are folded down, a larger storage space can be obtained. Therefore, objectively speaking, the Toyota RAV4 has a spacious cargo area.', 48),
 (73, 'How is the safety of the Toyota RAV4?', 'The Toyota RAV4 is equipped with seven safety airbags, full-speed range adaptive cruise control, lane departure warning, lane keep assist, active braking, full LED headlights, and more.', 48),
 (74, 'How is the storage space of the Toyota C-HR?', 'The maximum load capacity can reach 942 liters. When the rear seats of the Toyota C-HR are folded down, it can also form a sizable flat floor, providing more possibilities for expanding the interior space and enhancing practicality. In addition, the rear seats also support a 40:60 folding ratio, further increasing the storage capacity.', 49),
-(75, 'What are the tire specifications of the Toyota C-HR?', 'The front and rear tires are both 215/60 R17.', 49);
+(75, 'What are the tire specifications of the Toyota C-HR?', 'The front and rear tires are both 215/60 R17.', 49),
+(76, 'Why is the owner selling this car?', 'The owner might be selling the car for various reasons such as upgrading to a newer model, no longer needing the vehicle, lifestyle changes, or increasing maintenance and repair costs. Checking the car\'s maintenance history and current condition can give you better insights into the reason for selling.', 50),
+(77, 'Has this used car ever been in an accident?', 'You should request a vehicle history report from services like Carfax or AutoCheck. These reports will indicate if the car has been in any accidents, the extent of the damage, and whether the repairs were done properly. You can also ask a mechanic to check for signs of post-accident repairs', 51),
+(78, ' Which parts of the car have been replaced or repaired?', 'Ask the owner or dealer about any parts that have been replaced or repaired, such as the engine, transmission, brakes, suspension, and electronic components. This information will help you understand the current condition of the car and anticipate future maintenance costs.\r\n\r\n', 52),
+(79, 'Does the car have any technical issues?', ' Inquire about any existing technical issues the car might have, such as engine starting problems, transmission troubles, non-functioning air conditioning, or electrical faults. This will help you decide whether the car is worth purchasing.', 53),
+(80, 'Does the car have any fluid leaks?', 'Fluid leaks, such as engine oil, transmission fluid, coolant, or brake fluid, can indicate serious technical problems. Check under the car for signs of leaks and ask the owner or dealer if the car has any known fluid leakage issues.\r\n\r\n', 54);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `highlighted_features`
+-- Cấu trúc bảng cho bảng `highlighted_features`
 --
 
 CREATE TABLE `highlighted_features` (
   `id` int(11) NOT NULL,
-  `main` text,
-  `detail_feat` text,
+  `main` text DEFAULT NULL,
+  `detail_feat` text DEFAULT NULL,
   `highlight_cars` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
--- Dumping data for table `highlighted_features`
+-- Đang đổ dữ liệu cho bảng `highlighted_features`
 --
 
 INSERT INTO `highlighted_features` (`id`, `main`, `detail_feat`, `highlight_cars`) VALUES
@@ -713,17 +721,17 @@ INSERT INTO `highlighted_features` (`id`, `main`, `detail_feat`, `highlight_cars
 -- --------------------------------------------------------
 
 --
--- Table structure for table `introduction`
+-- Cấu trúc bảng cho bảng `introduction`
 --
 
 CREATE TABLE `introduction` (
   `id` int(11) NOT NULL,
-  `detail_intro` text,
+  `detail_intro` text DEFAULT NULL,
   `intro_cars` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
--- Dumping data for table `introduction`
+-- Đang đổ dữ liệu cho bảng `introduction`
 --
 
 INSERT INTO `introduction` (`id`, `detail_intro`, `intro_cars`) VALUES
@@ -883,18 +891,45 @@ INSERT INTO `introduction` (`id`, `detail_intro`, `intro_cars`) VALUES
 (154, 'The exterior of the car shows no signs of dents or color difference, but there are some areas with repainted paint. There are minor flaws on the exterior and some parts have been replaced. The lighting system is functioning properly and the interior is clean. The electronic system is in normal condition. The engine and gearbox are in good working condition with no idle shaking and flexible steering. It is a one-owner vehicle in overall good condition.', 53),
 (155, 'The exterior of this car has not been modified and is free from flaws. The paint is well maintained and the lighting system is functioning properly. The interior is clean with minor normal wear on the seats. The electronic system is in normal condition. The engine and gearbox are in good working condition, with no idle shaking and flexible steering. It is a one-owner vehicle in excellent overall condition.', 54);
 
+-- --------------------------------------------------------
+
 --
--- Indexes for dumped tables
+-- Cấu trúc bảng cho bảng `old_car_user`
+--
+
+CREATE TABLE `old_car_user` (
+  `user_id` int(11) NOT NULL,
+  `old_user_name` varchar(50) NOT NULL,
+  `phone_number` varchar(15) DEFAULT NULL,
+  `img_owner` varchar(20) DEFAULT NULL,
+  `stories` text DEFAULT NULL,
+  `car_old_car_user` int(11) DEFAULT NULL,
+  `reason_for_selling` text DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Đang đổ dữ liệu cho bảng `old_car_user`
+--
+
+INSERT INTO `old_car_user` (`user_id`, `old_user_name`, `phone_number`, `img_owner`, `stories`, `car_old_car_user`, `reason_for_selling`) VALUES
+(50, 'John Doe', '123-456-7890', '/img/john.jpg', 'John loves classic cars. He has a collection of vintage models.', 50, 'John is downsizing his collection to make space for new acquisitions.'),
+(51, 'Jane Smith', '234-567-8901', '/img/jane.jpg', 'Jane is a car enthusiast and often participates in car shows.', 51, 'Jane is moving to a new city and cannot take all her cars with her.'),
+(52, 'Robert Brown', '345-678-9012', '/img/robert.jpg', 'Robert enjoys restoring old cars and has a garage full of them.', 52, 'Robert is selling to fund a new restoration project.'),
+(53, 'Emily White', '456-789-0123', '/img/emily.jpg', 'Emily has a passion for muscle cars and owns several models from the 60s.', 53, 'Emily needs to sell some cars to cover medical expenses.'),
+(54, 'Michael Green', '567-890-1234', '/img/michael.jpg', 'Michael is known for his extensive knowledge of car history and has written several books on the subject.', 54, 'Michael is retiring and wants to simplify his life by selling his collection.');
+
+--
+-- Chỉ mục cho các bảng đã đổ
 --
 
 --
--- Indexes for table `brand`
+-- Chỉ mục cho bảng `brand`
 --
 ALTER TABLE `brand`
   ADD PRIMARY KEY (`brand_id`);
 
 --
--- Indexes for table `cars`
+-- Chỉ mục cho bảng `cars`
 --
 ALTER TABLE `cars`
   ADD PRIMARY KEY (`newcar_id`),
@@ -902,20 +937,20 @@ ALTER TABLE `cars`
   ADD KEY `fk_cars_type` (`type`);
 
 --
--- Indexes for table `cars_type`
+-- Chỉ mục cho bảng `cars_type`
 --
 ALTER TABLE `cars_type`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `body_type` (`body_type`);
 
 --
--- Indexes for table `customers`
+-- Chỉ mục cho bảng `customers`
 --
 ALTER TABLE `customers`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `cus_cars`
+-- Chỉ mục cho bảng `cus_cars`
 --
 ALTER TABLE `cus_cars`
   ADD PRIMARY KEY (`registration_id`),
@@ -923,132 +958,151 @@ ALTER TABLE `cus_cars`
   ADD KEY `car_id` (`car_id`);
 
 --
--- Indexes for table `detail_information`
+-- Chỉ mục cho bảng `detail_information`
 --
 ALTER TABLE `detail_information`
   ADD PRIMARY KEY (`id`),
   ADD KEY `infor_cars` (`infor_cars`);
 
 --
--- Indexes for table `faq`
+-- Chỉ mục cho bảng `faq`
 --
 ALTER TABLE `faq`
   ADD PRIMARY KEY (`faq_id`),
   ADD KEY `faq_car` (`faq_car`);
 
 --
--- Indexes for table `highlighted_features`
+-- Chỉ mục cho bảng `highlighted_features`
 --
 ALTER TABLE `highlighted_features`
   ADD PRIMARY KEY (`id`),
   ADD KEY `highlight_cars` (`highlight_cars`);
 
 --
--- Indexes for table `introduction`
+-- Chỉ mục cho bảng `introduction`
 --
 ALTER TABLE `introduction`
   ADD PRIMARY KEY (`id`),
   ADD KEY `intro_cars` (`intro_cars`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- Chỉ mục cho bảng `old_car_user`
+--
+ALTER TABLE `old_car_user`
+  ADD PRIMARY KEY (`user_id`),
+  ADD KEY `car_old_car_user` (`car_old_car_user`);
+
+--
+-- AUTO_INCREMENT cho các bảng đã đổ
 --
 
 --
--- AUTO_INCREMENT for table `brand`
+-- AUTO_INCREMENT cho bảng `brand`
 --
 ALTER TABLE `brand`
   MODIFY `brand_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
--- AUTO_INCREMENT for table `cars`
+-- AUTO_INCREMENT cho bảng `cars`
 --
 ALTER TABLE `cars`
   MODIFY `newcar_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=55;
 
 --
--- AUTO_INCREMENT for table `cars_type`
+-- AUTO_INCREMENT cho bảng `cars_type`
 --
 ALTER TABLE `cars_type`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
--- AUTO_INCREMENT for table `customers`
+-- AUTO_INCREMENT cho bảng `customers`
 --
 ALTER TABLE `customers`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
--- AUTO_INCREMENT for table `cus_cars`
+-- AUTO_INCREMENT cho bảng `cus_cars`
 --
 ALTER TABLE `cus_cars`
   MODIFY `registration_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `detail_information`
+-- AUTO_INCREMENT cho bảng `detail_information`
 --
 ALTER TABLE `detail_information`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=228;
 
 --
--- AUTO_INCREMENT for table `faq`
+-- AUTO_INCREMENT cho bảng `faq`
 --
 ALTER TABLE `faq`
-  MODIFY `faq_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=76;
+  MODIFY `faq_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=81;
 
 --
--- AUTO_INCREMENT for table `highlighted_features`
+-- AUTO_INCREMENT cho bảng `highlighted_features`
 --
 ALTER TABLE `highlighted_features`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=166;
 
 --
--- AUTO_INCREMENT for table `introduction`
+-- AUTO_INCREMENT cho bảng `introduction`
 --
 ALTER TABLE `introduction`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=156;
 
 --
--- Constraints for dumped tables
+-- AUTO_INCREMENT cho bảng `old_car_user`
+--
+ALTER TABLE `old_car_user`
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=55;
+
+--
+-- Các ràng buộc cho các bảng đã đổ
 --
 
 --
--- Constraints for table `cars`
+-- Các ràng buộc cho bảng `cars`
 --
 ALTER TABLE `cars`
   ADD CONSTRAINT `cars_ibfk_1` FOREIGN KEY (`new_brand`) REFERENCES `brand` (`brand_id`),
   ADD CONSTRAINT `fk_cars_type` FOREIGN KEY (`type`) REFERENCES `cars_type` (`id`);
 
 --
--- Constraints for table `cus_cars`
+-- Các ràng buộc cho bảng `cus_cars`
 --
 ALTER TABLE `cus_cars`
   ADD CONSTRAINT `cus_cars_ibfk_1` FOREIGN KEY (`customer_id`) REFERENCES `customers` (`id`),
   ADD CONSTRAINT `cus_cars_ibfk_2` FOREIGN KEY (`car_id`) REFERENCES `cars` (`newcar_id`);
 
 --
--- Constraints for table `detail_information`
+-- Các ràng buộc cho bảng `detail_information`
 --
 ALTER TABLE `detail_information`
   ADD CONSTRAINT `detail_information_ibfk_1` FOREIGN KEY (`infor_cars`) REFERENCES `cars` (`newcar_id`);
 
 --
--- Constraints for table `faq`
+-- Các ràng buộc cho bảng `faq`
 --
 ALTER TABLE `faq`
   ADD CONSTRAINT `faq_ibfk_1` FOREIGN KEY (`faq_car`) REFERENCES `cars` (`newcar_id`);
 
 --
--- Constraints for table `highlighted_features`
+-- Các ràng buộc cho bảng `highlighted_features`
 --
 ALTER TABLE `highlighted_features`
   ADD CONSTRAINT `highlighted_features_ibfk_1` FOREIGN KEY (`highlight_cars`) REFERENCES `cars` (`newcar_id`);
 
 --
--- Constraints for table `introduction`
+-- Các ràng buộc cho bảng `introduction`
 --
 ALTER TABLE `introduction`
   ADD CONSTRAINT `introduction_ibfk_1` FOREIGN KEY (`intro_cars`) REFERENCES `cars` (`newcar_id`);
+
+--
+-- Các ràng buộc cho bảng `old_car_user`
+--
+ALTER TABLE `old_car_user`
+  ADD CONSTRAINT `old_car_user_ibfk_1` FOREIGN KEY (`car_old_car_user`) REFERENCES `cars` (`newcar_id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
