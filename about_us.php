@@ -59,7 +59,6 @@
             <h1>Why Choose Borderless</h1>
             <section class="container mt-5">
                 <div data-aos="zoom-in" class="row">
-                    <!-- Thẻ 1 -->
                     <div class="col-md-4 mb-4">
                         <div class="card card-top-border">
                             <div class="card-body">
@@ -71,7 +70,6 @@
                             </div>
                         </div>
                     </div>
-                    <!-- Thẻ 2 -->
                     <div data-aos="zoom-in" class="col-md-4 mb-4">
                         <div class="card card-top-border">
                             <div class="card-body">
@@ -83,7 +81,6 @@
                             </div>
                         </div>
                     </div>
-                    <!-- Thẻ 3 -->
                     <div data-aos="zoom-in" class="col-md-4 mb-4">
                         <div class="card card-top-border">
                             <div class="card-body">
@@ -97,7 +94,6 @@
                     </div>
                 </div>
                 <div data-aos="zoom-in-up" class="row">
-                    <!-- Thẻ 4 -->
                     <div class="col-md-4 mb-4">
                         <div class="card card-top-border">
                             <div class="card-body">
@@ -109,7 +105,6 @@
                             </div>
                         </div>
                     </div>
-                    <!-- Thẻ 5 -->
                     <div data-aos="zoom-in-up" class="col-md-4 mb-4">
                         <div class="card card-top-border">
                             <div class="card-body">
@@ -120,9 +115,7 @@
                                 <p class="card-text">As a company that operates with integrity, we always prioritize customer benefits and guarantee service quality and product quality. We value the trust and support of customers and continuously improve our service level, which has won the praise and trust of many customers.</p>
                             </div>
                         </div>
-                    </div>
-                    <!-- Thẻ 6 -->
-                    
+                    </div>                    
 
                     <div data-aos="zoom-in-up" class="col-md-4 mb-4" style="background-image: linear-gradient(0, rgba(44,159,28,.8), rgba(44,159,28,.8)) ,url(/img/bg-service1.jpg) ">
                         <div style="margin-top:80px;">

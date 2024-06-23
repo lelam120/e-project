@@ -60,7 +60,7 @@ main .bon > div p {
     top: 0;
     left: 0%;
     width: 400px;
-    height: 3px; /* Độ dày của viền */
+    height: 3px; 
     background-color: green;
     transform: translateX(-50%);
 }

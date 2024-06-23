@@ -14,6 +14,5 @@
                         <li>    <p class="tieudenho">Reason For Selling</p>
                         <div> <?php echo $chucu['reason_for_selling'] ?></div>
                         </li>
-                  
                 </ul>
  </div>

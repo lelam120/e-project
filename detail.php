@@ -15,10 +15,6 @@
     $chucu = chucu_car($product_id);
 
 
-    // $json = json_encode( $chucu, JSON_PRETTY_PRINT);
-    // echo $json;
-    // die("ca")
-
 
 
 ?>

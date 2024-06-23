@@ -10,17 +10,17 @@
     <style>
         .boxbox{
             background-color: white;
-            width: 75%; /* Adjust width as needed */
+            width: 75%; 
             padding: 30px;
             position: absolute;
             top: 90%;
             left: 50%;
             transform: translate(-50%, -50%);
-            z-index: 10; /* Ensure it's above the background image */
+            z-index: 10; 
             padding: 50px;
-            border: 2px solid #fff; /* Viền của boxbox */
-            box-shadow: 0 0 20px rgba(0,0,0,0.2); /* Đổ bóng */
-            border-bottom: 2px solid #2c9f1c; /* Đường viền màu xanh dưới */
+            border: 2px solid #fff; 
+            box-shadow: 0 0 20px rgba(0,0,0,0.2); 
+            border-bottom: 2px solid #2c9f1c; 
         }
         .contact-info {
             background-color: #242424;
@@ -63,7 +63,7 @@
        }
         .contact-info a:hover{
             text-decoration: none;
-            color: #2c9f1c; /* Đổi màu khi hover */
+            color: #2c9f1c;
         }
         .contact-info i {
             color: #21b83a;
@@ -96,21 +96,21 @@
             justify-content: space-between;
         }
         .form-column .form-group {
-            width: 48%; /* Adjust width as needed */
+            width: 48%; 
         }
         .form-group.full-width {
             width: 100%;
         }
         .form-group textarea {
-            height: 150px; /* Adjust height as needed */
+            height: 150px;
         }
         .icon-container {
             display: flex;
-            justify-content: center; /* Căn giữa các icon */
-            gap: 20px; /* Khoảng cách giữa các icon */
+            justify-content: center; 
+            gap: 20px;
         }
         .icon-container i {
-            font-size: 27px; /* Kích thước icon */
+            font-size: 27px; 
             color:#2c9f1c;
         }
 

@@ -167,7 +167,6 @@
 
     <div class="container mt-5">
         <div class="row">
-            <!-- Search Form -->
             <div class="col-md-3">
             <?php include_once("html/Select_PreOwned_Cars.php"); ?>
             </div>

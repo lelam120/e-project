@@ -1,13 +1,13 @@
 <style>
       .logo {
-          max-width: 100px; /* Điều chỉnh kích thước tối đa theo % hoặc px */
-          height: auto; /* Đảm bảo hình ảnh giữ tỉ lệ */
+          max-width: 100px; 
+          height: auto; 
       }
       .container-fluid {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding: 0 15px; /* Điều chỉnh padding nếu cần thiết */
+        padding: 0 15px; 
         width: 55%;
         margin:auto;
       }
@@ -16,15 +16,15 @@
         align-items: center;
       }
       .navbar-nav .nav-item {
-        margin-right: 20px; /* Điều chỉnh khoảng cách giữa các mục */
+        margin-right: 20px; 
       }
       .navbar-brand {
-        margin-left: 10px; /* Khoảng cách giữa logo và tiêu đề thương hiệu */
-        margin-right: 30px; /* Khoảng cách giữa tiêu đề thương hiệu và mục đầu tiên */
+        margin-left: 10px; 
+        margin-right: 30px;
       }
       .nav-item.dropdown:hover .dropdown-menu {
         display: block;
-        margin-top: 0; /* Giúp căn chỉnh dropdown */
+        margin-top: 0;
       }
 </style>
 
