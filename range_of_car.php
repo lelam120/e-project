@@ -4,9 +4,9 @@
     $newest_products = null;
     $checkbrand = brand_all();;
 
-    $hangxe  = isset($_GET['brand']) ? intval($_GET['brand']) : 0;
-    $bodysitai  = isset($_GET['bodystyle']) ? intval($_GET['bodystyle']) : 0;
-    $search = isset($_GET["search"])?$_GET["search"]:"";
+    $hangxe  = isset($_POST['brand']) ? intval($_POST['brand']) : 0;
+    $bodysitai  = isset($_POST['bodystyle']) ? intval($_POST['bodystyle']) : 0;
+    $search = isset($_POST["search"])?$_POST["search"]:"";
     
     if ($search == ""){
         if ($hangxe == 0 & $bodysitai == 0) {
@@ -24,7 +24,7 @@
         }
     
     }else{
-        $newest_products = Search_form($search);
+        $newest_products = Search_form_new($search);
        
     }
 
@@ -32,7 +32,7 @@
    
     $items_per_page = 12;
 
-    $current_page = isset($_GET['page']) ? (int)$_GET['page'] : 1;
+    $current_page = isset($_POST['page']) ? (int)$_POST['page'] : 1;
 
     $total_items = count($newest_products);
     $total_pages = ceil($total_items / $items_per_page);
@@ -182,7 +182,7 @@
         </div> 
     </div>
     <div class="bg py-4" style="background-color: #2c9f1c; height:100px;">
-        <form class="d-flex w-50 mx-auto" role="search" action="/range_of_car.php" method="GET">
+        <form class="d-flex w-50 mx-auto" role="search" action="/range_of_car.php" method="POST">
             <input value="<?php echo $search; ?>" name="search" placeholder="Search Range Of Car" type="text" class="form-control"/>
             <button class="btn btn" style="background-color: #000;" type="submit"><i class="bi bi-search" style="color:white"></i></button>
         </form>

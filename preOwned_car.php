@@ -3,22 +3,29 @@
     $newest_products = null;
     $checkbrand = brand_all();;
 
-    $hangxe  = isset($_GET['brand']) ? intval($_GET['brand']) : 0;
-    $bodysitai  = isset($_GET['bodystyle']) ? intval($_GET['bodystyle']) : 0;
+    $hangxe  = isset($_POST['brand']) ? intval($_POST['brand']) : 0;
+    $bodysitai  = isset($_POST['bodystyle']) ? intval($_POST['bodystyle']) : 0;
+    $search = isset($_POST["search"])?$_POST["search"]:"";
 
-    if ($hangxe == 0 & $bodysitai == 0) {
-        $newest_products = old_car();
-       
-    } else if ($hangxe == 0 & $bodysitai != 0) {
-        $newest_products = body_callOld($bodysitai);
-
-    }else if ($hangxe != 0 & $bodysitai == 0) {
-        $newest_products = brand_callOld($hangxe);
-              
-    }else if ($hangxe != 0 & $bodysitai != 0){
-        $newest_products = brandBody_Old($hangxe,$bodysitai);
+    if ($search == ""){
+        if ($hangxe == 0 & $bodysitai == 0) {
+            $newest_products = old_car();
         
+        } else if ($hangxe == 0 & $bodysitai != 0) {
+            $newest_products = body_callOld($bodysitai);
+
+        }else if ($hangxe != 0 & $bodysitai == 0) {
+            $newest_products = brand_callOld($hangxe);
+                
+        }else if ($hangxe != 0 & $bodysitai != 0){
+            $newest_products = brandBody_Old($hangxe,$bodysitai);
+            
+        }
+    }else{
+        $newest_products = Search_form_old($search);
+    
     }
+
 
 ?>
 
@@ -158,7 +165,7 @@
                 </div> 
             </div>
             <div class="bg py-4" style="background-color: #2c9f1c; height:100px;">
-                <form class="d-flex w-50 mx-auto" role="search"  action="/range_of_car.php" method="GET">
+                <form class="d-flex w-50 mx-auto" role="search"  action="/preOwned_car.php" method="POST">
                     <input class="form-control" type="search" name="search" placeholder="Search PreOwned Car" aria-label="Search" value="<?php echo $item["brand_id"]; ?>">
                     <button class="btn btn" style="background-color: #000;" type="submit"><i class="bi bi-search" style="color:white"></i></button>
                 </form>

@@ -154,7 +154,7 @@
                     <?php foreach($checkbrand as $item):?>
                     <div class="hangxe_kien">
                         <div>
-                            <form action="/preOwned_car.php" method="GET">
+                            <form action="/preOwned_car.php" method="POST">
                                 <input value="<?php echo $bodysitai;  ?>" name="bodystyle" type="hidden" >
                                 <input  type="text" id="loc" name="brand" style="display: none;" value="<?php echo $item["brand_id"]; ?>">
                                 <button id="checkbox2" type="submit" class="submit-button"></button>
@@ -173,7 +173,7 @@
                     <?php foreach($checkbrand as $item):?>
                     <div class="hangxe_kien" style="height:40px;">
                         <div>
-                            <form action="/preOwned_car.php" method="GET">
+                            <form action="/preOwned_car.php" method="POST">
                                 <input value="<?php echo $hangxe;  ?>" name="brand" type="hidden" >
                                 <input  type="text" id="loc" name="bodystyle" style="display: none;" value="<?php echo $item["id"]; ?>">
                                 <button style="margin-right: 6px;" id="checkbox2" type="submit" class="submit-button"></button>

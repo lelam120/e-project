@@ -27,8 +27,22 @@ function old_car(){
     }
     return $list;
 }
-function Search_form($search){
-    $sql = "SELECT * FROM cars WHERE car_name LIKE '%$search%'";
+function Search_form_new($search){
+    $sql = "SELECT *, (SELECT brand_name FROM brand WHERE brand_id = cars.new_brand) AS brand_name,
+                      (SELECT body_type FROM cars_type WHERE id = cars.type) AS typecar
+             FROM cars WHERE car_name LIKE '%$search%' AND old_new = 'new'";
+
+    $result = query($sql);
+    $list = [];
+    while($row = $result->fetch_assoc()){
+    $list[] = $row;
+    }
+    return $list;
+}
+function Search_form_old($search){
+    $sql = "SELECT *, (SELECT brand_name FROM brand WHERE brand_id = cars.new_brand) AS brand_name,
+                      (SELECT body_type FROM cars_type WHERE id = cars.type) AS typecar
+             FROM cars WHERE car_name LIKE '%$search%' AND old_new = 'old'";
 
     $result = query($sql);
     $list = [];
